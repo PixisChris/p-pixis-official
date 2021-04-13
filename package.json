@@ -1,0 +1,47 @@
+{
+    "name": "polish-parcel-boilerplate",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "npm run clean && parcel src/*.html --out-dir development -p 3000 --log-level 4 --open",
+        "build": "rimraf ./dist && parcel build src/*.html --out-dir dist --public-url ./ --log-level 4 && cp src/robots.txt dist/robots.txt",
+        "clean": "rimraf ./development && rimraf ./.cache",
+        "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
+        "deploy": "npm run build && node gh-pages-deploy.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.13.14",
+        "@babel/preset-env": "^7.13.12",
+        "autoprefixer": "^9.8.6",
+        "gh-pages": "^3.1.0",
+        "onchange": "7.1.0",
+        "parcel-bundler": "^1.12.5",
+        "parcel-plugin-custom-dist-structure": "^1.1.17",
+        "postcss": "^8.2.9",
+        "postcss-modules": "^3.2.2",
+        "prettier": "2.2.1",
+        "rimraf": "^3.0.2",
+        "sass": "^1.32.8"
+    },
+    "browserslist": "> 0.2%, last 2 versions, not dead",
+    "customDistStructure": {
+        "config": {
+            ".js": "js",
+            ".css": "css",
+            "images": [
+                ".jpg",
+                ".png",
+                ".svg",
+                ".gif"
+            ]
+        },
+        "options": {
+            "development": true
+        }
+    }
+}
