@@ -1,5 +1,6 @@
 @import './base.scss';
 @import './nav.scss';
+@import './layout.scss';
 
 
 * {
@@ -9,4 +10,13 @@
 [class*="-btn"] {
   cursor: pointer;
   user-select: none;
+}
+
+[class*="bg-"] {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-cover {
+  background-size: cover;
 }
