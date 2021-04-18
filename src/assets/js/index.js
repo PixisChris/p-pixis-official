@@ -21,7 +21,7 @@ docReady(() => {
     toggleClassName('#nav', 'active');
   });
 
-  document.querySelector('#float-banner .close').addEventListener('click', () => {
+  document.querySelector('#float-banner .close-btn').addEventListener('click', () => {
     toggleClassName('#float-banner', 'hide');
   });
 });
