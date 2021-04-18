@@ -1,10 +1,12 @@
-.pcfx { display: flex; }
-.pc { display: block; }
-.m, .mfx { display: none; }
-@media screen and (max-width: 992px) {
-  .pcfx, .pc { display: none; }
-  .m { display: block; }
-  .mfx { display: flex; }
+$mobile-break-point: 992px;
+
+.pcfx { display: flex!important; }
+.pc { display: block!important; }
+.m, .mfx { display: none!important; }
+@media screen and (max-width: $mobile-break-point) {
+  .pcfx, .pc { display: none!important; }
+  .m { display: block!important; }
+  .mfx { display: flex!important; }
 }
 
 #float-banner {
@@ -66,7 +68,12 @@ header, section {
 header {
   padding-top: 180px;
   background-color: #fff;
-  padding-left: 100px;
+
+  @media screen and (max-width: $mobile-break-point) {
+    padding: 5% 6%;
+    min-height: 0;
+    margin-top: 50vh;
+  }
 }
 
 .header-bottom-wave {
@@ -82,7 +89,8 @@ section {
 
 .main-icon-btn {
   position: relative;
-  width: 322px;
+  max-width: 322px;
+  width: 100%;
   text-align: center;
   background-color: #3DCB97;
   color: #fff;
@@ -137,6 +145,32 @@ section {
   .main-icon-btn {
     margin-top: 63px;
   }
+
+  @media screen and (max-width: $mobile-break-point) {
+    .sub-title {
+      font-size: 15px;
+    }
+  
+    h2.title {
+      margin: 0;
+      font-size: 27px;
+    }
+  
+    p {
+      font-size: 15px;
+      color: #535965;
+      margin-top: 25px;
+      max-width: 90%;
+      line-height: 1.8;
+    }
+  
+    .main-icon-btn {
+      margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+    }
+  }
 }
 
 section.partners {
@@ -169,6 +203,28 @@ section.functions {
     .screen-preview.active {
       flex: 5 1 auto;
     }
+
+    @media screen and (max-width: $mobile-break-point) {
+      width: 100%;
+      display: block;
+      padding-top: 52.25%;
+
+      .screen-preview {
+        position: absolute;
+        padding-top: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transition: 0.3s ease;
+        opacity: 0;
+      }
+  
+      .screen-preview.active {
+        width: 100%;
+        opacity: 1;
+      }
+    }
   }
 
   .content {
@@ -192,11 +248,31 @@ section.functions {
       z-index: 1;
       top: -80px;
       width: 55%;
+
+      @media screen and (max-width: $mobile-break-point) {
+        width: 100%;
+        top: -15px;
+      }
     }
   }
 
   .info-box {
     padding: 90px 100px;
+
+    .title {
+      font-size: 42px;
+    }
+
+    @media screen and (max-width: $mobile-break-point) {
+      width: 90%;
+      padding: 40px;
+      margin-right: 0;
+      margin-left: auto;
+
+      .title {
+        font-size: 24px;
+      }
+    }
   }
 
   .bar {
@@ -245,21 +321,50 @@ section.we-do-care, section.dashboard {
     max-width: 100%;
     display: flex;
     justify-content: center;
+
+    @media screen and (max-width: $mobile-break-point) {
+      flex-direction: column-reverse;
+    }
     
     .left {
       position: relative;
       z-index: 1;
       width: 55%;
+
+      @media screen and (max-width: $mobile-break-point) {
+        width: 100%;
+      }
     }
   }
 
   .info-box {
     padding: 90px 100px 90px 150px;
 
+    .title {
+      font-size: 34px;
+    }
+
     & > img {
       width: 50%;
       margin-top: 40px;
       margin-bottom: 40px;
+    }
+
+    @media screen and (max-width: $mobile-break-point) {
+      width: 90%;
+      padding: 40px;
+      margin-left: auto;
+      margin-left: 0;
+
+      & > img {
+        width: 50%;
+        margin-top: 0px;
+        margin-bottom: 20px;
+      }
+
+      .title {
+        font-size: 24px;
+      }
     }
   }
 
@@ -268,6 +373,12 @@ section.we-do-care, section.dashboard {
     width: 120%;
     left: -20%;
     z-index: 1;
+
+    @media screen and (max-width: $mobile-break-point) {
+      width: 100%;
+      left: 5%;
+      margin-bottom: -10%;
+    }
   }
 }
 
@@ -275,6 +386,10 @@ section.dashboard .right img {
   width: 100%;
   left: -8%;
   top: 30%;
+
+  @media screen and (max-width: $mobile-break-point) {
+    left: -2%;
+  }
 }
 
 section.info {
@@ -333,6 +448,58 @@ section.info {
         img {
           width: auto;
           height: 15%;
+        }
+      }
+
+      @media screen and (max-width: $mobile-break-point) {
+        cursor: pointer;
+        position: relative;
+        background-color: #fff;
+        border-radius: 0px;
+        flex: 0 0 90%;
+        padding: 30px 70px 20px 25px;
+        text-align: left;
+        margin-bottom: 30px;
+  
+        & > img {
+          position: absolute;
+          width: 20%;
+          right: 60px;
+          top: -20px;
+          transform: rotateY(180deg);
+          z-index: 1;
+        }
+  
+        h3 {
+          font-size: 20px;
+          margin-bottom: 0;
+        }
+  
+        p {
+          font-size: 14px;
+          line-height: 1.5;
+          color: #535965;
+          padding-right: 5px;
+        }
+  
+        .more {
+          position: absolute;
+          width: 100%;
+          right: 0;
+          left: auto;
+          height: 80%;
+          width: 67px;
+          top: 10%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: -1px 0 0 0 #F0F2F5;
+  
+          img {
+            width: auto;
+            height: 8px;
+            transform: rotateZ(-90deg);
+          }
         }
       }
     }
@@ -401,6 +568,70 @@ section.ready-actions {
       align-items: center;
     }
   }
+
+  @media screen and (max-width: $mobile-break-point) {
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 0;
+
+    & > img {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 50px;;
+    }
+
+    .ready-actions-block {
+      position: relative;
+      width: 90%;
+      left: 0;
+      bottom: auto;
+      top: -30px;
+      padding: 40px;
+      display: block;
+
+      .left, .right {
+        width: 100%;
+      }
+
+      .right {
+        margin-top: 50px;
+      }
+
+      .left .title {
+        position: relative;
+        width: calc(100% + 56px);
+        left: -28px;
+
+        img {
+          flex: 0 0 15px;
+          width: 15px;
+        }
+        .text {
+          font-size: 24px;
+          padding: 0 10px;
+        }
+      }
+
+      .left {
+        p {
+          margin-top: 20px;
+          font-size: 15px;
+          max-width: 100%;
+          margin-left: 0%;
+        }
+      }
+
+      .right {
+        display: block;
+        
+        & > * {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
 }
 
 section.articles {
@@ -432,6 +663,17 @@ section.articles {
         top: 8px;
       }
     }
+
+    @media screen and (max-width: $mobile-break-point) {
+      font-size: 18px;
+      margin-bottom: 50px;
+      margin-top: 20px;
+      padding-left: 5%;
+
+      .action {
+        display: none;
+      }
+    }
   }
 
   .article-list {
@@ -444,6 +686,12 @@ section.articles {
     position: relative;
     flex: 0 0 calc((100% - 150px) / 3);
     margin-bottom: 50px;
+
+    @media screen and (max-width: $mobile-break-point) {
+      flex: 0 0 90%;
+      width: 90%;
+      margin-left: 5%;
+    }
 
     &:hover {
       .img {
@@ -526,6 +774,29 @@ section.technology {
     background-color: transparent;
     color: #fff;
   }
+
+  @media screen and (max-width: $mobile-break-point) {
+    padding: 10%;
+    .content {
+      flex-direction: column-reverse;
+    }
+
+    .right {
+      padding: 0;
+      margin-bottom: 50px;
+      
+      img {
+        width: 100%;
+      }
+    }
+
+    .left {
+      h2.title {
+        font-size: 24px;
+        margin-top: 30px;
+      }
+    }
+  }
 }
 
 footer#footer {
@@ -542,6 +813,7 @@ footer#footer {
     justify-content: flex-start;
     align-items: flex-start;
     font-size: 15px;
+    
 
     & > * {
       margin-right: 10%;
@@ -566,6 +838,24 @@ footer#footer {
       color: #797E89;
       font-weight: 400;
       margin-bottom: 23px;
+    }
+
+    @media screen and (max-width: $mobile-break-point) {
+      flex-direction: column;
+      padding: 10% 5% 0;
+      position: relative;
+
+      .company-info {
+        margin-bottom: 60px;
+      }
+
+      .links-list {
+        position: absolute;
+        right: 0;
+        width: 45%;
+        top: calc(10% + 100px);
+        margin-right: 0;
+      }
     }
   }
 

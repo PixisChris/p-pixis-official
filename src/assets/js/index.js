@@ -24,4 +24,8 @@ docReady(() => {
   document.querySelector('#float-banner .close-btn').addEventListener('click', () => {
     toggleClassName('#float-banner', 'hide');
   });
+
+  document.querySelector('#nav-mobile .nav-menu-btn').addEventListener('click', () => {
+    toggleClassName('#nav-mobile', 'active');
+  });
 });
