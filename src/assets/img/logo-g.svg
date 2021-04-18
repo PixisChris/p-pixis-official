@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="153.267" height="41.717" viewBox="0 0 153.267 41.717">
+  <g id="Group_4117" data-name="Group 4117" transform="translate(-190 -2489.782)">
+    <g id="Group_2996" data-name="Group 2996" transform="translate(142.394 2459.782)">
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="6.075" height="39.461" rx="3.038" transform="translate(86.818 31.127)" fill="#3dcb97"/>
+      <path id="Path_14" data-name="Path 14" d="M204.46,1723.846H187.494a3.155,3.155,0,0,0,0,6.3h16.968a4.74,4.74,0,0,1,4.724,4.757,4.482,4.482,0,0,1-4.39,4.527H186.762v20.6a3.043,3.043,0,0,0,3.036,2.978,3.079,3.079,0,0,0,3.034-3.123s0-14.5,0-14.5h12.129c14.027-.64,13.645-21.367-.5-21.537" transform="translate(-136.861 -1691.846)" fill="#3dcb97"/>
+      <path id="Path_16" data-name="Path 16" d="M670.76,1738.907H659.3a4.722,4.722,0,0,1-4.884-4.553v-.023a4.929,4.929,0,0,1,1.343-3.652,4.616,4.616,0,0,1,3.373-1.4h16.6a3.474,3.474,0,0,0,2.184-.879,3.39,3.39,0,0,0,.845-2.276,3.084,3.084,0,0,0-3.01-3.149H659.127a11.038,11.038,0,0,0-.249,22.058h12.051a4.931,4.931,0,0,1,.506,9.8H653.082a3.155,3.155,0,0,0,0,6.3h17.847a10.785,10.785,0,0,0,10.624-10.94v-.089a12.066,12.066,0,0,0-3.093-8.213,10.1,10.1,0,0,0-7.7-2.992" transform="translate(-480.68 -1691.199)" fill="#3dcb97"/>
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="6.075" height="39.461" rx="3.038" transform="translate(153.191 31.127)" fill="#3dcb97"/>
+      <g id="Group_1" data-name="Group 1" transform="translate(104.002 31.241)">
+        <path id="Path_1" data-name="Path 1" d="M414.712,1737.6l4.3-4.3-11.514-11.514a3,3,0,0,0-4.239,0l-.057.057a3,3,0,0,0,0,4.24Z" transform="translate(-402.32 -1720.915)" fill="#3dcb97"/>
+        <path id="Path_2" data-name="Path 2" d="M493.706,1808l-4.3,4.3,11.514,11.514a3,3,0,0,0,4.239,0l.057-.058a3,3,0,0,0,0-4.24Z" transform="translate(-466.864 -1785.459)" fill="#3dcb97"/>
+      </g>
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="6.075" height="52.921" rx="3.038" transform="translate(140.181 30) rotate(45)" fill="#3dcb97"/>
+    </g>
+  </g>
+</svg>

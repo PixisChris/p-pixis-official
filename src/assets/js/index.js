@@ -20,4 +20,8 @@ docReady(() => {
   document.querySelector('#nav .product-btn').addEventListener('click', () => {
     toggleClassName('#nav', 'active');
   });
+
+  document.querySelector('#float-banner .close').addEventListener('click', () => {
+    toggleClassName('#float-banner', 'hide');
+  });
 });
