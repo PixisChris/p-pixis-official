@@ -869,3 +869,51 @@ footer#footer {
     font-size: 13px;
   }
 }
+
+// other pages
+.other-page {
+  header {
+    min-height: calc(100vh - 100px);
+    color: #fff;
+    z-index: 1;
+
+    .content {
+      padding-left: 5%;
+
+      @media screen and (max-width: $mobile-break-point) {
+        padding-top: 100px;
+      }
+    }
+
+    @media screen and (max-width: $mobile-break-point) {
+      margin-top: 0;
+    }
+
+    h3 {
+      color: #3DCB97;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    p {
+      line-height: 2;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+
+  .partners {
+    position: relative;
+    z-index: 2;
+  }
+
+  .partners img {
+    position: relative;
+    transform: translateY(-50px);
+    box-shadow: 0px 10px 45px 0px rgba(0, 0, 0, .1);
+  }
+}

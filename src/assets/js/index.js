@@ -2,7 +2,9 @@ import './_helper';
 
 // TODO: utils.js
 const toggleClassName = (el, className) => {
-  document.querySelector(el).classList.toggle(className);
+  if (document.querySelector(el)) {
+    document.querySelector(el).classList.toggle(className);
+  }
 };
 
 const docReady = (fn) => {
@@ -17,15 +19,15 @@ const docReady = (fn) => {
 };
 
 docReady(() => {
-  document.querySelector('#nav .product-btn').addEventListener('click', () => {
+  document.querySelector('#nav .product-btn')?.addEventListener('click', () => {
     toggleClassName('#nav', 'active');
   });
 
-  document.querySelector('#float-banner .close-btn').addEventListener('click', () => {
+  document.querySelector('#float-banner .close-btn')?.addEventListener('click', () => {
     toggleClassName('#float-banner', 'hide');
   });
 
-  document.querySelector('#nav-mobile .nav-menu-btn').addEventListener('click', () => {
+  document.querySelector('#nav-mobile .nav-menu-btn')?.addEventListener('click', () => {
     toggleClassName('#nav-mobile', 'active');
   });
 });
