@@ -1,0 +1,56 @@
+body.contact-success-page {
+  section.thanks {
+    padding-top: 100px;
+    min-height: 100vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+
+    h1 {
+      font-size: 105px;
+      font-weight: 700;
+      margin: 0;
+      margin-bottom: 39px;
+      color: $dark-green;
+    }
+
+    h2 {
+      font-size: 24px;
+      line-height: 44px;
+      font-weight: 500;
+      margin: 0;
+      margin-bottom: 39px;
+    }
+
+    a {
+      display: inline-block;
+    }
+
+    .thanks-info {
+      max-width: 468px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: $mobile-break-point) {
+      h1 {
+        font-size: 70px;
+      }
+    }
+
+    @media screen and (max-width: $sm-break-point) {
+      padding-top: 50px;
+      h1 {
+        font-size: 50px;
+      }
+      h2 {
+        font-size: 16px;
+        line-height: 26px;
+      }
+      .thanks-info { 
+        max-width: 314px;
+      }
+    }
+  }
+}
