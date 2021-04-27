@@ -100,4 +100,46 @@ form {
       font-size: 12px;
       line-height: 17px;
   }
+
+  
+}
+
+// checkbox
+.g-input-unit.g-checkbox-unit {
+
+  // 隱藏原生 checkbox input[type="checkbox"]
+  input[type="checkbox"].g-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .custom-checkbox {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    margin-right: 18px;
+    margin-left: 8px;
+    border-radius: 4px;
+    background-color: $white;
+    border: 1px solid $black;
+  }
+
+  input[type="checkbox"].g-checkbox:checked ~ .custom-checkbox {
+    background-image: url('/assets/img/icons/checkbox-checked.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  label.g-checkbox-label {
+    font-size: 13px;
+    line-height: 20px;
+    text-align: left;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+  }
 }
