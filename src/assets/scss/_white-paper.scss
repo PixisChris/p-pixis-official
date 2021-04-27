@@ -1,6 +1,21 @@
 .white-paper-page {
-  header {
+  h1, h2, h3, h4, h5, p, ul {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .bg-cover {
+    background-color: $white;
+    background-image: url('/assets/img/white-paper/bg.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 1868px;
+  }
+
+  main {
+    padding-top: 174px;
     min-height: calc(100vh - 100px);
+    height: 890px;
     color: #fff;
     z-index: 1;
     display: flex;
@@ -27,22 +42,76 @@
       margin-top: 0;
     }
 
-    .content {
-      flex: 0 1 554px;
-      padding-left: 0;
-      padding-right: 0;
-      margin-left: 5.2%;
-      margin-right: 9.4%;
+    div.content-wrapper {
+      display: flex;
+      flex: 1 1 auto;
+      justify-content: flex-end;
+      .white-paper-img {
+        margin-left: -7.29%;
+        flex: 1 0 504px;
+        height: 475px;
+        margin-top: 91.5px;
+        margin-right: 23px;
+      }
+      article.content {
+        flex: 1 0 294px;
+        margin: 0 41px;
+        margin-top: 127.5px;
+        flex-wrap: nowrap;
+        h1, h2 {
+          color: $black;
+        }
+        h1 {
+          font-size: 24px;
+          margin-bottom: 25px;
+        }
+        h2 {
+          font-size: 20px;
+          margin-bottom: 23px;
+        }
+        ul {
+          color: #535965;
+          line-height: 29px;
+          font-size: 15px;
+          li {
+            margin-left: 12px;
+            margin-bottom: 17px;
+            &:first-child {
+              margin-top: 29px;
+            }
+          }
+        }
 
-      @media screen and (max-width: $mobile-break-point) {
-        padding-top: 100px;
+        @media screen and (max-width: $mobile-break-point) {
+          padding-top: 100px;
+        }
       }
     }
 
-    .contact-form {
-      flex: 1 1 594px;
-      align-content: stretch;
-      margin-right: 5.6%;
+    div.download-form-wrapper {
+      flex: 1 0 585px;
+      margin-right: 4%;
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 51px 34px 38px 43px;
+        justify-content: center;
+        height: 589px;
+        h1 {
+          flex: 0 0 100%;
+        }
+        .g-input-unit {
+          width: 50%;
+          display: inline-block;
+          &:nth-child(2n) {
+            padding-right: 2.43vw;
+          }
+        }
+        .main-icon-btn {
+          margin-top: 44.5px;
+          height: 66px;
+        }
+      }
     }
   }
 
@@ -55,5 +124,39 @@
     position: relative;
     width: 100%;
     box-shadow: 0px 10px 45px 0px rgba(0, 0, 0, .1);
+  }
+
+  @media screen and (max-width: 1280px) {
+    main {
+      div.content-wrapper {
+        article.content {
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+      }
+      div.download-form-wrapper {
+        flex: 1 0 510px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile-break-point) {
+    .bg-cover {
+      background-size: 1304px;
+    }
+
+    main {
+      height: 1387px;
+      flex-wrap: wrap;
+      // .white-paper-img {
+      //   flex: 1 1 50%;
+      // }
+      // .content {
+      //   flex: 1 1 50%;
+      // }
+      // .download-form {
+      //   flex: 1 1 100%;
+      // }
+    }
   }
 }
