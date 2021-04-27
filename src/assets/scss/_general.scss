@@ -49,6 +49,17 @@ form {
       transition: border 0.2s;
   }
 
+  select.g-input {
+    border-radius: 0;
+    appearance: none;         // 移除瀏覽器預設外觀
+    -moz-appearance: none;    // Firefox
+    -webkit-appearance: none; // Safari, Chrome, Opera
+    background-image: url('/assets/img/icons/arrow-down.svg'); // 自訂箭頭
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 8px);
+    background-position-y: 22px;
+  }
+
   textarea.g-input {
       resize: none;
       height: 96px;
