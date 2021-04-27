@@ -1,4 +1,6 @@
-body.contact-success-page {
+// 聯絡我們、白皮書成功頁
+body.contact-success-page,
+body.white-paper-success-page {
   section.thanks {
     padding-top: 100px;
     min-height: 100vh;
@@ -52,5 +54,19 @@ body.contact-success-page {
         max-width: 314px;
       }
     }
+  }
+}
+
+body.white-paper-success-page {
+  section.thanks {
+
+    .thanks-info {
+      max-width: 398px;
+
+      @media screen and (max-width: $sm-break-point) {
+          max-width: 350px;
+      }
+    }
+
   }
 }
