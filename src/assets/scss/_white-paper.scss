@@ -93,6 +93,7 @@
         box-shadow: 0px 10px 20px rgba(#D0D3D8, 0.2);
         h1 {
           flex: 0 0 100%;
+          margin-bottom: 60px;
         }
         .g-input-unit {
           width: 50%;
@@ -182,11 +183,6 @@
       div.download-form-wrapper {
         flex: 0 0 585px;
         margin-top: 37px;
-        form {
-          h1 {
-            margin-bottom: 68px;
-          }
-        }
       }
     }
   } // 1200px END
