@@ -8,10 +8,14 @@ form {
   text-align: center;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   h1 {
     font-size: 36px;
     margin: 0 auto;
+    flex: 1 0 100%;
   }
 
   button {
@@ -22,6 +26,14 @@ form {
 // 基本輸入元件
 .g-input-unit {
   position: relative;
+  flex: 1 0 100%;
+
+  &.half { // 一半
+    flex: 0 0 calc(50% - 17.5px);
+    @media screen and (max-width: $mobile-break-point) {
+      flex: 1 0 100%;
+    }
+  }
 
   textarea.g-input,
   input.g-input,
@@ -33,7 +45,7 @@ form {
       border-bottom: 1px solid $gray;
       padding: 13px 0px;
       outline: none;
-      margin-bottom: 13px;
+      margin-bottom: 29px;
       transition: border 0.2s;
   }
 
@@ -87,5 +99,47 @@ form {
       left: 0px;
       font-size: 12px;
       line-height: 17px;
+  }
+
+  
+}
+
+// checkbox
+.g-input-unit.g-checkbox-unit {
+
+  // 隱藏原生 checkbox input[type="checkbox"]
+  input[type="checkbox"].g-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .custom-checkbox {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    margin-right: 18px;
+    margin-left: 8px;
+    border-radius: 4px;
+    background-color: $white;
+    border: 1px solid $black;
+  }
+
+  input[type="checkbox"].g-checkbox:checked ~ .custom-checkbox {
+    background-image: url('/assets/img/icons/checkbox-checked.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  label.g-checkbox-label {
+    font-size: 13px;
+    line-height: 20px;
+    text-align: left;
+    display: flex;
+    position: relative;
+    cursor: pointer;
   }
 }

@@ -1,4 +1,6 @@
 .contact-page {
+  overflow-x: hidden;
+
   header {
     min-height: calc(100vh - 100px);
     color: #fff;
@@ -15,6 +17,7 @@
     h1 {
       font-size: 36px;
       font-weight: 500;
+      margin-bottom: 45px;
     }
 
     p {
@@ -22,38 +25,166 @@
       font-size: 18px;
       font-weight: 400;
     }
-    
-    @media screen and (max-width: $mobile-break-point) {
-      margin-top: 0;
-    }
 
     .content {
       flex: 0 1 554px;
-      padding-left: 0;
-      padding-right: 0;
+      padding: 0 0 150px 0;
       margin-left: 5.2%;
       margin-right: 9.4%;
-
-      @media screen and (max-width: $mobile-break-point) {
-        padding-top: 100px;
-      }
     }
 
     .contact-form {
       flex: 1 1 594px;
       align-content: stretch;
       margin-right: 5.6%;
+
+      .title {
+        margin-bottom: 35px;
+      }
+
+      .main-icon-btn {
+        margin: 0 auto;
+        margin-top: 45px;
+      }
+
+      a.link {
+        
+        text-decoration: underline;
+      }
+    }
+
+    @media screen and (max-width: $mobile-break-point) {
+      margin-top: 0;
+      flex-direction: column;
+      padding-bottom: 63px;
+
+      .content {
+        padding: 100px 2.6% 115px 2.6%;
+        margin: 0;
+        text-align: center;
+        flex-basis: auto;
+      }
+
+      .contact-form {
+        margin: 0;
+      }
+    }
+
+    @media screen and (max-width: $sm-break-point) {
+      padding: 46px 7px 0 7px;
+      max-height: 983px;
+      margin-bottom: 641px;
+      justify-content: flex-start;
+
+      h1 {
+        font-size: 24px;
+        width: 198px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 33px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      .content {
+        padding: 100px 5.7% 49px 5.7%;
+      }
+
+      .contact-form {
+        box-shadow: 0 10px 20px $light-gray;
+        form {
+          padding: 40px 28px 54px 28px;
+        }
+      }
     }
   }
 
   .partners {
     position: relative;
     z-index: 2;
+
+    img {
+      position: relative;
+      width: 100%;
+      box-shadow: 0px 10px 45px 0px rgba(0, 0, 0, .1);
+    }
+
+    @media screen and (max-width: $mobile-break-point) {
+      width: 1087px;
+      height: 181px;
+    }
   }
 
-  .partners img {
-    position: relative;
-    width: 100%;
-    box-shadow: 0px 10px 45px 0px rgba(0, 0, 0, .1);
+  section.about {
+    h1 {
+      margin: 0;
+      color: $black;
+      font-size: 36px;
+      font-weight: 500;
+    }
+    p {
+      color: $green;
+      margin: 7.8px 0;
+      font-size: 16px;
+    }
+
+    background-color: $white;
+    display: flex;
+    padding: 99px 8.7% 73px 8.7%;
+    border-bottom: 1px solid $light-gray;
+
+    .about-title {
+      margin-right: auto;
+      flex: 0 0 30%;
+    }
+
+    .about-info {
+      flex-grow: 1;
+
+      .info-item {
+        border-top: 1px solid $light-gray;
+        display: flex;
+        padding: 22px 0;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 32px;
+
+        .name {
+          width: 150px;
+          min-width: 150px;
+          color: $gray;
+        }
+      }
+    }
+
+    @media screen and (max-width: $mobile-break-point) {
+      flex-direction: column;
+
+      .about-title {
+        margin-bottom: 95px;
+      }
+
+      .about-info {
+        margin-left: 9.8%;
+      }
+    }
+
+    @media screen and (max-width: $sm-break-point) {
+      padding: 72px 26px 10px 37px;
+      border-bottom: none;
+
+      .about-title { 
+        margin-bottom: 45px;
+      }
+      .about-info { 
+        margin-left: 0;
+
+        .info-item {
+          flex-direction: column;
+        }
+      }
+    }
   }
 }
