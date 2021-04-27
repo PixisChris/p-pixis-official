@@ -112,6 +112,14 @@
     }
   }
 
+  .lg-only-header {
+    display: block;
+  }
+
+  .sm-only-header {
+    display: none;
+  }
+
   .partners {
     position: relative;
     z-index: 2;
@@ -135,7 +143,7 @@
         flex: 1 0 510px;
       }
     }
-  }
+  } // 1280px END
 
   @media screen and (max-width: 1200px) {
     .bg-cover {
@@ -165,7 +173,7 @@
         margin-top: -81px;
       }
     }
-  }
+  } // 1200px END
 
   @media screen and (max-width: 992px) {
     main {
@@ -175,5 +183,72 @@
         }
       }
     }
-  }
+  } // 992px END
+
+  @media screen and (max-width: 767px) {
+    .bg-cover {
+      background-size: 935px;
+    }
+    .lg-only-header {
+      display: none;
+    }
+    .sm-only-header {
+      display: block;
+      color: $black;
+      font-size: 24px;
+      line-height: 33px;
+    }
+    main {
+      height: auto;
+      flex-direction: column;
+      padding-top: 101px;
+      justify-content: flex-start;
+      h1 {
+        font-size: 24px;
+        line-height: 33px;
+      }
+      div.content-wrapper {
+        flex: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: initial;
+        margin-bottom: 17px;
+        h1 {
+          align-self: center;
+        }
+        .white-paper-img {
+          flex: 0 0 337px;
+          width: 357px;
+          margin-left: 0;
+          margin-right: 0px;
+          margin-bottom: 65px;
+          align-self: center;
+          transform: translateX(-66px);
+        }
+        article.content {
+          flex: 0 0 391px;
+          margin: 0 auto;
+          width: 294px;
+          h2 {
+            font-weight: 400;
+          }
+          ul {
+            font-weight: 300;
+          }
+        }
+      }
+      div.download-form-wrapper {
+        margin-right: 0px;
+        margin: 0px auto 88px auto;
+        form {
+          padding: 40px 29px 34px 29px;
+          width: 96.2vw;
+          max-width: 414px;
+          .g-input-unit {
+            width: 100%;
+          }
+        }
+      }
+    }
+  } // 576px END
 }
