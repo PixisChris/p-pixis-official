@@ -1,0 +1,91 @@
+// 通用
+
+// 表單
+form {
+  background-color: $white;
+  color: $black;
+  padding: 56px 43px 45px 43px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+  h1 {
+    font-size: 36px;
+    margin: 0 auto;
+  }
+
+  button {
+    border: none;
+  }
+}
+
+// 基本輸入元件
+.g-input-unit {
+  position: relative;
+
+  textarea.g-input,
+  input.g-input,
+  select.g-input {
+      box-sizing: border-box;
+      width: 100%;
+      height: 49px;
+      border: none;
+      border-bottom: 1px solid $gray;
+      padding: 13px 0px;
+      outline: none;
+      margin-bottom: 13px;
+      transition: border 0.2s;
+  }
+
+  textarea.g-input {
+      resize: none;
+      height: 96px;
+  }
+
+  // placeholder 為透明
+  textarea.g-input::placeholder,
+  input.g-input::placeholder {
+      color: transparent;
+  }
+
+  // onfocus
+  textarea.g-input:focus,
+  input.g-input:focus {
+      border: none;
+      border-bottom: 1px solid $black;
+      padding: 22px 10px 6px 0px;
+  }
+
+  // 已有文字輸入 (unfocus + placeholde unshown)
+  textarea.g-input:not(:focus):not(:placeholder-shown),
+  input.g-input:not(:focus):not(:placeholder-shown) {
+      border: none;
+      border-bottom: 1px solid $gray;
+      padding: 22px 10px 6px 0px;
+  }
+
+  // 標籤
+  textarea.g-input + label.g-input-label,
+  input.g-input + label.g-input-label {
+      pointer-events: none;
+      display: block;
+      position: absolute;
+      top: 16px;
+      left: 0px;
+      font-size: 16px;
+      line-height: 17px;
+      color: $black;
+      transition: all 0.3s;
+  }
+
+  // 已有文字輸入 或 focus 時的標籤
+  textarea.g-input:focus + label.g-input-label,
+  textarea.g-input:not(:focus):not(:placeholder-shown) + label.g-input-label,
+  input.g-input:focus + label.g-input-label,
+  input.g-input:not(:focus):not(:placeholder-shown) + label.g-input-label {
+      top: 5px;
+      left: 0px;
+      font-size: 12px;
+      line-height: 17px;
+  }
+}
