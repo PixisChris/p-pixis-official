@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./assets/scss/index.scss" />
 </head>
 
-<body class="contact-page">
+<body class="white-paper-page">
     <nav id="nav-mobile" class="m">
         <div class="nav-logo">
             <a href="/index.html">
@@ -28,7 +28,7 @@
             <a href="/case.html" class="nav-btn">成功案例</a>
             <a href="/articles.html" class="nav-btn">資安好文</a>
             <a href="/medias.html" class="nav-btn">媒體報導</a>
-            <a href="/white-paper.html" class="nav-btn">白皮書</a>
+            <a href="/white-paper.html" class="nav-btn active">白皮書</a>
             <a href="/contact.html" class="nav-btn">聯繫我們</a>
             <div class="nav-text">@ PIXIS 2021</div>
         </div>
@@ -47,8 +47,8 @@
             <a href="/case.html" class="nav-btn">成功案例</a>
             <a href="/articles.html" class="nav-btn">資安好文</a>
             <a href="/medias.html" class="nav-btn">媒體報導</a>
-            <a href="/white-paper.html" class="nav-btn">白皮書</a>
-            <a href="/contact.html" class="nav-btn active">聯繫我們</a>
+            <a href="/white-paper.html" class="nav-btn active">白皮書</a>
+            <a href="/contact.html" class="nav-btn">聯繫我們</a>
         </div>
         <div class="nav-product">
             <div class="nav-product-text">
@@ -173,16 +173,24 @@
         </div>
     </nav>
 
-    <header class="bg-cover" style="background-color: #2A5850">
-        <div class="content">
-            <h1>讓系統為你解決企業內網問題</h1>
-            <p>PIXIS
-                飛泓科技藉由開發企業網路管理平台與內網衝突解決方案，協助企業解決最棘手的資安挑戰。不管你的企業規模處於哪個階段：中小型企業、單區企業、跨區企業，我們都提供相對應的解決方案，為你的團隊省下更多時間、IT建構成本與降低團隊勞頓。
-            </p>
+    <main class="bg-cover">
+        <div class="content-wrapper">
+            <h1 class="sm-only-header">PIXIS 技術白皮書</h1>
+            <img class="white-paper-img" src="/assets/img/white-paper/left-white-paper.png" alt="白皮書">
+            <article class="content">
+                <h1 class="lg-only-header">PIXIS 技術白皮書</h1>
+                <h2>內容概要</h2>
+                <ul>
+                    選擇對的內部網路管理平台對企業而言是個大挑戰，你需要思考到底要投資多少？你需要多厲害的功能？你具備的技術是否足以導入內部網路管理平台了嗎？我們準備了幾項可立即上手的教戰守則幫你快速決策！下載本白皮書您將了解：
+                    <li>政策多個安全基礎面向</li>
+                    <li>企業資訊安全的四大考量點</li>
+                    <li>選擇最適合你的內部網路管理平台必思考的五項重點</li>
+                </ul>
+            </article>
         </div>
-        <div class="contact-form">
-            <form action="">
-                <h1 class="title">歡迎與我們聯絡</h1>
+        <div class="download-form-wrapper">
+            <form action="/white-paper-request" method="post">
+                <h1>免費下載白皮書</h1>
                 <div class="g-input-unit half">
                     <input class="g-input" type="text" id="last-name" name="last-name" placeholder="姓 *" required>
                     <label class="g-input-label" for="last-name">姓 *</label>
@@ -196,9 +204,8 @@
                     <label class="g-input-label" for="phone">電話 *</label>
                 </div>
                 <div class="g-input-unit half">
-                    <input class="g-input" type="text" id="company-name" name="company-name" placeholder="公司 *"
-                        required>
-                    <label class="g-input-label" for="company-name">公司 *</label>
+                    <input class="g-input" type="text" id="company" name="company" placeholder="公司 *" required>
+                    <label class="g-input-label" for="company">公司 *</label>
                 </div>
                 <div class="g-input-unit half">
                     <input class="g-input" type="email" id="email" name="email" placeholder="工作電子信箱 *" required>
@@ -207,37 +214,6 @@
                 <div class="g-input-unit half">
                     <input class="g-input" type="text" id="title" name="title" placeholder="職稱 *" required>
                     <label class="g-input-label" for="title">職稱 *</label>
-                </div>
-                <div class="g-input-unit half">
-                    <select class="g-input" id="usage" name="usage" required>
-                        <option value>洽詢用途 *</option>
-                        <option value="2">內部使用測試</option>
-                        <option value="3">產品業務評估</option>
-                        <option value="4">其它用途</option>
-                    </select>
-                </div>
-                <div class="g-input-unit half">
-                    <select class="g-input" id="company-size" name="company-size" required>
-                        <option value>公司規模 *</option>
-                        <option value="2">100人以下</option>
-                        <option value="3">100-500人</option>
-                        <option value="4">500-1000人</option>
-                        <option value="5">1000-2000人</option>
-                        <option value="6">2000人以上</option>
-                    </select>
-                </div>
-                <div class="g-input-unit">
-                    <input class="g-input" type="text" id="website" name="website" placeholder="網站 *" required>
-                    <label class="g-input-label" for="website">網站 *</label>
-                </div>
-                <div class="g-input-unit">
-                    <select class="g-input" id="how" name="how">
-                        <option value>如何得知 PIXIS</option>
-                        <option value="2">社群</option>
-                        <option value="3">同業推薦</option>
-                        <option value="4">展覽</option>
-                        <option value="5">廣告</option>
-                    </select>
                 </div>
                 <div class="g-input-unit g-checkbox-unit">
                     <label class="g-checkbox-label" for="agree">
@@ -251,67 +227,36 @@
                 </div>
                 <br>
                 <button type="submit" class="main-icon-btn">
-                    送出表單
+                    提交
                     <img src="./assets/img/icons/arrow-right.svg" alt="arrow icon">
                 </button>
             </form>
         </div>
-    </header>
+    </main>
 
     <section class="partners">
-        <img src="./assets/img/partners-pc.jpg" alt="" class="partners-logo">
+        <img src="./assets/img/partners-pc.jpg" alt="" class="partners-logo pc">
     </section>
 
-    <section class="about">
-        <div class="about-title">
-            <h1>關於 PIXIS</h1>
-            <p>Company profile</p>
+    <section class="technology" class="bg-cover" style="background-image: url('./assets/img/footer-bg.png');">
+        <div class="content">
+            <div class="left">
+                <div class="info-box">
+                    <div class="sub-title">・ patented technology</div>
+                    <h2 class="title">
+                        將防護最佳化<br>提升價值並降低成本
+                    </h2>
+                    <p>我們與業界最頂尖的夥伴合作，為您帶來嶄新的創新技術。超過 30 年 NAC / IPAM 產業經驗，全球超過 250,000 人受到 PIXIS 系統的保護</p>
+                    <div class="main-icon-btn">
+                        與我們聯繫
+                        <img src="./assets/img/icons/arrow-right.svg" alt="arrow icon">
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <img src="./assets/img/footer-partners.png" alt="">
+            </div>
         </div>
-        <div class="about-info">
-            <div class="info-item">
-                <div class="name">公司名</div>
-                <div class="details">飛泓科技股份有限公司 PIXIS</div>
-            </div>
-            <div class="info-item">
-                <div class="name">負責人</div>
-                <div class="details">楊利泓 Tommy</div>
-            </div>
-            <div class="info-item">
-                <div class="name">成立時間</div>
-                <div class="details">2016年12月6日</div>
-            </div>
-            <div class="info-item">
-                <div class="name">資本額</div>
-                <div class="details">新台幣 5,000 萬元</div>
-            </div>
-            <div class="info-item">
-                <div class="name">相關專利</div>
-                <div class="details">
-                    (發明)-連網裝置與拓樸圖建立方法<br>
-                    (新型)-連網裝置<br>
-                    (發明)-網路資源分配伺服器及網路資源分配方法<br>
-                    (新型)-網路資源分配伺服器
-                </div>
-            </div>
-            <div class="info-item">
-                <div class="name">相關認證</div>
-                <div class="details">
-                    經濟部資訊安全服務機構能量與資安自主產品認證<br>
-                    證號：I 09-IS-2-52474957-0161
-                </div>
-            </div>
-            <div class="info-item">
-                <div class="name">地址</div>
-                <div class="details">
-                    105 台北市 松山區 南京東路三段 275號 7樓
-                </div>
-            </div>
-            <div class="info-item">
-                <div class="name">電子郵件</div>
-                <div class="details">
-                    service@pixis.com.tw
-                </div>
-            </div>
     </section>
 
     <footer id="footer">
@@ -355,5 +300,4 @@
     </footer>
 </body>
 <script src="./assets/js/index.js"></script>
-
 </html>

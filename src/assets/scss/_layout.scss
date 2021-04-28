@@ -752,6 +752,9 @@ section.articles {
 section.technology {
   padding: 5% 2.5%;
   min-height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
   
   .content {
     display: flex; 
