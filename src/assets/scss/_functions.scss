@@ -8,20 +8,59 @@
     justify-content: space-between;
     background-color: #F8F7F6;
 
+    @media screen and (max-width: $mobile-break-point) {
+      flex-direction: column-reverse;
+      margin-top: 0;
+      padding: 0;
+    }
+
     .left, .right {
       flex: 1 1 50%;
       width: 50%;
+
+      @media screen and (max-width: $mobile-break-point) {
+        width: 100%;
+        flex: 0 0 auto;
+      }
+    }
+
+    .right {
+      @media screen and (max-width: $mobile-break-point) {
+        height: 33vh;
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-color: #2A5850;
+          width: 100%;
+          height: 100%;
+          opacity: 0.44;
+        }
+      }
     }
 
     .left {
       padding-top: 180px;
       padding-left: 6%;
       padding-right: 6%;
+
+      @media screen and (max-width: $mobile-break-point) {
+        padding: 0 5%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
     }
 
     h1 {
       font-size: 55px;
       margin-bottom: 0;
+
+      @media screen and (max-width: $mobile-break-point) {
+        font-size: 28px;
+      }
     }
 
     p {
@@ -30,6 +69,11 @@
       margin-top: 40px;
       margin-bottom: 40px;
       max-width: 450px;
+
+      @media screen and (max-width: $mobile-break-point) {
+        max-width: 100%;
+        font-size: 15px;
+      }
     }
   }
 
@@ -45,12 +89,20 @@
 
       img {
         margin-right: 15px;
+
+        @media screen and (max-width: $mobile-break-point) {
+          width: 30px;
+        }
       }
     }
 
     h2 {
       font-size: 70px;
       margin: 0;
+
+      @media screen and (max-width: $mobile-break-point) {
+        font-size: 36px;
+      }
     }
 
     p {
@@ -59,6 +111,11 @@
       margin-top: 54px;
       margin-bottom: 10vh;
       max-width: 500px;
+
+      @media screen and (max-width: $mobile-break-point) {
+        max-width: 100%;
+        font-size: 15px;
+      }
     }
 
     .main-screen {
@@ -69,6 +126,10 @@
       will-change: transform;
       transform-style: preserve-3d;
       transform: scale3d(1, 1, 1);
+
+      @media screen and (max-width: $mobile-break-point) {
+        margin-bottom: 50px;
+      }
 
       img {
         width: 100%;
@@ -109,6 +170,10 @@
           transform: rotate(-90deg);
           opacity: .5;
         }
+
+        @media screen and (max-width: $mobile-break-point) {
+          font-size: 20px;
+        }
       }
 
       .function-list {
@@ -135,6 +200,12 @@
       width: calc((100% - 250px) / 2);
       padding-left: 15%;
 
+      @media screen and (max-width: $mobile-break-point) {
+        width: 100%!important;
+        padding-left: 5%!important;
+        padding-right: 5%!important;
+      }
+
       .item {
         margin-bottom: 70px;
       }
@@ -148,6 +219,10 @@
         margin-top: 25px;
         padding-left: 20px;
         margin-bottom: 40vh;
+
+        @media screen and (max-width: $mobile-break-point) {
+          margin-bottom: 40px;
+        }
 
         li {
           color: #535965;
