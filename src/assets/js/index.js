@@ -35,36 +35,33 @@ docReady(() => {
       toggleClassName('#nav-mobile', 'active');
     });
 
-  const fnSection = document.querySelector('.function-content');
-  const fnNav = document.querySelector('.function-nav');
-  const fnMainScreen = document.querySelector('.main-screen');
-  if (fnSection) {
-    document.addEventListener('scroll', () => {
-      const yOff = window.pageYOffset;
-      const wH = window.innerHeight;
-      const wW = window.innerWidth;
-      const MOUNT_SCALE_END = 500;
-      const start = fnSection.offsetTop + wH / 3;
-      const end = fnSection.offsetTop + wH / 2;
+  document.addEventListener('scroll', () => {
+    const wH = window.innerHeight;
+    const yOff = window.pageYOffset + wH;
+    const fnContainers = document.querySelectorAll('[data-scroll="fn"]');
+    fnContainers.forEach((fnContainer) => {
+      const layout = fnContainer.dataset.scrollLayout; // left or right
+      const fnNav = fnContainer.querySelector(`.function-nav`);
+      const fnMainScreen = fnContainer.querySelector('.main-screen');
+      const scrollBaseline = fnContainer.querySelector('.scroll-baseline');
+      const scrollEndline = fnContainer.querySelector('.scroll-endline');
 
-      const screenStart = fnMainScreen.offsetTop + wH / 1.7;
-      const screenMid = fnMainScreen.offsetTop + wH / 1.05;
-      const screenEnd = fnMainScreen.offsetTop;
-      
-      // console.log('===========')
-      // console.log('yOff', yOff);
-      // console.log('start', screenStart);
-      // console.log('end', screenEnd);
-      // console.log('===========')
-
-
+      const screenStart = scrollBaseline.offsetTop + fnMainScreen.offsetHeight / 2;
+      const screenMid = fnMainScreen.offsetTop + fnMainScreen.offsetHeight / 3 * 2;
+      const screenEnd = fnMainScreen.offsetTop + fnMainScreen.offsetHeight;
+      const pageEnd = scrollEndline.offsetTop;
       if (yOff >= screenMid) {
         const perc =
-          (yOff - screenMid) / (screenEnd - screenMid) <= -1
-            ? -1
+          (yOff - screenMid) / (screenEnd - screenMid) > 1
+            ? 1
             : (yOff - screenMid) / (screenEnd - screenMid);
-        fnNav.style.transform = `translateY(${10 + 10 * perc}%)`;
-        fnNav.style.opacity = -perc;
+        if (yOff <= pageEnd) {
+          fnNav.style.opacity = perc;
+          fnNav.style.transform = `translateY(${10 - perc * 10}%)`;
+        } else {
+          fnNav.style.transform = `translateY(10%)`;
+          fnNav.style.opacity = 0;
+        }
       } else {
         fnNav.style.transform = `translateY(10%)`;
         fnNav.style.opacity = 0;
@@ -72,16 +69,18 @@ docReady(() => {
 
       if (yOff >= screenStart) {
         const perc =
-          (yOff - screenStart) / (screenEnd - screenStart) <= -1
-            ? -1
+          (yOff - screenStart) / (screenEnd - screenStart) > 1
+            ? 1
             : (yOff - screenStart) / (screenEnd - screenStart);
-        fnMainScreen.style.transform = `scale(${1 + 0.4 * perc}) translate3d(calc(${-50 * perc - 5 * perc}%), calc(${
-          yOff - screenStart
-        }px), 0)`;
-      } else {
+        if (yOff <= pageEnd) {
+          const translateX = layout === 'left' ? `calc(${50 * perc + 5 * perc}%)` : `calc(-${50 * perc + 5 * perc}%)`
+          fnMainScreen.style.transform = `scale(${1 - 0.4 * perc}) translate3d(${translateX}, calc(${
+            (yOff - screenStart) / 0.6
+          }px - ${0 + 83.3 * perc}%), 0)`;
+        }
       }
-    });
-  }
+    }); 
+  });
 });
 
 
