@@ -1,5 +1,40 @@
 import './_white-paper'
 
+
+// TODO: load html component
+function loadHTML(myDivId, url) {
+  var xmlhttp;
+  if (window.XMLHttpRequest) 
+  {
+      xmlhttp = new XMLHttpRequest();
+  } 
+  else 
+  {
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  xmlhttp.onreadystatechange = function() 
+  {
+      if (xmlhttp.readyState == XMLHttpRequest.DONE ) 
+      {
+         if(xmlhttp.status == 200){
+             document.getElementById(myDivId).innerHTML = xmlhttp.responseText;
+             var allScripts = document.getElementById(myDivId).getElementsByTagName('script');
+             for (var n = 0; n < allScripts .length; n++)
+             {
+                 eval(allScripts [n].innerHTML)//run script inside div generally not a good idea but these scripts are anyways intended to be executed.
+             }
+         }
+         else {
+             alert('Error');
+         }
+      }
+  }
+
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send();
+}
+
 // TODO: utils.js
 const toggleClassName = (el, className) => {
   if (document.querySelector(el)) {
@@ -19,6 +54,12 @@ const docReady = (fn) => {
 };
 
 docReady(() => {
+  try {
+    loadHTML('#nav-wrapper', './components/_nav.html') 
+  } catch (error) {
+    
+  }
+
   document.querySelector('#nav .product-btn')?.addEventListener('click', () => {
     toggleClassName('#nav', 'active');
   });
@@ -74,7 +115,7 @@ docReady(() => {
               ? 1
               : (yOff - screenStart) / (screenEnd - screenStart);
           if (yOff <= pageEnd) {
-            const translateX = layout === 'left' ? `calc(${50 * perc + 5 * perc}%)` : `calc(-${50 * perc + 5 * perc}%)`
+            const translateX = layout === 'left' ? `calc(${50 * perc}% - ${5 * perc}vw)` : `calc(-${50 * perc}% + ${5 * perc}vw)`
             fnMainScreen.style.transform = `scale(${1 - 0.4 * perc}) translate3d(${translateX}, calc(${
               (yOff - screenStart) / 0.6
             }px - ${0 + 83.3 * perc}%), 0)`;

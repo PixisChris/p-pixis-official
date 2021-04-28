@@ -88,6 +88,7 @@
     font-size: 18px;
     margin-bottom: 15px;
     font-weight: 500;
+    color: #535965;
   }
 
   .nav-product-desc {
@@ -135,6 +136,7 @@
     position: absolute;
     left: 30px;
     top: 18px;
+    transition: 0.2s ease;
 
     img {
       width: auto;
@@ -142,7 +144,17 @@
     }
   }
 
+  &.active {
+    background-color: #2F9471;
+
+    .nav-logo {
+      transform: translateY(12px);
+    }
+  }
+
   &.active .nav-menu-btn {
+    transform: translateY(12px);
+
     span:nth-of-type(1) {
       opacity: 0;
     }
@@ -164,6 +176,7 @@
     top: 8px;
     width: 40px;
     height: 40px;
+    transition: 0.35s ease;
     
     span {
       position: absolute;
@@ -195,24 +208,47 @@
     transition: 0.3s ease;
 
     a {
+      width: 80%;
+      text-align: left;
+      margin: 0 auto;
+      border-top: 1px solid #78DBB7;
+      transition: 0.3s ease 0.3s;
+      display: block;
+      text-align: center;
+      line-height: 65px;
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       opacity: 0; 
       transform: translateX(-5px);
+
+      &:nth-of-type(5) { border-bottom: 1px solid #78DBB7; }
+
+      &.main-icon-btn {
+        margin-top: 60px;
+        justify-content: center;
+      }
+    }
+
+    .product-btn {
+      img {
+        transform: rotate(180deg);
+      }
     }
   }
 
   .nav-text {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    text-align: right;
+    text-align: center;
     width: 100%;
     opacity: 0;
     pointer-events: none;
-    font-size: 13px;
+    font-size: 12px;
+    margin-top: 24px;
   }
 
   &.active {
-    height: 500px;
+    height: 614px;
 
     .nav-text {
       opacity: 0.4;
@@ -224,20 +260,8 @@
       padding-top: 40px;
 
       a {
-        transition: 0.3s ease 0.3s;
-        display: block;
-        width: 100%;
-        text-align: center;
-        line-height: 50px;
         opacity: 1;
         transform: translateX(0);
-
-        img {
-          position: relative;
-          transform: rotate(90deg);
-          margin-bottom: 3px;
-          margin-left: 8px;
-        }
       }
 
       a:nth-of-type(2) { transition: 0.3s ease 0.35s; }
