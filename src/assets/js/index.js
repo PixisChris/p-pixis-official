@@ -20,14 +20,12 @@ docReady(() => {
   setHomePageScreensEffect();
 
   // scroll.js start
-  if (window.innerWidth >= 768) {
-    document.addEventListener('scroll', () => {
-      const wH = window.innerHeight;
-      const yOff = window.pageYOffset + wH;
-      setHomePageWelcomeEffect(yOff, wH);
-      setFnPageEffect(yOff, wH);
-    });
-  }
+  document.addEventListener('scroll', () => {
+    const wH = window.innerHeight;
+    const yOff = window.pageYOffset + wH;
+    setHomePageWelcomeEffect(yOff, wH);
+    window.innerWidth >= 768 && setFnPageEffect(yOff, wH);
+  });
   // scroll.js end
 });
 
