@@ -45,9 +45,9 @@ const setHomePageScreensEffect = () => {
     document.querySelector('.bar-body').classList.add('move');
     dataScreens.forEach((dataScreen) => {
       if (dataScreen.dataset.screen == screenIndex) {
-        dataScreen.classList.add('active');
+        dataScreen?.classList.add('active');
       } else {
-        dataScreen.classList.remove('active');
+        dataScreen?.classList.remove('active');
       }
     });
     screenIndex = screenIndex + 1 > 6 ? 1 : screenIndex + 1;
@@ -79,7 +79,7 @@ const setHomePageWelcomeEffect = (yOff, wH) => {
   scrollAnims.forEach((scrollAnim) => {
     const scrollPos = scrollAnim.offsetTop + wH / 2;
     if (yOff >= scrollPos) {
-      scrollAnim.classList.add('scroll-anim-show');
+      scrollAnim?.classList.add('scroll-anim-show');
     }
   });
 };

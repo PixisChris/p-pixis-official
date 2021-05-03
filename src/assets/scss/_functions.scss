@@ -11,6 +11,7 @@
     display: flex;
     justify-content: space-between;
     background-color: #F8F7F6;
+    padding-bottom: 0;
 
     @media screen and (max-width: $mobile-break-point) {
       flex-direction: column-reverse;
@@ -50,6 +51,7 @@
       padding-top: 180px;
       padding-left: 6%;
       padding-right: 6%;
+      padding-bottom: 8%;
 
       @media screen and (max-width: $mobile-break-point) {
         padding: 0 5%;
@@ -92,6 +94,7 @@
       align-items: flex-start;
 
       img {
+        width: 57px;
         margin-right: 15px;
 
         @media screen and (max-width: $mobile-break-point) {
@@ -124,7 +127,6 @@
 
     .main-screen {
       width: 100%;
-      box-shadow: -25px 44px 100px -15px rgb(0 0 0 / 30%);
       font-size: 0;
       margin-bottom: 50vh;
       will-change: transform;
@@ -138,6 +140,10 @@
       img {
         width: 100%;
       }
+    }
+
+    .main-screen-video {
+      box-shadow: -25px 44px 100px -15px rgb(0 0 0 / 30%);
     }
 
     .function-nav {
@@ -250,6 +256,75 @@
         padding-right: 15%;
         margin-right: 0;
         margin-left: auto;
+      }
+    }
+  }
+
+  section.info {
+    min-height: 0;
+    padding-bottom: 8%;
+
+    h4 {
+      font-size: 36px;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto 40px;
+    }
+
+    .content {
+      align-items: stretch;
+    }
+
+    .info-item {
+      position: relative;
+      border-radius: 0px;
+      padding: 30px 87px 30px 50px;
+      flex: 0 0 calc(100% / 3 - 60px / 3);
+      margin-right: 20px;
+      margin-bottom: 20px;
+
+      & > img {
+        position: absolute;
+        right: 80px;
+        top: -20%;
+        width: 20%;
+        transform: rotateY(180deg);
+      }
+    }
+
+    h3 {
+      font-size: 20px;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    p {
+      text-align: left;
+      font-size: 14px;
+      line-height: 1.8;
+      color: #535965;
+      margin-bottom: 0;
+    }
+
+    .more {
+      position: absolute;
+      width: 100%;
+      top: 5%;
+      width: 60px;
+      bottom: 0;
+      left: auto;
+      right: 0;
+      margin: auto 0 auto auto;
+      height: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-left: 1px solid #F0F2F5;
+
+      img {
+        width: auto;
+        height: 8px;
+        transform: rotateZ(-90deg);
       }
     }
   }
