@@ -1,28 +1,15 @@
 import './_white-paper'
 import './_contact'
+import { docReady, toggleClassName, loadHTMLById } from './_utils';
 
-// TODO: utils.js
-const toggleClassName = (el, className) => {
-  if (document.querySelector(el)) {
-    document.querySelector(el).classList.toggle(className);
-  }
-};
-
-const docReady = (fn) => {
-  if (
-    document.readyState === 'complete' ||
-    document.readyState === 'interactive'
-  ) {
-    setTimeout(fn, 1);
-  } else {
-    document.addEventListener('DOMContentLoaded', fn);
-  }
-};
+window.addEventListener('load', () => {
+  document.querySelector('body').classList.remove('loading');
+  document.querySelector('#loading').classList.add('hide');
+});
 
 docReady(() => {
-  document.querySelector('#nav .product-btn')?.addEventListener('click', () => {
-    toggleClassName('#nav', 'active');
-  });
+  loadHTMLById('nav-components', '_nav.html');
+  loadHTMLById('footer-components', '_footer.html');
 
   document
     .querySelector('#float-banner .close-btn')
@@ -30,51 +17,7 @@ docReady(() => {
       toggleClassName('#float-banner', 'hide');
     });
 
-  document
-    .querySelector('#nav-mobile .nav-menu-btn')
-    ?.addEventListener('click', () => {
-      toggleClassName('#nav-mobile', 'active');
-    });
-
-  // screens start
-  const screenNodeList = document.querySelectorAll('.screen-preview');
-  const screens = Array.apply(null, screenNodeList);
-  const screenContentNodeList = document.querySelectorAll('.function-wrapper');
-  const screenContents = Array.apply(null, screenContentNodeList);
-  const dataScreens = Array.apply(null, document.querySelectorAll('[data-screen]'));
-
-  let screenIndex = 1;
-  setInterval(() => {
-    document.querySelector('.bar-body').classList.add('move');
-    dataScreens.forEach(dataScreen => {
-      if (dataScreen.dataset.screen == screenIndex) {
-        dataScreen.classList.add('active');  
-      } else {
-        dataScreen.classList.remove('active');
-      }
-    })
-    screenIndex = screenIndex + 1 > 6 ? 1 : screenIndex + 1;
-  }, 5000);
-  screens.forEach((screen) => {
-    const screenNum = screen.dataset.screen;
-    screen.addEventListener('click', () => {
-      screens.forEach((s) => {
-        if (s.dataset.screen === screenNum)  {
-          s.classList.add('active');    
-        } else {
-          s.classList.remove('active');
-        }
-      });
-      screenContents.forEach((s) => {
-        if (s.dataset.screen === screenNum)  {
-          s.classList.add('active');    
-        } else {
-          s.classList.remove('active');
-        }
-      });
-    });
-  })
-  // screens end
+  setHomePageScreensEffect();
 
   // scroll.js start
   if (window.innerWidth >= 768) {
@@ -88,17 +31,60 @@ docReady(() => {
   // scroll.js end
 });
 
+const setHomePageScreensEffect = () => {
+  // screens start
+  const screenNodeList = document.querySelectorAll('.screen-preview');
+  const screens = Array.apply(null, screenNodeList);
+  const screenContentNodeList = document.querySelectorAll('.function-wrapper');
+  const screenContents = Array.apply(null, screenContentNodeList);
+  const dataScreens = Array.apply(
+    null,
+    document.querySelectorAll('[data-screen]')
+  );
+
+  let screenIndex = 1;
+  setInterval(() => {
+    document.querySelector('.bar-body').classList.add('move');
+    dataScreens.forEach((dataScreen) => {
+      if (dataScreen.dataset.screen == screenIndex) {
+        dataScreen.classList.add('active');
+      } else {
+        dataScreen.classList.remove('active');
+      }
+    });
+    screenIndex = screenIndex + 1 > 6 ? 1 : screenIndex + 1;
+  }, 5000);
+  screens.forEach((screen) => {
+    const screenNum = screen.dataset.screen;
+    screen.addEventListener('click', () => {
+      screens.forEach((s) => {
+        if (s.dataset.screen === screenNum) {
+          s.classList.add('active');
+        } else {
+          s.classList.remove('active');
+        }
+      });
+      screenContents.forEach((s) => {
+        if (s.dataset.screen === screenNum) {
+          s.classList.add('active');
+        } else {
+          s.classList.remove('active');
+        }
+      });
+    });
+  });
+  // screens end
+};
 
 const setHomePageWelcomeEffect = (yOff, wH) => {
   const scrollAnims = document.querySelectorAll('.scroll-anim');
-  scrollAnims.forEach(scrollAnim => {
+  scrollAnims.forEach((scrollAnim) => {
     const scrollPos = scrollAnim.offsetTop + wH / 2;
     if (yOff >= scrollPos) {
-      scrollAnim.classList.add('scroll-anim-show')
+      scrollAnim.classList.add('scroll-anim-show');
     }
   });
 };
-
 
 const setFnPageEffect = (yOff, wH) => {
   const fnContainers = document.querySelectorAll('[data-scroll="fn"]');
@@ -109,8 +95,10 @@ const setFnPageEffect = (yOff, wH) => {
     const scrollBaseline = fnContainer.querySelector('.scroll-baseline');
     const scrollEndline = fnContainer.querySelector('.scroll-endline');
 
-    const screenStart = scrollBaseline.offsetTop + fnMainScreen.offsetHeight / 2;
-    const screenMid = fnMainScreen.offsetTop + fnMainScreen.offsetHeight / 3 * 2;
+    const screenStart =
+      scrollBaseline.offsetTop + fnMainScreen.offsetHeight / 2;
+    const screenMid =
+      fnMainScreen.offsetTop + (fnMainScreen.offsetHeight / 3) * 2;
     const screenEnd = fnMainScreen.offsetTop + fnMainScreen.offsetHeight;
     const pageEnd = scrollEndline.offsetTop;
     if (yOff >= screenMid) {
@@ -136,16 +124,16 @@ const setFnPageEffect = (yOff, wH) => {
           ? 1
           : (yOff - screenStart) / (screenEnd - screenStart);
       if (yOff <= pageEnd) {
-        const translateX = layout === 'left' ? `calc(${50 * perc}% - ${5 * perc}vw)` : `calc(-${50 * perc}% + ${5 * perc}vw)`
-        fnMainScreen.style.transform = `scale(${1 - 0.4 * perc}) translate3d(${translateX}, calc(${
-          (yOff - screenStart) / 0.6
-        }px - ${0 + 83.3 * perc}%), 0)`;
+        const translateX =
+          layout === 'left'
+            ? `calc(${50 * perc}% - ${5 * perc}vw)`
+            : `calc(-${50 * perc}% + ${5 * perc}vw)`;
+        fnMainScreen.style.transform = `scale(${
+          1 - 0.4 * perc
+        }) translate3d(${translateX}, calc(${(yOff - screenStart) / 0.6}px - ${
+          0 + 83.3 * perc
+        }%), 0)`;
       }
     }
-  }); 
-}
-
-window.addEventListener('load', () => {
-  document.querySelector('body').classList.remove('loading');
-  document.querySelector('#loading').classList.add('hide');
-});
+  });
+};
