@@ -7,6 +7,8 @@
     <meta name="open-default-browser" content="true" />
     <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <title>PIXIS 聯繫我們 | 內網管理系統，高效率企業問題</title>
     <link rel="stylesheet" href="./assets/scss/index.scss" />
 
@@ -60,9 +62,21 @@
 
         gtag('config', 'UA-43690573-9');
     </script>
+
+    <!-- Smartsupp Live Chat script -->
+    <script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = '92269eb98a9d7fd316046d371184870cb8f078e3';
+    window.smartsupp||(function(d) {
+      var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+      s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+      c.type='text/javascript';c.charset='utf-8';c.async=true;
+      c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+    </script>
 </head>
 
-<body class="contact-page">
+<body class="contact-page js-contact-page">
     <nav id="nav-mobile" class="m">
         <div class="nav-logo">
             <a href="/index.html">
@@ -232,7 +246,7 @@
             </p>
         </div>
         <div class="contact-form">
-            <form action="">
+            <form class="js-contact-form" action="">
                 <h1 class="title">歡迎與我們聯絡</h1>
                 <div class="g-input-unit half">
                     <input class="g-input" type="text" id="last-name" name="last-name" placeholder="姓 *" required>
@@ -262,19 +276,19 @@
                 <div class="g-input-unit half">
                     <select class="g-input" id="usage" name="usage" required>
                         <option value>洽詢用途 *</option>
-                        <option value="2">內部使用測試</option>
-                        <option value="3">產品業務評估</option>
-                        <option value="4">其它用途</option>
+                        <option value="內部使用測試">內部使用測試</option>
+                        <option value="產品業務評估">產品業務評估</option>
+                        <option value="其它用途">其它用途</option>
                     </select>
                 </div>
                 <div class="g-input-unit half">
                     <select class="g-input" id="company-size" name="company-size" required>
                         <option value>公司規模 *</option>
-                        <option value="2">100人以下</option>
-                        <option value="3">100-500人</option>
-                        <option value="4">500-1000人</option>
-                        <option value="5">1000-2000人</option>
-                        <option value="6">2000人以上</option>
+                        <option value="100人以下">100人以下</option>
+                        <option value="100-500人">100-500人</option>
+                        <option value="500-1000人">500-1000人</option>
+                        <option value="1000-2000人">1000-2000人</option>
+                        <option value="2000人以上">2000人以上</option>
                     </select>
                 </div>
                 <div class="g-input-unit">
@@ -284,10 +298,10 @@
                 <div class="g-input-unit">
                     <select class="g-input" id="how" name="how">
                         <option value>如何得知 PIXIS</option>
-                        <option value="2">社群</option>
-                        <option value="3">同業推薦</option>
-                        <option value="4">展覽</option>
-                        <option value="5">廣告</option>
+                        <option value="社群">社群</option>
+                        <option value="同業推薦">同業推薦</option>
+                        <option value="展覽">展覽</option>
+                        <option value="廣告">廣告</option>
                     </select>
                 </div>
                 <div class="g-input-unit g-checkbox-unit">

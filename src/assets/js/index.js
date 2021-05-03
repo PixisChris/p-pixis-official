@@ -1,4 +1,5 @@
 import './_white-paper'
+import './_contact'
 
 // TODO: utils.js
 const toggleClassName = (el, className) => {
