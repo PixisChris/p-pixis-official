@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="open-default-browser" content="true" />
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+    <title>PIXIS 資安好文 | 內網管理系統，高效率企業問題</title>
+    <link rel="stylesheet" href="./assets/scss/index.scss" />
+
+
+    <!-- Global site tag (gtag.js) - Google Ads: 837768354 -->
+    <script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script>
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async=""
+        src="http://www.googletagmanager.com/gtag/js?id=UA-43690573-9&amp;l=dataLayer&amp;cx=c"></script>
+    <script type="text/javascript" async="" src="https://www.google.com/pagead/conversion_async.js"></script>
+    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WKRQ3KZ"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-837768354"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-837768354');
+    </script>
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion',
+                {
+                    'send_to': 'AW-837768354/cZVdCPnEmXsQoqm9jwM',
+                    'event_callback': callback
+                });
+            return false;
+        }
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WKRQ3KZ');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-43690573-9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-43690573-9');
+    </script>
+</head>
+
+<body class="article-page loading">
+    <div id="loading">
+        <div class="css-loading-container">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </div>
+
+    <div id="nav-components"></div>
+
+    <header class="bg-cover" style="background-image: url('./assets/img/case-bg.png');">
+        <div class="content">
+            <h3>・Case</h3>
+            <h1>資安好文</h1>
+        </div>
+    </header>
+
+    <section class="article-wrapper">
+        <div class="content">
+            <div class="article-header">
+                <div class="article-date">2020.10.01</div>
+                <div class="article-icon-item">
+                    <img src="./assets/img/articles/icon-app.svg" alt="">
+                    應用程式盤點
+                </div>
+            </div>
+            <h1 class="article-title">
+                [PIXIS CTO] NAC (Network Access Control) 網路存取控管解決方案
+            </h1>
+            <div class="article-functions">
+                <div>Functions</div>
+                <div class="icon-item">
+                    <img src="./assets/img/articles/icon-app.svg" alt="">
+                    應用程式盤點
+                </div>
+                <div class="icon-item">
+                    <img src="./assets/img/icons/nav-1-1.svg" alt="">
+                    符規預檢
+                </div>
+                <div class="icon-item">
+                    <img src="./assets/img/icons/nav-2-2.svg" alt="">
+                    端點流量排名
+                </div>
+                <div class="icon-item">
+                    <img src="./assets/img/icons/nav-1-3.svg" alt="">
+                    即時監看
+                </div>
+                <div class="counts">
+                    15+
+                </div>
+            </div>
+            <div class="article-content">
+                在今日隨著電腦資訊快速發展、網路科技一日千里的時代,對於網路資安防禦
+                的觀念已經十分的普及。然而,最早的資安防禦架構,主要都著重強調對於連
+                接外部網路的防禦,諸如防火牆、駭客入侵偵測、網頁攻擊防禦...等等;到現
+                在所有對外防禦的產品已經十分的完整成熟。但近年來駭客入侵內網的事件頻
+                傳,知名企業重要資料被偷竊的事件不斷時有所聞。於是,對於防範從企業內
+                部入侵與攻擊的需求,又成為新的話題。 談到企業內部網路防禦,不得不提
+                到最底層的乙太網路 (Ethernet) ,因其成本低廉、架構簡單容易佈建,早已
+                打敗其他結構嚴謹,功能完整的網路架構 (如: Token-Ring、ATM等協定),長
+                久以來乙太網路已成為基礎網路的標準。但是同時也因先天上簡單的設計,沒
+                有任何管理或控制連網設備的機制,造成不易管理、無法有效監控上線設備的
+                問題;又再如,隨著BYOD(Bring Your Own Device)各種移動設備的盛行,
+                需求不斷地成長,企業對於如何因應此風潮的同時,又要能維護內網安全,無
+                不希望能夠找到一個有效的解決的管理手段,更加深了企業對於企業內部資安
+                防禦方案的重視。
+                <br><br>
+                隨著內網安全與管理需求不斷地增加,許多因應之解決方案也隨之產生。
+                NAC 這樣的一個名詞因之而誕生。NAC (Network Access control) 主要的功
+                能就在於解決設備在連上企業或組織內部網路的第一時間,如何來判斷其是否
+                合法,有無權限進入網路的問題。就好像從旅客國外回國進入海關,海關第一
+                時間就會檢查你是否有合法授權可以入境。
+                <br><br>
+                NAC是所有此類產品的統稱,所有具備檢查設備接入網路合法性的種功能的
+                解決方案,均稱為NAC產品。( 隨著網路與資安的複雜度,之後NAC 的產
+                品,又加入如何判斷接入設備的OS版本、系統Patch是否更新到最新版本,
+                防毒軟體病毒碼是否更新...等需求,本文之後也會將此功能稍加討論)。而在
+                NAC多種產品與協定中,以802.1X的功能的方案更為其中的代表。最早期,
+                思科之整體NAC方案便是以802.1X 為基礎核心而建構。
+
+                <br><br>
+                <h3>802.1X的架構及功能優點說明:</h3>
+                <ol>
+                    <li>
+                        802.1X是一種ISO第二層的協定,可以在設備接入網路的第一時間,而且
+                        是在不需要IP位址的狀況下就能對設備或使用者進行身份認證。
+                    </li>
+                    <br>
+                    <li>
+                        802.1X可以針對接入之設備(Device)或者是個人(User)進行驗證,
+                        802.1X 採用的認證機制為EAP (Extended Authentication )協定,在所有
+                        NAC產品的方案中,具備十分嚴謹及安全的認證方式,不易被有心人士突
+                        破。
+                    </li>
+                    <br>
+                    <li>
+                        802.1X 具備另一優點為提供動態VLAN的功能。所謂動態VLAN的功能是
+                        在設備連接的交換器設備上的一種功能。該交換器的連接埠並不固定於某
+                        個VLAN或網段,可依據接入之連網設備或使用者的身份,如該設備的
+                        MAC 位址,或USER-ID 判斷其所屬的單位及其網段,將該設備所連接的
+                        交換器埠,即時動態改為所屬之網段 VLAN ( 隨著不同的設備或使用者連
+                        接,該連接埠也動態變更其所屬 VLAN)。如果設備無法通過認證,則可將
+                        該設備連接埠改為獨立或封鎖的VLAN網段,進行後續處理。因為是經由
+                        網路交換器分隔VLAN,相當於實體隔離,十分的安全。
+                        動態VLAN能配合使用者的單位身份,它的好處是不論使用者在任何單位
+                        的部門、地點或樓層,隨時可將其所連接之交換器網路埠即時改成所屬之
+                        VLAN及網段,所以所配發的IP可以永遠固定同一個。這在現在移動設備
+                        盛行,機動作業環境,提供使用者的極大的便利性,同時因設備之IP位址
+                        的一致性,更有助於資安追蹤與考核的方便性。(不須因為使用者或設備
+                        的移動造成IP位址需要變動產生IP追蹤的困難)。
+                    </li>
+                </ol>
+                當在透過嚴謹的EAP認證程序驗證個人或設備為合法的狀態時,便可用該使
+                用者所屬之單位組織派送相關之網段VLAN,當設備進入此VLAN以後更可派
+                送相對應的IP地址,因為其支持動態網段所以帶來的好處是不論使用者到任
+                何其他單位的部門、地點、樓層,所接入的交換器的埠均會變成他所屬單位
+                的VLAN及IP 網段。
+
+                <br><br>
+                <h3>802.1X的缺點:</h3>
+                產品有優點通常也會有些對應的缺點,802.1X有其嚴謹的認證機制及安全的
+                隔離防禦能力,但因此其架構也相對複雜,所有的末端網路交換器均需要支
+                援802.1X 的功能 (在現今大部分廠牌的交換器均已支援802.1X,這點已經不
+                再是問題) , 同時 802.1X也需要建置多個伺服主機分別進行認證、確認身份
+                並派送VLAN及派送所需IP位址的功能。 而建置前期也需要大量的工作將企
+                業內部的設備MAC 地址進行輸入,而且同時需要更新多個伺服器上面的相關
+                資料,之後的資料同步維護也需要投入不少的人力 ( 即便全部都使用微軟系統
+                的環境 AD、NPA及DHCP等,多種功能之間也無法同步,需要分別進行資料
+                的建立與維護)。近來NAC產品對於接入設備檢查的需求已經從認證之外,更
+                加上了對接入設備的系統版本、Patch更新、病毒版本更新等等的檢查,確認
+                設備是否安全才允許其進入網路,如此一來更需要在後台連結更多種的伺服器
+                來進行相關的檢測,使得整體的系統架構更加複雜,更加難以維護.。
+                <br><br>
+                另一個問題為802.1X 認證有只在設備接入網路時進行認證及確認身份的動
+                作,一旦核可之後,就不再做後續追蹤,(就如同邊境海關只在人員經過海關
+                時檢查有無合法證件,入境後就不再管理)。例如: 如果某員工電腦合法進入內
+                網網路後,擅自更改IP位址,802.1X便無法管理此種違規行為。又如連線設
+                備何時離線(上下線時間紀錄),或者目前總共有多少設備上線等設備追蹤與管
+                理問題,都非802.1X所涵蓋。
+
+                <br><br>
+                <h3>IP/ARP 偵測與阻斷管控解決方案 :</h3>
+                有別於802.1X方案,另一種以設備IP/MAC位址為主體進行管控的方式,採
+                用IP/ARP協定對於接入設備之MAC 進行即時偵測,判斷其是否為授權設備,
+                從而決定其是否能夠進入網路。IP/MAC 控管系統,以偵測設備之 ARP 廣播內
+                容為基礎。利用所有設備接入乙太網路環境時,必須使用ARP 協定與其他設
+                備或閘道器溝通的原理,即時偵測接入設備的MAC及IP等相關資訊,並判斷
+                此MAC 位址是否具備合法授權,可以進入網路中。或者如果設備沒有授權,
+                便利用干擾設備之 ARP 內容之方式,立即阻擋該設備進入網路。
+                <br><br>
+                此種 NAC 解決方案雖不具有802.1X EAP等級之嚴謹認證機制,但具備多項
+                優點:
+                <ol>
+                    <li>
+                        具備快速建置,易於管理的優勢。
+                    </li>
+                    <br>
+                    <li>
+                        不限定任何廠牌之網路交換器均可相容,迅速整合於企業網路之中。
+                    </li>
+                    <br>
+                    <li>
+                        另外一種主要的功能是具備不斷即時的追蹤的能力,即使設備已經北允許
+                        進入網路,仍然受到IP/MAC管理系統不斷的監控,諸入不可隨意更改IP
+                        位址、位置的移動、何時上下線等都有詳細的紀錄。
+                    </li>
+                    <br>
+                    <li>
+                        可整合微軟OS Patch更新,病毒軟體的病毒碼更新。於設備接入網路第
+                        一時間進行版本預先檢查(Pre-Check),而且在隨後設備有任何違反網路
+                        政策的情況時,可隨時進行網路阻隔。
+                    </li>
+                    <br>
+                </ol>
+
+                <br><br>
+                兩種NAC解決方案,使用的架構與協定並不相,各有其優點;802.1X 以 EAP
+                協定為基礎,搭配動態VLAN功能提供安全、具備嚴謹的網路接入認證功能及
+                動態的VLAN派送功能。以IP/ARP協定為基礎之IP/MAC 控管方式,具備彈性
+                與快速建置的優勢以及持續性的監控能力。 實務上若能結合此兩種方案的特
+                性,則可吸收互補兩種產品的優點,形成一種更加完整的 NAC 解決方案。台
+                灣飛泓科技公司,研發生產NAC 產品技術多年,深知各種NAC協定之功能及
+                優勢,針對此兩種解決方案加以整合,融合802.1X 及動態 VLAN的技術以及
+                IP/ARP 管控技術的各項功能,產生一個全新整合性的 NAC 解決方案及更加完
+                整的功能:
+                <ol>
+                    <li>
+                        具備802.1X 高安全性(EPA) 協定認證機制 設備接入網路時,系統可同步
+                        進行Pre-Check,檢查設備OS Patch狀態,病毒版本的更新等。
+                    </li>
+                    <br>
+                    <li>
+                        分配使用者設備至所屬單位VLAN ( 動態 VLAN功能 ) 不論設備接入或移
+                        動至公司內部任何樓層、地點,永遠派送同一個IP (並可綁訂 MAC 與 IP)
+                        包含IPv4 及IPv6 完整派送。
+                    </li>
+                    <br>
+                    <li>
+                        隨時追縱設備狀態 (IP/MAC 網路政策追蹤控管功能) 除經過802.1X認證
+                        之外,在網內中仍隨時監控設備,任何違反網路政策之行為,仍可立即封
+                        鎖。
+                    </li>
+                    <br>
+                    <li>
+                        結合訪客系統及員工簽入系統 設備聯網時立即自動偵測該設備MAC 位
+                        址,無須手動建置,訪客或員工填入相關資訊,立即整合於後台系統中進
+                        行認證及政策之派送。大幅簡化後台資料建置或維護的人力需求。
+                    </li>
+                    <br>
+                    <li>
+                        設備管制 包含個人電腦、NB 、平板、手機、有線、無線等終端設備,均
+                        可管制。
+                    </li>
+                    <br>
+                    <li>
+                        單一系統包含所有認證、VLAN資訊傳遞、IP派送之功能 簡化原有
+                        802.1X需要建置多個後台伺服器的工程,架構單純建置快速,人員或訪
+                        客資料統一管控,無須跨多個系統進行維護。
+                    </li>
+                    <br>
+                </ol>
+
+
+                <a href="/white-paper.html" class="product-cta">
+                    <img src="./assets/img/product-cta.png" alt="">
+                </a>
+            </div>
+            <a href="/articles.html" class="article-btn">
+                返回總覽
+                <img src="./assets/img/articles/icon-arrow.svg" alt="">
+            </a>
+        </div>
+    </section>
+
+    <section class="more-articles">
+        <div class="sub-title">・Case</div>
+        <div class="more-articles-content article-list">
+            <a href="/article-2.html" class="article">
+                <div class="icon-item">
+                    <img src="./assets/img/articles/icon-app.svg" alt="">
+                    應用程式盤點
+                </div>
+                <div class="img bg-cover" style="background-image: url('./assets/img/articles/article-2-cover.png')">
+                </div>
+                <div class="note">
+                    <span>2020.10.01</span>
+                </div>
+                <div class="title">[PIXIS CTO] NAC (Network Access Control) 網路存取控管解決方案</div>
+            </a>
+            <a href="/article-1.html" class="article">
+                <div class="icon-item">
+                    <img src="./assets/img/articles/icon-app.svg" alt="">
+                    應用程式盤點
+                </div>
+                <div class="img bg-cover" style="background-image: url('./assets/img/articles/article-1-cover.png')">
+                </div>
+                <div class="note">
+                    <span>2021.05.04</span>
+                </div>
+                <div class="title">IP 及乙太網路管理之探討</div>
+            </a>
+            <a href="https://cyber.ithome.com.tw/2021/exhibition-page/105" target="_blank" class="article">
+                <div class="icon-item">
+                    <img src="./assets/img/articles/icon-app.svg" alt="">
+                    應用程式盤點
+                </div>
+                <div class="img bg-cover" style="background-image: url('./assets/img/medias/medias-1-cover.png')"></div>
+                <div class="note">
+                    <span>2020.05.26</span>
+                </div>
+                <div class="title">PIXIS 受 TCA台灣電腦公會 專訪</div>
+            </a>
+            <a href="/cases-3.html" class="article">
+                <div class="icon-item">
+                    <img src="./assets/img/articles/icon-app.svg" alt="">
+                    應用程式盤點
+                </div>
+                <div class="img bg-cover" style="background-image: url('./assets/img/cases/cases-3-cover.png')"></div>
+                <div class="note">
+                    <span>2021.02.01</span>
+                </div>
+                <div class="title">企業廠區多達數千台 Switch 該如何有效率地辨識裝置以及旗下介接的設備? PIXIS 具備什麼技術解決這類難題?</div>
+            </a>
+            <a href="/cases-4.html" class="article">
+                <div class="icon-item">
+                    <img src="./assets/img/articles/icon-app.svg" alt="">
+                    應用程式盤點
+                </div>
+                <div class="img bg-cover" style="background-image: url('./assets/img/cases/cases-4-cover.png')"></div>
+                <div class="note">
+                    <span>2020.11.12</span>
+                </div>
+                <div class="title">許多大型企業依然使用 Excel 進行資安、設備管理，這將大幅提高維安風險， 而 PIXIS 提供了絕佳的解決方案</div>
+            </a>
+            <a href="/cases-2.html" class="article">
+                <div class="icon-item">
+                    <img src="./assets/img/articles/icon-app.svg" alt="">
+                    應用程式盤點
+                </div>
+                <div class="img bg-cover" style="background-image: url('./assets/img/cases/cases-2-cover.png')"></div>
+                <div class="note">
+                    <span>2021.03.15</span>
+                </div>
+                <div class="title">多個產品串接的同時會耗費大量人力成本，在與企業的合作中，工程師針對重重難題提出解決方案，最終取得了雙贏</div>
+            </a>
+        </div>
+    </section>
+
+    <div id="footer-components"></div>
+</body>
+<script src="./assets/js/index.js"></script>
+
+</html>
