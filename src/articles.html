@@ -1,170 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="open-default-browser" content="true" />
-        <meta
-            name="viewport"
-            content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
-        />
-        <title>PIXIS 資安好文 | 內網管理系統，高效率企業問題</title>
-        <link rel="stylesheet" href="./assets/scss/index.scss" />
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="open-default-browser" content="true" />
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+    <title>PIXIS 資安好文 | 內網管理系統，高效率企業問題</title>
+    <link rel="stylesheet" href="./assets/scss/index.scss" />
 
 
-        <!-- Global site tag (gtag.js) - Google Ads: 837768354 -->
-        <script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script>
-        <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-        <script type="text/javascript" async="" src="http://www.googletagmanager.com/gtag/js?id=UA-43690573-9&amp;l=dataLayer&amp;cx=c"></script>
-        <script type="text/javascript" async="" src="https://www.google.com/pagead/conversion_async.js"></script>
-        <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WKRQ3KZ"></script>
-        <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-837768354"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Ads: 837768354 -->
+    <script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script>
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async=""
+        src="http://www.googletagmanager.com/gtag/js?id=UA-43690573-9&amp;l=dataLayer&amp;cx=c"></script>
+    <script type="text/javascript" async="" src="https://www.google.com/pagead/conversion_async.js"></script>
+    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WKRQ3KZ"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-837768354"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-            gtag('config', 'AW-837768354');
-        </script>
-        <script>
-            function gtag_report_conversion(url) {
-                var callback = function () {
-                    if (typeof (url) != 'undefined') {
-                        window.location = url;
-                    }
-                };
-                gtag('event', 'conversion',
+        gtag('config', 'AW-837768354');
+    </script>
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion',
                 {
                     'send_to': 'AW-837768354/cZVdCPnEmXsQoqm9jwM',
                     'event_callback': callback
                 });
-                return false;
-            }
-        </script>
-        <!-- Google Tag Manager -->
-        <script>
-            (function (w, d, s, l, i) {
-                w[l] = w[l] || []; w[l].push({
-                    'gtm.start':
+            return false;
+        }
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
                     new Date().getTime(), event: 'gtm.js'
-                }); var f = d.getElementsByTagName(s)[0],
+            }); var f = d.getElementsByTagName(s)[0],
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', 'GTM-WKRQ3KZ');</script>
-        <!-- End Google Tag Manager -->
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-43690573-9"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WKRQ3KZ');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-43690573-9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-            gtag('config', 'UA-43690573-9');
-        </script>
-    </head>
+        gtag('config', 'UA-43690573-9');
+    </script>
+</head>
 
-    <body class="other-page articles-page loading">
-        <div id="loading">
-            <div class="css-loading-container">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-                <div class="shape shape-3"></div>
-                <div class="shape shape-4"></div>
+<body class="other-page articles-page loading">
+    <div id="loading">
+        <div class="css-loading-container">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </div>
+
+    <div id="nav-components"></div>
+
+    <header class="bg-cover" style="background-image: url('./assets/img/articles-bg.png');">
+        <div class="content">
+            <h3>・Professional Articles</h3>
+            <h1>資安好文</h1>
+            <p>為超過800全球品牌拓增商業契機與壯大成長。<br>深入了解我們如何為他們達成並超越目標。</p>
+        </div>
+    </header>
+
+    <section class="partners">
+        <img src="./assets/img/partners-pc.jpg" alt="" class="partners-logo pc">
+    </section>
+
+    <section class="articles">
+        <div class="content">
+            <div class="article-list">
+                <a href="/article-1.html" class="article">
+                    <div class="icon-item">
+                        <img src="./assets/img/articles/icon-app.svg" alt="">
+                        應用程式盤點
+                    </div>
+                    <div class="img bg-cover"
+                        style="background-image: url('./assets/img/articles/article-1-cover.png')"></div>
+                    <div class="note">
+                        <span>2021.05.04</span>
+                    </div>
+                    <div class="title">IP 及乙太網路管理之探討</div>
+                </a>
+                <a href="/article-2.html" class="article">
+                    <div class="icon-item">
+                        <img src="./assets/img/articles/icon-app.svg" alt="">
+                        應用程式盤點
+                    </div>
+                    <div class="img bg-cover"
+                        style="background-image: url('./assets/img/articles/article-2-cover.png')"></div>
+                    <div class="note">
+                        <span>2020.10.01</span>
+                    </div>
+                    <div class="title">[PIXIS CTO] NAC (Network Access Control) 網路存取控管解決方案</div>
+                </a>
+                <a class="article" style="visibility: hidden;">
+                    <div class="icon-item">
+                        <img src="./assets/img/articles/icon-app.svg" alt="">
+                        應用程式盤點
+                    </div>
+                    <div class="img bg-cover"
+                        style="background-image: url('./assets/img/articles/article-2-cover.png')"></div>
+                    <div class="note">
+                        <span>2020.10.01</span>
+                    </div>
+                    <div class="title">[PIXIS CTO] NAC (Network Access Control) 網路存取控管解決方案</div>
+                </a>
             </div>
         </div>
+    </section>
 
-        <div id="nav-components"></div>
+    <div id="footer-components"></div>
+</body>
+<script src="./assets/js/index.js"></script>
 
-        <header class="bg-cover" style="background-image: url('./assets/img/articles-bg.png');">
-            <div class="content">
-                <h3>・Professional Articles</h3>
-                <h1>資安好文</h1>
-                <p>為超過800全球品牌拓增商業契機與壯大成長。<br>深入了解我們如何為他們達成並超越目標。</p>
-            </div>
-        </header>
-
-        <section class="partners">
-            <img src="./assets/img/partners-pc.jpg" alt="" class="partners-logo pc">
-        </section>
-
-        <section class="articles">
-            <div class="content">
-                <div class="article-list">
-                    <a href="" class="article">
-                        <div class="icon-item">
-                            <img src="./assets/img/articles/icon-app.svg" alt="">
-                            應用程式盤點
-                        </div>
-                        <div class="img bg-cover" style="background-image: url('./assets/img/articles/1.png')"></div>
-                        <div class="note">
-                            <span>2021.02.15</span>
-                        </div>
-                        <div class="title">台積電內網系統安排，設計出四重訪客驗證，除了保全外的額外一層線上保護</div>
-                    </a>
-                    <a href="" class="article">
-                        <div class="icon-item">
-                            <img src="./assets/img/articles/icon-app.svg" alt="">
-                            應用程式盤點
-                        </div>
-                        <div class="img bg-cover" style="background-image: url('./assets/img/articles/2.png')"></div>
-                        <div class="note">
-                            <span>2021.02.15</span>
-                        </div>
-                        <div class="title">台積電內網系統安排，設計出四重訪客驗證，除了保全外的額外一層線上保護</div>
-                    </a>
-                    <a href="" class="article">
-                        <div class="icon-item">
-                            <img src="./assets/img/articles/icon-dashboard.svg" alt="">
-                            儀俵版
-                        </div>
-                        <div class="img bg-cover" style="background-image: url('./assets/img/articles/3.png')"></div>
-                        <div class="note">
-                            <span>2021.02.15</span>
-                        </div>
-                        <div class="title">台積電內網系統安排，設計出四重訪客驗證，除了保全外的額外一層線上保護</div>
-                    </a>
-                    <a href="" class="article">
-                        <div class="icon-item">
-                            <img src="./assets/img/articles/icon-app.svg" alt="">
-                            應用程式盤點
-                        </div>
-                        <div class="img bg-cover" style="background-image: url('./assets/img/articles/4.png')"></div>
-                        <div class="note">
-                            <span>2021.02.15</span>
-                        </div>
-                        <div class="title">台積電內網系統安排，設計出四重訪客驗證，除了保全外的額外一層線上保護</div>
-                    </a>
-                    <a href="" class="article">
-                        <div class="icon-item">
-                            <img src="./assets/img/articles/icon-app.svg" alt="">
-                            應用程式盤點
-                        </div>
-                        <div class="img bg-cover" style="background-image: url('./assets/img/articles/5.png')"></div>
-                        <div class="note">
-                            <span>2021.02.15</span>
-                        </div>
-                        <div class="title">台積電內網系統安排，設計出四重訪客驗證，除了保全外的額外一層線上保護</div>
-                    </a>
-                    <a href="" class="article">
-                        <div class="icon-item">
-                            <img src="./assets/img/articles/icon-app.svg" alt="">
-                            應用程式盤點
-                        </div>
-                        <div class="img bg-cover" style="background-image: url('./assets/img/articles/6.png')"></div>
-                        <div class="note">
-                            <span>2021.02.15</span>
-                        </div>
-                        <div class="title">台積電內網系統安排，設計出四重訪客驗證，除了保全外的額外一層線上保護</div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <div id="footer-components"></div>
-    </body>
-    <script src="./assets/js/index.js"></script>
 </html>
