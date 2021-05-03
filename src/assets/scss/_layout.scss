@@ -189,7 +189,6 @@ section.partners {
   text-align: right;
   min-height: auto;
   height: auto;
-  overflow: hidden;
 
   img {
     width: 80%;
@@ -959,5 +958,14 @@ footer#footer {
     position: relative;
     transform: translateY(-50px);
     box-shadow: 0px 10px 45px 0px rgba(0, 0, 0, .1);
+  }
+}
+
+.articles-page, .medias-page, .case-page {
+  header {
+    padding-top: 180px;
+  }
+  section.partners {
+    overflow: initial;
   }
 }
