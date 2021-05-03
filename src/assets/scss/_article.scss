@@ -45,12 +45,37 @@
     padding: 0 40px;
     border-radius: 40px;
     height: 73px;
+    @media screen and (max-width: $mobile-break-point) {
+      display: none;
+    }
+
+    & > div  {
+      @media screen and (max-width: $mobile-break-point) {
+        display: none;
+      }
+    }
 
     & > div:nth-of-type(1) {
       font-size: 15px;
       padding-right: 20px;
       margin-right: 33px;
       border-right: 1px solid #D0D3D9;
+      
+      @media screen and (max-width: $mobile-break-point) {
+        display: block;
+      }
+    }
+
+    & > div:nth-of-type(2) {
+      @media screen and (max-width: $mobile-break-point) {
+        display: block;
+      }
+    }
+
+    & > div:nth-last-of-type(1) {
+      @media screen and (max-width: $mobile-break-point) {
+        display: block;
+      }
     }
 
     .icon-item {
@@ -93,6 +118,10 @@
     font-size: 16px;
     line-height: 2;
     color: #171A1D;
+
+    @media screen and (max-width: $mobile-break-point) {
+      width: 100%;
+    }
   }
 
   .article-btn {
@@ -151,4 +180,7 @@
   left: -15%;
   bottom: 0;
   transform: translateX(-100%);
+  @media screen and (max-width: $mobile-break-point) {
+    display: none;
+  }
 }

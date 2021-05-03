@@ -269,6 +269,11 @@
       width: 100%;
       max-width: 1280px;
       margin: 0 auto 40px;
+
+      @media screen and (max-width: $mobile-break-point) {
+        font-size: 30px;
+        text-align: center;
+      }
     }
 
     .content {
@@ -282,6 +287,14 @@
       flex: 0 0 calc(100% / 3 - 60px / 3);
       margin-right: 20px;
       margin-bottom: 20px;
+
+      @media screen and (max-width: $mobile-break-point) {
+        flex: 0 0 95%;
+        width: 95%;
+        margin-left: 2.5%;
+        padding: 7px 87px 30px 30px;
+        margin-bottom: 50px;
+      }
 
       & > img {
         position: absolute;
