@@ -8,8 +8,8 @@ window.addEventListener('load', () => {
 });
 
 docReady(() => {
-  loadHTMLById('nav-components', '_nav.html');
-  loadHTMLById('footer-components', '_footer.html');
+  loadHTMLById('nav-components', 'nav.html');
+  loadHTMLById('footer-components', 'footer.html');
 
   document
     .querySelector('#float-banner .close-btn')
