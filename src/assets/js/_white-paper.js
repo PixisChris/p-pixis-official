@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		 // 如果要直接串接自有後端 api END
 
             e.preventDefault();
-            console.log(e.target);
+            // console.log(e.target);
             var params = {
                 FunctionName : 'sendPost',
                 InvocationType : 'RequestResponse',
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert('很抱歉，為了帶給您最好的服務，我們正在努力更新系統中，請稍後再試。')
             } else {
                 pullResults = JSON.parse(data.Payload);
-                location.href = '/white-paper-success.html';
+                location.href = 'white-paper-success.html';
                 console.log('lambda success');
             }
         });

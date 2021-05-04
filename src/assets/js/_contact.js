@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (document.body.classList.contains('js-contact-page')) {
 		document.querySelector('.js-contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            console.log(e.target);
+            // console.log(e.target);
             var params = {
                 FunctionName : 'sendPost',
                 InvocationType : 'RequestResponse',
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert('很抱歉，為了帶給您最好的服務，我們正在努力更新系統中，請稍後再試。')
             } else {
                 pullResults = JSON.parse(data.Payload);
-                location.href = '/contact-success.html';
+                location.href = 'contact-success.html';
                 console.log('lambda success');
             }
         });
