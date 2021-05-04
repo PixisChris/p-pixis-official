@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "npm run clean && parcel src/*.html --out-dir development -p 3000 --log-level 4 --open",
-        "build": "rimraf ./dist && parcel build src/*.html --out-dir dist --public-url ./ --log-level 4 && cp src/robots.txt dist/robots.txt",
+        "build": "rimraf ./dist && parcel build src/*.html --out-dir dist --public-url ./ --log-level 4 --no-minify && cp src/robots.txt dist/robots.txt",
         "clean": "rimraf ./development && rimraf ./.cache",
         "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
         "deploy": "npm run build && node gh-pages-deploy.js"
