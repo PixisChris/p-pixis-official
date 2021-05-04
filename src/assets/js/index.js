@@ -33,11 +33,11 @@ docReady(() => {
     // 左上角小選單
     document.querySelector('.function-select')?.addEventListener('click', (e) => {
       e.stopPropagation()
-      toggleClassName('.function-options', 'active')
+      toggleClassName('header .function-options', 'active')
     })
     document.body.addEventListener('click', e => {
-      if(!e.target.classList.contains('function-options') && document.querySelector('.function-options').classList.contains('active')) {
-        document.querySelector('.function-options').classList.remove('active')
+      if(!e.target.classList.contains('function-options') && document.querySelector('header .function-options').classList.contains('active')) {
+        document.querySelector('header .function-options').classList.remove('active')
       }
     })
   }
