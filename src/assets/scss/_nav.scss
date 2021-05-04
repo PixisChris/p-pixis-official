@@ -69,13 +69,40 @@
     transition: 0.3s ease;
     pointer-events: none;
     background-color: #fff;
-    width: calc(100% - 160px);
+    width: 271px;
     top: 80px;
     color: #171A1D;
-    left: 120px;
-    padding: 35px;
-    border-radius: 8px;
+    right: 509px;
+    border-radius: 0 0 8px 8px;
     box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .15);
+
+    .function-options {
+      width: 271px;
+      padding: 19px 0px;
+
+      .option {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 61px;
+        padding: 0 31px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #F0F2F5;
+        }
+      }
+      .icon {
+        width: 36px;
+        height: 38px;
+      }
+      span {
+        display: inline-block;
+        line-height: 38px;
+        font-weight: 600;
+        margin-left: 11px;
+      }
+      }
   }
   
   .nav-product-text {
