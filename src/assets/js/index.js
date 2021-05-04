@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
 docReady(() => {
   loadHTMLById('nav-components', 'nav.html');
   loadHTMLById('footer-components', 'footer.html');
-  loadHTMLById('chatbot-components', '/chatbot/script.html');
+  loadHTMLById('chatbot-components', 'chatbot/script.html');
 
   document
     .querySelector('#float-banner .close-btn')
