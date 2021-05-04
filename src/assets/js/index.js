@@ -5,6 +5,18 @@ import { docReady, toggleClassName, loadHTMLById, animateToAnchor } from './_uti
 window.addEventListener('load', () => {
   document.querySelector('body').classList.remove('loading');
   document.querySelector('#loading').classList.add('hide');
+
+
+  // 所有有錨點的 a 都加入 smooth behavior
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+  });
 });
 
 docReady(() => {
