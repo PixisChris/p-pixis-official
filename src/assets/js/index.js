@@ -1,6 +1,6 @@
 import './_white-paper'
 import './_contact'
-import { docReady, toggleClassName, loadHTMLById } from './_utils';
+import { docReady, toggleClassName, loadHTMLById, animateToAnchor } from './_utils';
 
 window.addEventListener('load', () => {
   document.querySelector('body').classList.remove('loading');
@@ -27,6 +27,8 @@ docReady(() => {
     window.innerWidth >= 768 && setFnPageEffect(yOff, wH);
   });
   // scroll.js end
+
+  // functions 
 });
 
 const setHomePageScreensEffect = () => {
@@ -42,7 +44,7 @@ const setHomePageScreensEffect = () => {
 
   let screenIndex = 1;
   setInterval(() => {
-    document.querySelector('.bar-body').classList.add('move');
+    document.querySelector('.bar-body')?.classList.add('move');
     dataScreens.forEach((dataScreen) => {
       if (dataScreen.dataset.screen == screenIndex) {
         dataScreen?.classList.add('active');
@@ -57,16 +59,16 @@ const setHomePageScreensEffect = () => {
     screen.addEventListener('click', () => {
       screens.forEach((s) => {
         if (s.dataset.screen === screenNum) {
-          s.classList.add('active');
+          s?.classList.add('active');
         } else {
-          s.classList.remove('active');
+          s?.classList.remove('active');
         }
       });
       screenContents.forEach((s) => {
         if (s.dataset.screen === screenNum) {
-          s.classList.add('active');
+          s?.classList.add('active');
         } else {
-          s.classList.remove('active');
+          s?.classList.remove('active');
         }
       });
     });
