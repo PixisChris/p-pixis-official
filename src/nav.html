@@ -10,7 +10,15 @@
         <span></span>
     </div>
     <div class="nav-content">
-        <a href="/fn-1.html" class="nav-btn product-btn">產品功能<img src="./assets/img/icons/arrow.svg" alt=""></a>
+        <a href="javascript:;" class="nav-btn product-btn">產品功能<img src="./assets/img/icons/arrow.svg" alt=""></a>
+        <div class="product-content">
+            <a href="/fn-1.html" class="product-link">NAC & IPAM<span>5</span></a>
+            <a href="/fn-1.html" class="product-link">NetFlow<span>4</span></a>
+            <a href="/fn-1.html" class="product-link">IoT<span>2</span></a>
+            <a href="/fn-1.html" class="product-link">OTC<span>4</span></a>
+            <a href="/fn-1.html" class="product-link">AMS<span>3</span></a>
+            <a href="/fn-1.html" class="product-link">Complicane<span>2</span></a>
+        </div>
         <a href="/case.html" class="nav-btn">成功案例</a>
         <a href="/articles.html" class="nav-btn">資安好文</a>
         <a href="/medias.html" class="nav-btn">媒體報導</a>
@@ -25,7 +33,7 @@
 <nav id="nav" class="pcfx">
     <div class="nav-logo">
         <a href="/index.html">
-          <img src="./assets/img/logo.svg" alt="pixis logo">
+            <img src="./assets/img/logo.svg" alt="pixis logo">
         </a>
     </div>
     <div class="nav-menu">
@@ -74,7 +82,7 @@
                 </div>
             </div>
             <div class="nav-feature">
-            <a href="fn-2.html" class="feature-title">Endpoint Flow</a>
+                <a href="fn-2.html" class="feature-title">Endpoint Flow</a>
                 <div class="feature-items">
                     <a href="fn-2.html#1" class="icon-item">
                         <img src="./assets/img/icons/nav-2-1.svg" alt="儀錶板 icon">
@@ -169,6 +177,11 @@
     document
         .querySelector('#nav-mobile .nav-menu-btn')
         ?.addEventListener('click', () => {
-        toggleClassName('#nav-mobile', 'active');
+            toggleClassName('#nav-mobile', 'active');
         });
+
+    document.querySelector('#nav-mobile .product-btn')?.addEventListener('click', () => {
+        toggleClassName('#nav-mobile .product-btn', 'active');
+        toggleClassName('#nav-mobile .product-content', 'active');
+    });
 </script>
