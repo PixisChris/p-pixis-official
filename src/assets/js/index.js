@@ -29,6 +29,18 @@ docReady(() => {
   // scroll.js end
 
   // functions 
+  if (document.body.id === 'function-page') {
+    // 左上角小選單
+    document.querySelector('.function-select')?.addEventListener('click', (e) => {
+      e.stopPropagation()
+      toggleClassName('.function-options', 'active')
+    })
+    document.body.addEventListener('click', e => {
+      if(!e.target.classList.contains('function-options') && document.querySelector('.function-options').classList.contains('active')) {
+        document.querySelector('.function-options').classList.remove('active')
+      }
+    })
+  }
 });
 
 const setHomePageScreensEffect = () => {

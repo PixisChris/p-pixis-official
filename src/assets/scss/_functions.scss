@@ -58,6 +58,73 @@
         padding-top: 50px;
         padding-bottom: 50px;
       }
+
+      .function-select {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 200px;
+        cursor: pointer;
+        z-index: 10;
+        .icon {
+          width: 36px;
+          height: 38px;
+        }
+        span {
+          display: inline-block;
+          line-height: 38px;
+          font-weight: 600px;
+          margin-left: 11px;
+          opacity: .6;
+        }
+        svg {
+          margin-left: 11px;
+        }
+      }
+      // 左上角選單
+      .function-options {
+        background: #fff;
+        width: 204px;
+        padding: 11px 15px;
+        border-radius: 17px;
+        box-shadow: 0 10px 20px #D0D3D8;
+        position: absolute;
+        z-index: 10;
+        top: 180px;
+        left: 6%;
+        opacity: 0;
+        pointer-events: none;
+
+        &.active {
+          opacity: 1;
+          pointer-events: all;
+        }
+        transition: opacity .3s ease;
+
+        .option {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin: 11px auto;
+          opacity: .6;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+        .icon {
+          width: 36px;
+          height: 38px;
+        }
+        span {
+          display: inline-block;
+          line-height: 38px;
+          font-weight: 600px;
+          margin-left: 11px;
+          opacity: .6;
+        }
+      }
     }
 
     h1 {
