@@ -133,13 +133,16 @@ const setFnPageEffect = (yOff, wH) => {
       if (yOff <= pageEnd) {
         fnNav.style.opacity = perc;
         fnNav.style.transform = `translateY(${10 - perc * 10}%)`;
+        fnNav.style.pointerEvents = 'visible';
       } else {
         fnNav.style.transform = `translateY(10%)`;
         fnNav.style.opacity = 0;
+        fnNav.style.pointerEvents = 'none';
       }
     } else {
       fnNav.style.transform = `translateY(10%)`;
       fnNav.style.opacity = 0;
+      fnNav.style.pointerEvents = 'none';
     }
 
     if (yOff >= screenStart) {
