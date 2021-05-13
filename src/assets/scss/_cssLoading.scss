@@ -86,9 +86,57 @@ $amount: 18px;
   justify-content: center;
   align-items: center;
   transition: 0.3s ease;
+
+  .loading-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+
+    .bar-body {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      right: 0;
+      left: auto;
+      border-radius: 4px;
+      background-color: #fff;
+      animation: barLoading 6s ease-in 0s infinite both;
+      
+      @keyframes barLoading {
+        0% {
+          width: 100%;
+          right: 0;
+          left: auto;
+        }
+
+        3% {
+          width: 0%;
+          right: 0;
+          left: auto;
+        }
+
+        4% {
+          width: 0%;
+          left: 0;
+          right: auto;
+        }
+
+        100% {
+          width: 100%;
+          left: 0;
+          right: auto;
+        }
+      }
+    }
+  }
 }
 
 #loading.hide {
   opacity: 0;
   pointer-events: none;
 }
+

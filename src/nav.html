@@ -10,7 +10,7 @@
         <span></span>
     </div>
     <div class="nav-content">
-        <a href="javascript:;" class="nav-btn product-btn">產品功能<img src="./assets/img/icons/arrow.svg" alt=""></a>
+        <a class="nav-fn" href="javascript:;" class="nav-btn product-btn">產品功能<img src="./assets/img/icons/arrow.svg" alt=""></a>
         <div class="product-content">
             <a href="/fn-1.html" class="product-link">NAC & IPAM</a>
             <a href="/fn-2.html" class="product-link">NetFlow</a>
@@ -37,15 +37,15 @@
         </a>
     </div>
     <div class="nav-menu">
-        <a href="javascript:;" class="nav-btn product-btn">
+        <a class="nav-fn nav-btn product-btn" href="javascript:;">
             產品功能
             <img src="./assets/img/icons/arrow.svg" alt="">
         </a>
-        <a href="/case.html" class="nav-btn">成功案例</a>
-        <a href="/articles.html" class="nav-btn">資安好文</a>
-        <a href="/medias.html" class="nav-btn">媒體報導</a>
-        <a href="/white-paper.html" class="nav-btn">白皮書</a>
-        <a href="/contact.html" class="nav-btn">聯繫我們</a>
+        <a class="nav-case nav-btn" href="/case.html">成功案例</a>
+        <a class="nav-articles nav-btn" href="/articles.html">資安好文</a>
+        <a class="nav-medias nav-btn" href="/medias.html">媒體報導</a>
+        <a class="nav-white-paper nav-btn" href="/white-paper.html">白皮書</a>
+        <a class="nav-contact nav-btn" href="/contact.html">聯繫我們</a>
     </div>
     <div class="nav-product">
         <div class="function-options">
@@ -91,4 +91,21 @@
         toggleClassName('#nav-mobile .product-btn', 'active');
         toggleClassName('#nav-mobile .product-content', 'active');
     });
+
+    console.log(window.location.href)
+    const ROUTE_PATH_MAP = {
+        'fn-': 'nav-fn',
+        'white-paper': 'nav-white-paper',
+        'medias': 'nav-medias',
+        'contact': 'nav-contact',
+        'case.html': 'nav-case',
+        'cases-': 'nav-case',
+        'articles.html': 'nav-articles',
+        'article-': 'nav-articles',
+    };
+    Object.keys(ROUTE_PATH_MAP).forEach((key) => {
+        if (window.location.href.indexOf(key) !== -1) {
+            toggleClassName(`.${ROUTE_PATH_MAP[key]}`, 'active');
+        }
+    })
 </script>

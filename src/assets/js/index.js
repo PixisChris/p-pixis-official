@@ -1,6 +1,6 @@
 import './_white-paper'
 import './_contact'
-import { docReady, toggleClassName, loadHTMLById, animateToAnchor } from './_utils';
+import { docReady, toggleClassName, loadHTMLById } from './_utils';
 
 window.addEventListener('load', () => {
   document.querySelector('body').classList.remove('loading');
@@ -13,7 +13,8 @@ window.addEventListener('load', () => {
         e.preventDefault();
 
         document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+            behavior: 'smooth',
+            block: 'center'
         });
     });
   });
@@ -31,12 +32,17 @@ docReady(() => {
 
   setHomePageScreensEffect();
 
-  // scroll.js start
-  document.addEventListener('scroll', () => {
+  const scrollHandler = () => {
     const wH = window.innerHeight;
     const yOff = window.pageYOffset + wH;
     setHomePageWelcomeEffect(yOff, wH);
     window.innerWidth >= 768 && setFnPageEffect(yOff, wH);
+
+  }
+
+  // scroll.js start
+  document.addEventListener('scroll', () => {
+    window.requestAnimationFrame(scrollHandler);
   });
   // scroll.js end
 
@@ -106,6 +112,10 @@ const setHomePageWelcomeEffect = (yOff, wH) => {
     const scrollPos = scrollAnim.offsetTop + wH / 2;
     if (yOff >= scrollPos) {
       scrollAnim?.classList.add('scroll-anim-show');
+      scrollAnim?.classList.add('scroll-anim-delay');
+      setTimeout(() => {
+        scrollAnim?.classList.remove('scroll-anim-delay');
+      }, 1000);
     }
   });
 };
@@ -130,7 +140,7 @@ const setFnPageEffect = (yOff, wH) => {
         (yOff - screenMid) / (screenEnd - screenMid) > 1
           ? 1
           : (yOff - screenMid) / (screenEnd - screenMid);
-      if (yOff <= pageEnd) {
+      if (yOff <= pageEnd + 500) {
         fnNav.style.opacity = perc;
         fnNav.style.transform = `translateY(${10 - perc * 10}%)`;
         fnNav.style.pointerEvents = 'visible';
@@ -162,5 +172,20 @@ const setFnPageEffect = (yOff, wH) => {
         }%), 0)`;
       }
     }
+
+    // fn-nav-item
+    const fnNavItems = fnContainer.querySelectorAll('.function-list .item');
+    fnNavItems.forEach((fnNavItem) => {
+      const anchor = fnNavItem.dataset.scroll;
+      const itemContent = fnContainer.querySelector(`.item[data-scroll="${anchor}"]`);
+      const itemContentHight = itemContent.offsetHeight;
+      const positionStart = itemContent.offsetTop + wH - 200;
+      const positionEnd = positionStart + itemContentHight;
+      if (yOff >= positionStart && yOff <= positionEnd) {
+        fnNavItem.classList.add('active');
+      } else {
+        fnNavItem.classList.remove('active');
+      }
+    });
   });
 };
