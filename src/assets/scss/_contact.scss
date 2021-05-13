@@ -196,3 +196,58 @@
     }
   }
 }
+
+.campany-info {
+  padding: 5% 2.5%;
+  min-height: 0;
+
+  @media screen and (max-width: $mobile-break-point) {
+    padding: 10%;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .left {
+      padding-left: 50px;
+      margin-right: 16.5%;
+      .title { font-size: 36px; margin-bottom: 10px;}
+      .sub-title { font-size: 16px; color: #3DCB97; }
+    }
+
+    .right {
+      flex: 1 1 auto;
+      .row {
+        padding: 30px 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-top: 1px solid #D0D3D9;
+        font-size: 16px;
+      }
+
+      .row .label {
+        flex: 0 0 150px;
+        margin-right: 20px;
+        color: #9B9FA8;
+      }
+
+      .row .value {
+        flex: 1 1 auto;
+        color: #171A1D;
+        line-height: 2.2;
+      }
+    }
+
+    @media screen and (max-width: $mobile-break-point) {
+      display: block;
+      .left { width: 100%; margin-bottom: 80px; }
+      .right { width: 100%; }
+    }
+  }
+}
