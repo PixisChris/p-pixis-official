@@ -37,3 +37,27 @@ a {
 .bg-cover {
   background-size: cover;
 }
+
+.bg-contain {
+  background-size: contain;
+}
+
+.bg-mask {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-image: radial-gradient(circle, rgba(42,88,80,0.5998774509803921) 0%, rgba(42,88,80,1) 45%);
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+  }
+}

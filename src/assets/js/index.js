@@ -179,7 +179,7 @@ const setFnPageEffect = (yOff, wH) => {
       const anchor = fnNavItem.dataset.scroll;
       const itemContent = fnContainer.querySelector(`.item[data-scroll="${anchor}"]`);
       const itemContentHight = itemContent.offsetHeight;
-      const positionStart = itemContent.offsetTop + wH - 200;
+      const positionStart = itemContent.offsetTop + wH/2;
       const positionEnd = positionStart + itemContentHight;
       if (yOff >= positionStart && yOff <= positionEnd) {
         fnNavItem.classList.add('active');
