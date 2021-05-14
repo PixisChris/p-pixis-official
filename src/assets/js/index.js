@@ -128,6 +128,7 @@ const setFnPageEffect = (yOff, wH) => {
     const fnMainScreen = fnContainer.querySelector('.main-screen');
     const scrollBaseline = fnContainer.querySelector('.scroll-baseline');
     const scrollEndline = fnContainer.querySelector('.scroll-endline');
+    const fnContent = fnContainer.querySelector('.function-content'); // 功能頁文字區塊
 
     const screenStart =
       scrollBaseline.offsetTop + fnMainScreen.offsetHeight / 2;
@@ -160,16 +161,28 @@ const setFnPageEffect = (yOff, wH) => {
         (yOff - screenStart) / (screenEnd - screenStart) > 1
           ? 1
           : (yOff - screenStart) / (screenEnd - screenStart);
+      // console.log( (yOff - screenStart) / (screenEnd - screenStart) )
       if (yOff <= pageEnd) {
         const translateX =
           layout === 'left'
-            ? `calc(${50 * perc}% - ${5 * perc}vw)`
-            : `calc(-${50 * perc}% + ${5 * perc}vw)`;
+            ? `${50 * perc * window.innerWidth * 0.01 - 5 * perc * window.innerWidth * 0.01}`
+            : `${-50 * perc * window.innerWidth * 0.01 + 5 * perc * window.innerWidth * 0.01}`;
+        var scaleValue = 1 - 0.4 * perc
+        // 因為 sticky 的更動不完全可配合原算法，因此當功能頁文字區塊出現在瀏覽畫面內時，就將 scale transition 至 0.6
+        if (fnContent.getBoundingClientRect().top < window.innerHeight) {
+          scaleValue = 0.6;
+        }
+
         fnMainScreen.style.transform = `scale(${
-          1 - 0.4 * perc
-        }) translate3d(${translateX}, calc(${(yOff - screenStart) / 0.6}px - ${
-          0 + 83.3 * perc
-        }%), 0)`;
+          scaleValue
+        }) translate3d(${Math.floor(translateX*10)/10}px, 0, 0)`;
+
+        // 將影片改為 sticky 固定，不使用 translateY 持續計算
+        fnMainScreen.style.position = 'sticky';
+        fnMainScreen.style.top = '110px';
+        fnMainScreen.style.marginBottom = '0px';
+        fnMainScreen.style.right = '0px';
+        fnMainScreen.style.transition = 'transform .2s';
       }
     }
 
