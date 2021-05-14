@@ -5,10 +5,10 @@ $danger: #FFFFFF; // red
 $warning: #B1EAD5; // yellow
 
 // Container and shapes dimentions
-$containerDimentions: 30px;
-$shapeDimentions: 12px;
+$containerDimentions: 15px;
+$shapeDimentions: 6px;
 //shape translate amount
-$amount: 18px;
+$amount: 10px;
 
 // custom translation for each shape in an animation
 @mixin customTranslate ($shape, $tx, $ty) {
@@ -25,6 +25,7 @@ $amount: 18px;
 
 
 .css-loading-container {
+  margin-left: 25px;
   position: relative;
   width: $containerDimentions;
   height: $containerDimentions;
@@ -88,6 +89,7 @@ $amount: 18px;
   transition: 0.3s ease;
 
   .loading-bar {
+    display: none;
     position: absolute;
     bottom: 0;
     left: 0;

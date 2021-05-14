@@ -140,7 +140,12 @@
             <div class="right bg-cover" style="background-image: url('./assets/img/functions/fn5_header.jpg')"></div>
         </header>
 
-        <section class="function-flow" data-scroll="fn" data-scroll-layout="left">
+        <section
+            class="function-flow"
+            data-scroll="fn"
+            data-scroll-layout="left"
+            data-anchor="應用程式盤點"
+        >
             <div class="title">
                 <img src="./assets/img/icons/nav-4-1.svg" alt="">
                 <h2>應用程式盤點</h2>
@@ -153,7 +158,7 @@
                 <img src="./assets/img/functions/fn5_screen1_應用程式盤點.png" alt="">
             </div>
             <div class="function-content">
-                <div class="item" data-scroll="fn-nav-item-1">
+                <div id="應用程式盤點_問題情境" class="item" data-scroll="fn-nav-item-1">
                     <div class="title">問題情境</div>
                     <ul class="list">
                         <li>狀況一、當公司內部多台機器及電腦當機無法使用，網管人員察覺內網中的電腦中毒並在區域內互相感染</li>
@@ -161,7 +166,7 @@
                         <li>狀況三、公司內部設備隱含感染勒索病毒的風險</li>
                     </ul>
                 </div>
-                <div class="item" data-scroll="fn-nav-item-2">
+                <div id="應用程式盤點_常見原因" class="item" data-scroll="fn-nav-item-2">
                     <div class="title">常見原因</div>
                     <ul class="list">
                         <li>員工自帶未更新設備進入公司並連上內網</li>
@@ -169,7 +174,7 @@
                         <li>訪客、廠商電腦並未定時、即時更新</li>
                     </ul>
                 </div>
-                <div class="item" data-scroll="fn-nav-item-3">
+                <div id="應用程式盤點_解決方案" class="item" data-scroll="fn-nav-item-3">
                     <div class="title">解決方案</div>
                     <ul class="list">
                         <li>可整合 AD、GPO、WSUS、防毒軟體等系統進行應用程式盤點，確保即將進入內網的設備有定時更新及掃毒。 </li>
@@ -181,14 +186,14 @@
             <div class="scroll-endline"></div>
             <div class="function-nav">
                 <div class="function active">
-                    <div class="function-title">
+                    <div class="function-title active">
                         <img src="./assets/img/icons/arrow-down.svg" alt="">
                         應用程式盤點
                     </div>
                     <div class="function-list">
-                        <div class="item active" data-scroll="fn-nav-item-1">問題情境</div>
-                        <div class="item" data-scroll="fn-nav-item-2">常見原因</div>
-                        <div class="item" data-scroll="fn-nav-item-3">解決方案</div>
+                        <a href="#應用程式盤點_問題情境" class="item active" data-scroll="fn-nav-item-1">問題情境</a>
+                        <a href="#應用程式盤點_常見原因" class="item" data-scroll="fn-nav-item-2">常見原因</a>
+                        <a href="#應用程式盤點_解決方案" class="item" data-scroll="fn-nav-item-3">解決方案</a>
                     </div>
                 </div>
                 <div class="function">
@@ -206,7 +211,12 @@
             </div>
         </section>
 
-        <section class="function-flow" data-scroll="fn" data-scroll-layout="right">
+        <section
+            class="function-flow"
+            data-scroll="fn"
+            data-scroll-layout="right"
+            data-anchor="License盤點"
+        >
             <div class="title">
                 <img src="./assets/img/icons/nav-4-2.svg" alt="">
                 <h2>License 盤點</h2>
@@ -219,7 +229,7 @@
                 <img src="./assets/img/functions/fn5_screen2_Lisence盤點.png" alt="">
             </div>
             <div class="function-content">
-                <div class="item" data-scroll="fn-nav-item-1">
+                <div id="License盤點_問題情境" class="item" data-scroll="fn-nav-item-1">
                     <div class="title">問題情境</div>
                     <ul class="list">
                         <li>訪客與廠商來訪時需連上內網，手動派發將耗時費力</li>
@@ -228,14 +238,14 @@
                         <li>無法快速知道還未被使用過的 IP</li>
                     </ul>
                 </div>
-                <div class="item" data-scroll="fn-nav-item-2">
+                <div id="License盤點_常見原因" class="item" data-scroll="fn-nav-item-2">
                     <div class="title">常見原因</div>
                     <ul class="list">
                         <li>網管人員花費時間手動派發固定 IP 給合法設備，但熟悉網路設定的員工可自行更改 IP 以規避政策，連上公司內部網路</li>
                         <li>有陌生設備及員工自帶設備，可能造成重要設備無法使用的風險。</li>
                     </ul>
                 </div>
-                <div class="item" data-scroll="fn-nav-item-3">
+                <div id="License盤點_解決方案" class="item" data-scroll="fn-nav-item-3">
                     <div class="title">解決方案</div>
                     <ul class="list">
                         <li>DHCP 自動派發 IP，減少人員工時以及人工不可預期的錯誤</li>
@@ -258,9 +268,9 @@
                         License 盤點
                     </div>
                     <div class="function-list">
-                        <div class="item active" data-scroll="fn-nav-item-1">問題情境</div>
-                        <div class="item" data-scroll="fn-nav-item-2">常見原因</div>
-                        <div class="item" data-scroll="fn-nav-item-3">解決方案</div>
+                        <a href="#License盤點_問題情境" class="item active" data-scroll="fn-nav-item-1">問題情境</a>
+                        <a href="#License盤點_常見原因" class="item" data-scroll="fn-nav-item-2">常見原因</a>
+                        <a href="#License盤點_解決方案" class="item" data-scroll="fn-nav-item-3">解決方案</a>
                     </div>
                 </div>
                 <div class="function">
@@ -272,7 +282,12 @@
             </div>
         </section>
 
-        <section class="function-flow" data-scroll="fn" data-scroll-layout="left">
+        <section
+            class="function-flow"
+            data-scroll="fn"
+            data-scroll-layout="left"
+            data-anchor="設備盤點"
+        >
             <div class="title">
                 <img src="./assets/img/icons/nav-4-3.svg" alt="">
                 <h2>設備盤點</h2>
@@ -285,7 +300,7 @@
                 <img src="./assets/img/functions/fn5_screen3_設備盤點.png" alt="">
             </div>
             <div class="function-content">
-                <div class="item" data-scroll="fn-nav-item-1">
+                <div id="設備盤點_問題情境" class="item" data-scroll="fn-nav-item-1">
                     <div class="title">問題情境</div>
                     <ul class="list">
                         <li>重要設備發生狀況時，等到停擺數分鐘後才被人發現</li>
@@ -297,7 +312,7 @@
                         <li>各種問題查找困難且費時</li>
                     </ul>
                 </div>
-                <div class="item" data-scroll="fn-nav-item-2">
+                <div id="設備盤點_常見原因" class="item" data-scroll="fn-nav-item-2">
                     <div class="title">常見原因</div>
                     <ul class="list">
                         <li>網路線亂接導致內部網路封包數量異常或無法上網</li>
@@ -305,7 +320,7 @@
                         <li>設備網路線接錯位置、IP 衝突、IP 派發來源錯誤等等設備斷線原因</li>
                     </ul>
                 </div>
-                <div class="item" data-scroll="fn-nav-item-3">
+                <div id="設備盤點_解決方案" class="item" data-scroll="fn-nav-item-3">
                     <div class="title">解決方案</div>
                     <ul class="list">
                         <li>自動偵測設備的 IP、設備、位置、事件等完整資訊，且可以整合資產管理系統，支援擴充欄位，系統資料一覽無遺。</li>
@@ -334,15 +349,9 @@
                         設備盤點
                     </div>
                     <div class="function-list">
-                        <div class="item active" data-scroll="fn-nav-item-1">問題情境</div>
-                        <div class="item" data-scroll="fn-nav-item-2">常見原因</div>
-                        <div class="item" data-scroll="fn-nav-item-3">解決方案</div>
-                    </div>
-                </div>
-                <div class="function">
-                    <div class="function-title">
-                        <img src="./assets/img/icons/arrow-down.svg" alt="">
-                        訪客登入軌跡
+                        <a href="#設備盤點_問題情境" class="item active" data-scroll="fn-nav-item-1">問題情境</a>
+                        <a href="#設備盤點_常見原因" class="item" data-scroll="fn-nav-item-2">常見原因</a>
+                        <a href="#設備盤點_解決方案" class="item" data-scroll="fn-nav-item-3">解決方案</a>
                     </div>
                 </div>
             </div>
