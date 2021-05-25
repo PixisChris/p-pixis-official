@@ -175,7 +175,7 @@ const setFnPageEffect = (yOff, wH) => {
 
         fnMainScreen.style.transform = `scale(${
           scaleValue
-        }) translate3d(${Math.floor(translateX*10)/10}px, 0, 0)`;
+        }) translate3d(${Math.floor(translateX*10*0.83)/10}px, 0, 0)`;
 
         // 將影片改為 sticky 固定，不使用 translateY 持續計算
         fnMainScreen.style.position = 'sticky';
