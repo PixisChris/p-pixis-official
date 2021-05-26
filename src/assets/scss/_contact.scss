@@ -108,10 +108,14 @@
     position: relative;
     z-index: 2;
     box-shadow: 0px 10px 45px 0px rgba(0, 0, 0, .1);
+    background-color: white;
+    text-align: center;
 
     img {
       position: relative;
       width: 100%;
+      max-width: 955px;
+      padding: 20px 0px;
     }
 
     @media screen and (max-width: $mobile-break-point) {
