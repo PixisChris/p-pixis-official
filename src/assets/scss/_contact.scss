@@ -235,6 +235,7 @@
         flex: 0 0 150px;
         margin-right: 20px;
         color: #9B9FA8;
+        line-height: 2.2;
       }
 
       .row .value {
@@ -246,8 +247,18 @@
 
     @media screen and (max-width: $mobile-break-point) {
       display: block;
-      .left { width: 100%; margin-bottom: 80px; }
-      .right { width: 100%; }
+      .left {
+        width: 100%; margin-bottom: 80px; padding-left: 0px;
+        .title {
+          font-size: 24px;
+        }
+      }
+      .right {
+        width: 100%;
+        .row {
+          flex-wrap: wrap;
+        }
+      }
     }
   }
 }
