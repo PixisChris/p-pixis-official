@@ -5,6 +5,11 @@ import { docReady, toggleClassName, loadHTMLById } from './_utils';
 window.addEventListener('load', () => {
   document.querySelector('body').classList.remove('loading');
   document.querySelector('#loading').classList.add('hide');
+  setTimeout(() => {
+    document.querySelector('#home_video > video').autoplay = true;
+    document.querySelector('#home_video > video').loop = true;
+    document.querySelector('#home_video > video').load();
+  }, 300);
 
 
   // 所有有錨點的 a 都加入 smooth behavior

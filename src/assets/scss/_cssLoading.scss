@@ -29,7 +29,7 @@ $amount: 10px;
   position: relative;
   width: $containerDimentions;
   height: $containerDimentions;
-  animation: rotation 1s infinite;
+  animation: rotation 0.8s infinite;
   
   .shape {
     position: absolute;
@@ -56,7 +56,7 @@ $amount: 10px;
   }
   @for $i from 1 through 4 {
     .shape-#{$i} {
-      animation: shape#{$i} 2s linear infinite;
+      animation: shape#{$i} 1.6s linear infinite;
     }
   }
 }
