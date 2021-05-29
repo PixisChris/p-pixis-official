@@ -5,17 +5,20 @@ import { docReady, toggleClassName, loadHTMLById } from './_utils';
 window.addEventListener('load', () => {
   document.querySelector('body').classList.remove('loading');
   document.querySelector('#loading').classList.add('hide');
-  setTimeout(() => {
-    document.querySelector('#home_video > video').autoplay = true;
-    document.querySelector('#home_video > video').loop = true;
-    document.querySelector('#home_video > video').load();
-  }, 300);
+  if (document.querySelector('#home_video > video')) {
+    setTimeout(() => {
+      document.querySelector('#home_video > video').autoplay = true;
+      document.querySelector('#home_video > video').loop = true;
+      document.querySelector('#home_video > video').load();
+    }, 300);
+  }
 
 
   // 所有有錨點的 a 都加入 smooth behavior
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
+        console.log(this.getAttribute('href'));
 
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth',
@@ -184,7 +187,7 @@ const setFnPageEffect = (yOff, wH) => {
 
         // 將影片改為 sticky 固定，不使用 translateY 持續計算
         fnMainScreen.style.position = 'sticky';
-        fnMainScreen.style.top = '110px';
+        fnMainScreen.style.top = '15px';
         fnMainScreen.style.marginBottom = '0px';
         fnMainScreen.style.right = '0px';
         fnMainScreen.style.transition = 'transform .2s';

@@ -85,6 +85,8 @@
         .querySelector('#nav-mobile .nav-menu-btn')
         ?.addEventListener('click', () => {
             toggleClassName('#nav-mobile', 'active');
+            document.querySelector('#nav-mobile .product-btn').classList.remove('active');
+            document.querySelector('#nav-mobile .product-content').classList.remove('active');
         });
 
     document.querySelector('#nav-mobile .product-btn')?.addEventListener('click', () => {
