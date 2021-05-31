@@ -1,6 +1,10 @@
-import './_white-paper'
-import './_contact'
-import { docReady, toggleClassName, loadHTMLById } from './_utils';
+import './_white-paper';
+import './_contact';
+import ScrollToAnchor from './scrolltoanchor.esm.js'
+import { docReady, toggleClassName, loadHTMLById, animate } from './_utils';
+var smoothScroll = new ScrollToAnchor({
+  offset: 200
+});
 
 window.addEventListener('load', () => {
   document.querySelector('body').classList.remove('loading');
@@ -12,20 +16,6 @@ window.addEventListener('load', () => {
       document.querySelector('#home_video > video').load();
     }, 300);
   }
-
-
-  // 所有有錨點的 a 都加入 smooth behavior
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        console.log(this.getAttribute('href'));
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-        });
-    });
-  });
 });
 
 docReady(() => {
@@ -45,8 +35,7 @@ docReady(() => {
     const yOff = window.pageYOffset + wH;
     setHomePageWelcomeEffect(yOff, wH);
     window.innerWidth >= 768 && setFnPageEffect(yOff, wH);
-
-  }
+  };
 
   // scroll.js start
   document.addEventListener('scroll', () => {
@@ -54,18 +43,27 @@ docReady(() => {
   });
   // scroll.js end
 
-  // functions 
+  // functions
   if (document.body.id === 'function-page') {
     // 左上角小選單
-    document.querySelector('.function-select')?.addEventListener('click', (e) => {
-      e.stopPropagation()
-      toggleClassName('header .function-options', 'active')
-    })
-    document.body.addEventListener('click', e => {
-      if(!e.target.classList.contains('function-options') && document.querySelector('header .function-options').classList.contains('active')) {
-        document.querySelector('header .function-options').classList.remove('active')
+    document
+      .querySelector('.function-select')
+      ?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleClassName('header .function-options', 'active');
+      });
+    document.body.addEventListener('click', (e) => {
+      if (
+        !e.target.classList.contains('function-options') &&
+        document
+          .querySelector('header .function-options')
+          .classList.contains('active')
+      ) {
+        document
+          .querySelector('header .function-options')
+          .classList.remove('active');
       }
-    })
+    });
   }
 });
 
@@ -173,17 +171,23 @@ const setFnPageEffect = (yOff, wH) => {
       if (yOff <= pageEnd) {
         const translateX =
           layout === 'left'
-            ? `${50 * perc * window.innerWidth * 0.01 - 5 * perc * window.innerWidth * 0.01}`
-            : `${-50 * perc * window.innerWidth * 0.01 + 5 * perc * window.innerWidth * 0.01}`;
-        var scaleValue = 1 - 0.4 * perc
+            ? `${
+                50 * perc * window.innerWidth * 0.01 -
+                5 * perc * window.innerWidth * 0.01
+              }`
+            : `${
+                -50 * perc * window.innerWidth * 0.01 +
+                5 * perc * window.innerWidth * 0.01
+              }`;
+        var scaleValue = 1 - 0.4 * perc;
         // 因為 sticky 的更動不完全可配合原算法，因此當功能頁文字區塊出現在瀏覽畫面內時，就將 scale transition 至 0.6
         if (fnContent.getBoundingClientRect().top < window.innerHeight) {
           scaleValue = 0.6;
         }
 
-        fnMainScreen.style.transform = `scale(${
-          scaleValue
-        }) translate3d(${Math.floor(translateX*10*0.83)/10}px, 0, 0)`;
+        fnMainScreen.style.transform = `scale(${scaleValue}) translate3d(${
+          Math.floor(translateX * 10 * 0.83) / 10
+        }px, 0, 0)`;
 
         // 將影片改為 sticky 固定，不使用 translateY 持續計算
         fnMainScreen.style.position = 'sticky';
@@ -198,9 +202,11 @@ const setFnPageEffect = (yOff, wH) => {
     const fnNavItems = fnContainer.querySelectorAll('.function-list .item');
     fnNavItems.forEach((fnNavItem) => {
       const anchor = fnNavItem.dataset.scroll;
-      const itemContent = fnContainer.querySelector(`.item[data-scroll="${anchor}"]`);
+      const itemContent = fnContainer.querySelector(
+        `.item[data-scroll="${anchor}"]`
+      );
       const itemContentHight = itemContent.offsetHeight;
-      const positionStart = itemContent.offsetTop + wH/2;
+      const positionStart = itemContent.offsetTop + wH - 230;
       const positionEnd = positionStart + itemContentHight;
       if (yOff >= positionStart && yOff <= positionEnd) {
         fnNavItem.classList.add('active');
