@@ -191,7 +191,7 @@ const setFnPageEffect = (yOff, wH) => {
 
         // 將影片改為 sticky 固定，不使用 translateY 持續計算
         fnMainScreen.style.position = 'sticky';
-        fnMainScreen.style.top = '15px';
+        fnMainScreen.style.top = '200px';
         fnMainScreen.style.marginBottom = '0px';
         fnMainScreen.style.right = '0px';
         fnMainScreen.style.transition = 'transform .2s';
