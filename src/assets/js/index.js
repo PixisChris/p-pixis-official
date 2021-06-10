@@ -9,11 +9,19 @@ var smoothScroll = new ScrollToAnchor({
 window.addEventListener('load', () => {
   document.querySelector('body').classList.remove('loading');
   document.querySelector('#loading').classList.add('hide');
-  if (document.querySelector('#home_video > video')) {
+  if (document.querySelector('#home_video video.pc')) {
     setTimeout(() => {
-      document.querySelector('#home_video > video').autoplay = true;
-      document.querySelector('#home_video > video').loop = true;
-      document.querySelector('#home_video > video').load();
+      document.querySelector('#home_video video.pc').autoplay = true;
+      document.querySelector('#home_video video.pc').loop = true;
+      document.querySelector('#home_video video.pc').load();
+    }, 300);
+  }
+
+  if (document.querySelector('#home_video video.m')) {
+    setTimeout(() => {
+      document.querySelector('#home_video video.m').autoplay = true;
+      document.querySelector('#home_video video.m').loop = true;
+      document.querySelector('#home_video video.m').load();
     }, 300);
   }
 });
