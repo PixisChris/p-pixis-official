@@ -2,6 +2,7 @@
 // <span data-i18n='a.b.c'>不需要寫字，一律吃翻譯 object</span>
 
 window.addEventListener('load', () => {
+	detectLocale()
 	translate()
 })
 
@@ -14,6 +15,22 @@ window.tw = {
 		'medias': '媒體報導',
 		'products': '產品功能',
 		'cases': '成功案例',
+		'submit': '提交',
+	},
+	'functions': {
+		'fn1': {
+			'feature1': '符規預檢',
+			'feature2': 'IP 派發',
+			'feature3': '即時監看',
+			'feature4': '使用管制',
+			'feature5': '紀錄稽核',
+		},
+		'fn2': {
+			'feature1': '儀表板',
+			'feature2': '端點流量排名' ,
+			'feature3': '應用程式流量',
+			'feature4': '目的端流量排名',
+		},
 	},
 	'pages': {
 		'index': {
@@ -60,11 +77,29 @@ window.tw = {
 				'title': '最嚴謹的管制技術<br>802.1X 全方位防衛企業安全',
 				'content': '支援完整 NAC 功能，禁止陌生設備 / 非法設備連網。透過 802.1X 的機制可規範設備使用的網段範圍'
 			}
+		},
+		'white-paper': {
+			'title-h2': '內容概要',
+			'ul': '選擇對的內部網路管理平台對企業而言是個大挑戰，你需要思考到底要投資多少？你需要多厲害的功能？你具備的技術是否足以導入內部網路管理平台了嗎？我們準備了幾項可立即上手的教戰守則幫你快速決策！<br>下載本白皮書您將了解：',
+			'li1': '政策多個安全基礎面向',
+			'li2': '企業資訊安全的四大考量點',
+			'li3': '選擇最適合你的內部網路管理平台必思考的五項重點',
+			'form': {
+				'title': '免費下載白皮書',
+				'first-name': '姓 *',
+				'last-name': '名 *',
+				'phone': '電話 *',
+				'company': '公司 *',
+				'email': '工作電子信箱 *',
+				'job-title': '職稱 *',
+				'privacy': '我已閱讀且同意<a class="link" href="#">Cookie政策</a>與<a class="link" href="#">隱私權政策</a>，請知悉我們將會妥善應用您提供的資訊，您可造訪這裡了解更多資料隱私細節。',
+			}
 		}
 	},
 	'footer': {
 		'title': 'PIXIS 飛泓科技的<br>服務涵蓋各行各業',
-		'content': '除台灣數十個中央部會與地方政府單位外，還有食品業和電子業龍頭、首屈一指的律師事務所、日本汽車業和電機業大廠、各級醫療機構等。面對台灣在地服務之外，也提供馬來西亞政府局處與泰國最高金融單位專業的資安服務。'
+		'content': '除台灣數十個中央部會與地方政府單位外，還有食品業和電子業龍頭、首屈一指的律師事務所、日本汽車業和電機業大廠、各級醫療機構等。面對台灣在地服務之外，也提供馬來西亞政府局處與泰國最高金融單位專業的資安服務。',
+		'address-and-phone': '飛泓科技股份有限公司<br>105405 台北市松山區南京東路三段275號<br>(+886) 02-2394-1199',
 	}
 }
 
@@ -77,6 +112,22 @@ window.en = {
 		'medias': 'Medias',
 		'products': 'Products',
 		'cases': 'Success Stories',
+		'submit': 'Submit',
+	},
+	'functions': {
+		'fn1': {
+			'feature1': 'Compliance Pre-checks',
+			'feature2': 'IP distribution',
+			'feature3': 'Real-time monitoring',
+			'feature4': 'Usage Control',
+			'feature5': 'Record Examination',
+		},
+		'fn2': {
+			'feature1': 'Customizable Dashboards',
+			'feature2': '端點流量排名',
+			'feature3': '應用程式流量',
+			'feature4': '目的端流量排名',
+		},
 	},
 	'pages': {
 		'index': {
@@ -123,11 +174,29 @@ window.en = {
 				'title': 'With the most advanced control technology,<br>the intranet is secure and reliable.',
 				'content': 'Supports complete NAC function, prohibits unfamiliar devices/illegal devices from connecting to the Internet. Through the 802.1X mechanism, the network segment range used by the device can be regulated.'
 			}
+		},
+		'white-paper': {
+			'title-h2': 'Abstract',
+			'ul': 'For companies, choosing the right internal network management platform is a big challenge. You have to think about how much to invest in, what advanced features you need, and whether you have enough technology to import the internal network management platform. We have prepared several guides that are easy to follow to help you make quick decisions!<br>By downloading this white paper, you will understand:',
+			'li1': 'Multiple security fundamentals of the policy',
+			'li2': 'Four major considerations for enterprise information security',
+			'li3': 'And five key points to consider when to choose the most suitable internal network management platform for you',
+			'form': {
+				'title': 'Download the white paper for free',
+				'first-name': 'First name *',
+				'last-name': 'Last name *',
+				'phone': 'Phone *',
+				'company': 'Company *',
+				'email': 'E-mail *',
+				'job-title': 'Job title *',
+				'privacy': 'I accept the <a class="link" href="#">Cookie Policy</a> and <a class="link" href="#">Privacy Policy</a>. We will properly apply the information you provide. You can visit here for more details.',
+			}
 		}
 	},
 	'footer': {
-		'title': "PIXIS Feihong Technology's services cover all walks of life",
-		'content': "In addition to dozens of central ministries and local government units in Taiwan, our clients include leading brand of the food and electronics industries, greatest law firms, major manufacturers in the Japanese automobile and electrical industries, and medical institutions at all levels."
+		'title': "PIXIS covers all walks of life",
+		'content': "In addition to dozens of central ministries and local government units in Taiwan, our clients include leading brand of the food and electronics industries, greatest law firms, major manufacturers in the Japanese automobile and electrical industries, and medical institutions at all levels.",
+		'address-and-phone': 'PIXIS Technology Co., Ltd.<br>No. 275, Sec. 3, Nanjing E. Rd., Songshan Dist., Taipei City 105405, Taiwan (R.O.C.) <br>(+886) 02-2394-1199',
 	}
 }
 
@@ -138,13 +207,6 @@ function index(obj,i) {
 }
 
 function translate() {
-	var params = new URLSearchParams(window.location.search)
-
-	if (params.get('locale') === 'en') {
-		window.locale = window.en
-	} else {
-		window.locale = window.tw
-	}
 	document.querySelectorAll('[data-i18n]').forEach((el) => {
 		const i18nDotNotationKey = el.getAttribute('data-i18n')
 		if (i18nDotNotationKey) {
@@ -155,4 +217,20 @@ function translate() {
 			}
 		}
 	})
+}
+
+function detectLocale() {
+	var params = new URLSearchParams(window.location.search)
+	// 根據瀏覽器偏好判斷
+	// ?locale 只是方便 debug
+	if (/^zh\b/.test(navigator.language) || params.get('locale') === 'en') {
+		window.locale = window.tw
+	} else {
+		window.locale = window.en
+	}
+	// 沒辦法設定 router 先註解掉
+	// // 上面先判斷瀏覽器，但以網址為主
+	// if (/^\/en\//.test(window.location.pathname)) {
+	// 	window.locale = window.en
+	// }
 }
