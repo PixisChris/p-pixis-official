@@ -94,7 +94,23 @@ window.tw = {
 				'job-title': '職稱 *',
 				'privacy': '我已閱讀且同意<a class="link" href="#">Cookie政策</a>與<a class="link" href="#">隱私權政策</a>，請知悉我們將會妥善應用您提供的資訊，您可造訪這裡了解更多資料隱私細節。',
 			}
-		}
+		},
+		'contact': {
+			'content-section': {
+				'title': '關於 PIXIS',
+				'company-name-label': '公司名',
+				'company-name': '飛泓科技股份有限公司 PIXIS',
+				'capital-label': '資本額',
+				'capital': '新台幣 5,000 萬元',
+				'patents-label': '相關專利',
+				'patents': '(發明)-連網裝置與拓樸圖建立方法<br>(新型)-連網裝置<br>(發明)-網路資源分配伺服器及網路資源分配方法<br>(新型)-網路資源分配伺服器',
+				'certs-label': '相關認證',
+				'certs': '經濟部資訊安全服務機構能量與資安自主產品認證<br>證號：109-IS-2-52474957-0161',
+				'address-label': '地址',
+				'address': '105405 台北市 松山區 南京東路三段 275 號 7 樓',
+				'email-label': '電子郵件',
+			}
+		},
 	},
 	'footer': {
 		'title': 'PIXIS 飛泓科技的<br>服務涵蓋各行各業',
@@ -191,12 +207,28 @@ window.en = {
 				'job-title': 'Job title *',
 				'privacy': 'I accept the <a class="link" href="#">Cookie Policy</a> and <a class="link" href="#">Privacy Policy</a>. We will properly apply the information you provide. You can visit here for more details.',
 			}
-		}
+		},
+		'contact': {
+			'content-section': {
+				'title': 'About PIXIS',
+				'company-name-label': 'Company name',
+				'company-name': 'PIXIS Technology Co., Ltd.',
+				'capital-label': 'Registered capital',
+				'capital': 'NT$ 50,000,000',
+				'patents-label': 'Patents',
+				'patents': '(發明)-連網裝置與拓樸圖建立方法<br>(新型)-連網裝置<br>(發明)-網路資源分配伺服器及網路資源分配方法<br>(新型)-網路資源分配伺服器',
+				'certs-label': 'Certifications',
+				'certs': '經濟部資訊安全服務機構能量與資安自主產品認證<br>證號：109-IS-2-52474957-0161',
+				'address-label': 'Address',
+				'address': 'No. 275, Sec. 3, Nanjing E. Rd., Songshan Dist., Taipei City 105405, Taiwan (R.O.C.)',
+				'email-label': 'E-mail',
+			}
+		},
 	},
 	'footer': {
 		'title': "PIXIS covers all walks of life",
 		'content': "In addition to dozens of central ministries and local government units in Taiwan, our clients include leading brand of the food and electronics industries, greatest law firms, major manufacturers in the Japanese automobile and electrical industries, and medical institutions at all levels.",
-		'address-and-phone': 'PIXIS Technology Co., Ltd.<br>No. 275, Sec. 3, Nanjing E. Rd., Songshan Dist., Taipei City 105405, Taiwan (R.O.C.) <br>(+886) 02-2394-1199',
+		'address-and-phone': 'PIXIS Technology Co., Ltd.<br>No. 275, Sec. 3, Nanjing E. Rd., Songshan Dist., Taipei City 105405, Taiwan (R.O.C.)<br>(+886) 02-2394-1199',
 	}
 }
 
