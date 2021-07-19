@@ -1,3 +1,4 @@
+import './_i18n';
 import './_white-paper';
 import './_contact';
 import ScrollToAnchor from './scrolltoanchor.esm.js'
