@@ -254,12 +254,19 @@ function translate() {
 function detectLocale() {
 	var params = new URLSearchParams(window.location.search)
 	// 根據瀏覽器偏好判斷
-	// ?locale 只是方便 debug
-	if (/^zh\b/.test(navigator.language) || params.get('locale') === 'en') {
+	if (/^zh\b/.test(navigator.language)) {
 		window.locale = window.tw
 	} else {
 		window.locale = window.en
 	}
+	
+	// 有 ?locale 會覆蓋瀏覽器設定，方便 debug
+	if (params.get('locale') === 'en') {
+		window.locale = window.en
+	} else if (params.get('locale') === 'zh') {
+		window.locale = window.tw
+	}
+
 	// 沒辦法設定 router 先註解掉
 	// // 上面先判斷瀏覽器，但以網址為主
 	// if (/^\/en\//.test(window.location.pathname)) {
