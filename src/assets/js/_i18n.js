@@ -199,6 +199,37 @@ window.tw = {
 				'list-items3': "<li>DHCP 自動派發 IP，減少人員工時以及人工不可預期的錯誤</li><li>可整合驗證授權機制自動核發 IP，以達到使用者和連線設備相關資訊透明化，並確保設備的連線能力。</li><li>進階的 DHCP+，幫助管理者直覺、彈性地設定 IP 核發政策，並可視核發對象設定 IP 租期，方便廠商及訪客暫用公司網路，並於期限到時自動回收IP。</li>",
 			},
 		},
+		'fn4': {
+			'header': {
+				'title': 'OTC 訪客驗證模組',
+				'content': '針對訪客所攜帶的電腦設備進行該設備的防毒軟體辨識、微軟更新版本更新辨識',
+				'contact-btn': '與我們聯繫',
+			},
+			'section1': {
+				'desc': "來拜訪的訪客可事先申請帳號，管理者將提供一組帳號密碼驗證使用，亦可針對該組帳號密碼設定使用期限，以列入控管。",
+				'list-items1': "<li>狀況一、當公司內部多台機器及電腦當機無法使用，網管人員察覺內網中的電腦中毒並在區域內互相感染</li><li>狀況二、員工向網管人員反映網速很慢，但原因不明</li><li>狀況三、公司內部設備隱含感染勒索病毒的風險</li>",
+				'list-items2': "<li>員工自帶未更新設備進入公司並連上內網</li><li>白名單設備中毒並帶病毒進入內網</li><li>訪客、廠商電腦並未定時、即時更新</li>",
+				'list-items3': "<li>可整合 AD、GPO、WSUS、防毒軟體等系統進行訪客預先申請，確保即將進入內網的設備有定時更新及掃毒。 </li><li>將未符合管理者規則之設備暫禁連網，並確保其完整更新後，方能恢復正常網路功能 。</li><li>新的病毒碼發布或是提供更新時，確認公司內部的電腦有即時更新，尤其有資安疑慮的以致於需要強制更新的版本，可依據網管人員提供之病毒碼更新版本，要求使用者符合規定後方可連網。</li>",
+			},
+			'section2': {
+				'desc': "為符合公司政策及資安需求，針對訪客所攜帶的電腦設備進行符規驗證，是否安裝防毒軟體、微軟漏洞更新是否符合公司規範。",
+				'list-items1': "<li>訪客與廠商來訪時需連上內網，手動派發將耗時費力</li><li>重要設備發生 IP 突會導致無法連網使用</li><li>IP 不夠用，無法自動回收</li><li>無法快速知道還未被使用過的 IP</li>",
+				'list-items2': "<li>網管人員花費時間手動派發固定 IP 給合法設備，但熟悉網路設定的員工可自行更改 IP 以規避政策，連上公司內部網路</li><li>有陌生設備及員工自帶設備，可能造成重要設備無法使用的風險。</li>",
+				'list-items3': "<li>DHCP 自動派發 IP，減少人員工時以及人工不可預期的錯誤</li><li>可整合驗證授權機制自動核發 IP，以達到使用者和連線設備相關資訊透明化，並確保設備的連線能力。</li><li>進階的 DHCP+，幫助管理者直覺、彈性地設定 IP 核發政策，並可視核發對象設定 IP 租期，方便廠商及訪客暫用公司網路，並於期限到時自動回收IP。</li>",
+			},
+			'section3': {
+				'desc': "訪客驗證若需符合公司有較嚴格需求，須經由管理者再次確認客戶設備是否攜入，可在管理者後台進行進階驗證。",
+				'list-items1': "<li>重要設備發生狀況時，等到停擺數分鐘後才被人發現</li><li>員工電腦中毒，感染多台設備之後才被發現，而後還花費大量時間尋找原因</li><li>switch 異常關閉，導致其下的設備皆無法使用</li><li>員工無法上網，網管人員發現該設備所處的子網路位置錯誤</li><li>員工電腦中毒亂發封包，導致網速緩慢</li><li>擁有多處外點辦公室或廠房，造成設備難以察找</li><li>各種問題查找困難且費時</li>",
+				'list-items2': "<li>網路線亂接導致內部網路封包數量異常或無法上網</li><li>公司員工自行更改 IP 導致衝突，使重要設備離線無法使用</li><li>設備網路線接錯位置、IP 衝突、IP 派發來源錯誤等等設備斷線原因</li>",
+				'list-items3': "<li>自動偵測設備的 IP、設備、位置、事件等完整資訊，且可以整合資產管理系統，支援擴充欄位，系統資料一覽無遺。</li><li>偵測串接埠後自動產出拓樸圖，完整畫出管理範圍內結構並標示出各 Port 流量。能掌握每台設備介接的位置，若有設備故障可快速找到該設備位置 </li><li>自動告警重要設備離線、內網封包量異常、IP衝突等事件。若有未納管之設備於內網存在，可於主機列表中第一時間發現，並了解該設備位置</li>",
+			},
+			'section4': {
+				'desc': "紀錄訪客登入時間、攜帶設備的數量、何時登出登入等登入軌跡，並記錄成為統計報表",
+				'list-items1': "<li>採購多筆設備 需要一台一台設定 無法批次設定</li><li>不合規、外來的設備在封鎖前對內網中與其相近的設備造成了影響</li><li>員工自帶設備連上內網，難以管制</li>",
+				'list-items2': "<li>人工執行設備驗證繁複且困難 </li><li>人工執行員工身分驗證困難且容易有疏漏</li><li>未授權的設備進入內網後才被檢查是否符規</li>",
+				'list-items3': "<li>嚴謹的 802.1X NAC （Network Access Control），支援同時驗證設備及使用者身份，有效禁止未授權或員工私帶設備（BYOD）連網。 </li><li>內建 RADIUS、DHCP，輕鬆導入與維護 802.1X。</li><li>入網後依據身份進入不同管理網段，將員工、非員工、未授權的環境完全切開</li><li>網內端點設備合規管理與不合規封鎖</li>",
+			}
+		},
 		'fn6': {
 			'header': {
 				'content': '政府組態基準',
@@ -283,6 +314,12 @@ window.en = {
 		'fn3': {
 			'feature1': 'IT, OT identification',
 			'feature2': 'IT, OT control',
+		},
+		'fn4': {
+			'feature1': 'Visitor pre-application',
+			'feature2': 'Equipment compliance inspection',
+			'feature3': 'Advanced visitor verification',
+			'feature4': 'Visitor login trajectory',
 		}
 	},
 	'pages': {
@@ -433,6 +470,37 @@ window.en = {
 				'list-items2': "<li>MIS assigns fixed IPs manually to legal devices, but employees who are familiar with network settings can change the IP by themselves to get away with the policy and connect to the company's intranet.</li><li>有陌生設備及員工自帶設備，可能造成重要設備無法使用的風險。</li>",
 				'list-items3': "<li>DHCP distributes IP automatically to reduce the working hours of the employees and reduce unpredictable errors.</li><li>It can integrate authentication and authorization mechanism to issue IP automatically and achieve transparency of users and those connected device. It can also ensure the device's connection capability.</li><li>Advanced DHCP+ can help the administrator to set the IP issuance policy straightforwardly and flexibly. They can also set the IP lease period according to the issuance object, which is convenient for manufacturers and visitors to temporarily use the company network, and automatically reclaim the IP when the deadline expires.</li>",
 			},
+		},
+		'fn4': {
+			'header': {
+				'title': 'OTC visitor verification module',
+				'content': 'Visitors’ computers should do a compliance verification to see whether anti-virus software is installed, and whether the Microsoft vulnerability updates comply with the specifications.',
+				'contact-btn': 'Contact us',
+			},
+			'section1': {
+				'desc': "Visitors who come to visit can apply for an account in advance, and the administrator will provide a set of account passwords for verification. The administrator can also set a time to control.",
+				'list-items1': "<li>Situation One: When multiple machines and computers in the company are unavailable, and the MIS detect that the computers in the intranet got a virus and infect each other in the area</li><li>Employees report to MIS that the internet speed is very slow, but the reason is unknown</li><li>The company's internal equipment has the potential risk of ransomware infection</li>",
+				'list-items2': "<li>Employees bring their own unupdated devices into the company and connect to the intranet</li><li>The whitelisted device got a virus and brought the virus into the intranet</li><li>Visitors and manufacturers’ computers aren't updated either regularly or in real time</li>",
+				'list-items3': "<li>It can integrate AD, GPO, WSUS, anti-virus software and other systems for application inventory to ensure that devices that are about to enter the intranet get updated and virus scans regularly.</li><li>Ban devices that don’t comply with the administrator’s rules from connecting to the Internet temporarily, and ensure that they are completely updated before resuming normal network functions.</li><li>When a new virus pattern is released or an update is provided, it can confirm that the company’s internal computers have real-time updates.</li>",
+			},
+			'section2': {
+				'desc': "To comply with the company’s policies and information security requirements, visitors’ computers should do a compliance verification to see whether anti-virus software is installed, and whether the Microsoft vulnerability updates comply with the specifications.",
+				'list-items1': "<li>When visitors and manufacturers need to connect to the intranet when visiting, the manual distribution is time-consuming and quite demanding.</li><li>IP abruptness of important equipments will make it impossible to connect to the Internet.</li><li>IP is not enough and cannot be recycled automatically.</li><li>Unable to know the unused IP quickly.</li>",
+				'list-items2': "<li>MIS assigns fixed IPs manually to legal devices, but employees who are familiar with network settings can change the IP by themselves to get away with the policy and connect to the company's intranet.</li><li>When devices are unfamiliar or brought from random employees, it may have the risk of malfunction of important devices.</li>",
+				'list-items3': "<li>DHCP distributes IP automatically to reduce the working hours of the employees and reduce unpredictable errors.</li><li>It can integrate authentication and authorization mechanism to issue IP automatically and achieve transparency of users and those connected device. It can also ensure the device's connection capability.</li><li>Advanced DHCP+ can help the administrator to set the IP issuance policy straightforwardly and flexibly. They can also set the IP lease period according to the issuance object, which is convenient for manufacturers and visitors to temporarily use the company network, and automatically reclaim the IP when the deadline expires.</li>",
+			},
+			'section3': {
+				'desc': "If the visitor’s verification needs to meet the stricter requirements of the company, the administrator must reconfirm whether the customer's device is brought in. Advanced verification can be done in the administrator's back end",
+				'list-items1': "<li>There is something wrong with an important equipment, while no one discovered it until it has been shut down.</li><li>An employee’s computer got a virus and was discovered after multiple devices also got virus. And you had to spend lots of time searching for the cause.</li><li>The switch is closed abnormally, causing all the related devices to be unusable.</li><li>The employee cannot access the Internet, and the MIS found that the device is in the wrong subnet location.</li><li>The employee’s computer got a virus and sent data packets randomly, causing a slow internet speed.</li><li>Owning multiple off-site offices or factories, making the equipment difficult to find.</li><li>It’s difficult and time-consuming to find various problems.</li>",
+				'list-items2': "<li>The random connection of the network cable leads to an abnormal number of internal network packets or unable to access the Internet.</li><li>Employees change the IP on their own, causing IP conflicting, making important equipment offline and unusable.</li><li>Employees change the IP on their own, causing IP conflicting, making important equipment offline and unusable.</li><li>Wrong location of device network cable, IP conflict, wrong IP distribution source, etc, making the device disconnected.</li>",
+				'list-items3': "<li>It can automatically detect the complete information of the device's IP, device, location, event, etc.. We can also integrate the asset management system, support expansion fields, and system data which can be seen clearly.</li><li>It can generate a topology map automatically after detecting serial ports, draw a complete structure within the scope of management and mark the flow of each port.</li><li>It can generate a topology map automatically after detecting serial ports, draw a complete structure within the scope of management and mark the flow of each port. It can grasp the location of each device’s interfacing. If device is out of order, you can quickly find the location of the device.</li><li>It can send automatic warning if important equipment is offline, intranet packet volume is abnormal , or IP conflict. If there is an unmanaged device on the intranet, it can be found in the host table at the first time, and the location of the device can be detected.</li>",
+			},
+			'section4': {
+				'desc': "It can record the visitors’ login time, the number of devices, and when they log out and log in. The statistics can also be recorded as reports.",
+				'list-items1': "<li>Because there are multiple devices, each device has to be set in order, and batch setting is not possible.</li><li>Non-compliant and external devices has affected the devices close to them on the intranet before they are blocked.</li><li>Employees bring their own equipment to connect to the intranet, which is difficult to control.</li>",
+				'list-items2': "<li>Manual device verification is complicated and difficult.</li><li>Employee identity verification manually is difficult and is prone to omissions.</li><li>Unauthorized devices are checked for compliance after entering the intranet.</li>",
+				'list-items3': "<li>Strict 802.1X NAC (Network Access Control) supports authentication of device and user identity simultaneously,  which can effectively prohibiting unauthorized or private device (BYOD) from connecting to the Internet.</li><li>Built-in RADIUS, DHCP, easy to import and maintain 802.1X</li><li>After entering the network, the network segments can be managed according to their identities. Thus, the employees, non-employees, and unauthorized environments can be cut off completely.</li><li>Compliance management of endpoint devices in the network and non-compliance blocking.</li>"
+			}
 		},
 		'fn6': {
 			'header': {
