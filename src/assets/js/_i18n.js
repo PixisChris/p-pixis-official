@@ -56,6 +56,10 @@ window.tw = {
 			'feature3': '應用程式流量',
 			'feature4': '目的端流量排名',
 		},
+		'fn3': {
+			'feature1': 'IT、OT 辨識',
+			'feature2': 'IT、OT 控管',
+		}
 	},
 	'pages': {
 		'index': {
@@ -176,6 +180,25 @@ window.tw = {
 				'list-items3': "<li>嚴謹的 802.1X NAC （Network Access Control），支援同時驗證設備及使用者身份，有效禁止未授權或員工私帶設備（BYOD）連網。</li><li>內建 RADIUS、DHCP，輕鬆導入與維護 802.1X。</li><li>入網後依據身份進入不同管理網段，將員工、非員工、未授權的環境完全切開</li><li>網內端點設備合規管理與不合規封鎖</li>"
 			}
 		},
+		'fn3': {
+			'header': {
+				'title': 'IoT<br>物聯辨識模組',
+				'content': '成功辨識物聯網設備，涵蓋範圍包含讀卡機、監視器、手機、顯示器等等，設備的廠牌、規格、型號皆可辨識，辨識率可達 9 成',
+				'contact-btn': '與我們聯繫',
+			},
+			'section1': {
+				'desc': "可查看物聯網相關設備的廠牌、規格、型號，及其對應數量與其IP, MAC 等，並統計成為報表",
+				'list-items1': "<li>發現公司內部多台機器及電腦當機無法使用，後察覺內網中的電腦中毒並在區域內互相感染</li><li>員工向 MIS 反映網速很慢，但原因不明</li><li>公司內部設備隱含感染勒索病毒的風險</li>",
+				'list-items2': "<li>員工自帶未更新設備進入公司並連上內網</li><li>原合格設備中毒並帶病毒進入內網</li><li>訪客、廠商電腦並未定時、即時更新</li>",
+				'list-items3': "<li>可整合 AD、GPO、WSUS、防毒軟體等系統進行IT、OT 辨識，確保即將進入內網的設備有定時更新及掃毒。</li><li>將未符合管理者規則之設備暫禁連網，並確保其完整更新後，方能恢復正常網路功能 。</li><li>新的病毒碼發布或是提供更新時，確認公司內部的電腦有即時更新，尤其有資安疑慮的以致於需要強制更新的版本，可依據網管人員提供之病毒碼更新版本，要求使用者符合規定後方可連網。</li>",
+			},
+			'section2': {
+				'desc': "可依區域、部門、整體公司的流量排名，統計使用者電腦，上傳、下載於特定時間點的最高用量或用量排名",
+				'list-items1': "<li>訪客與廠商來訪時需連上內網，手動派發將耗時費力</li><li>重要設備發生 IP 突會導致無法連網使用</li><li>IP 不夠用，無法自動回收</li><li>無法快速知道還未被使用過的 IP</li>",
+				'list-items2': "<li>網管人員花費時間手動派發固定 IP 給合法設備，但熟悉網路設定的員工可自行更改 IP 以規避政策，連上公司內部網路</li><li>有陌生設備及員工自帶設備，可能造成重要設備無法使用的風險。</li>",
+				'list-items3': "<li>DHCP 自動派發 IP，減少人員工時以及人工不可預期的錯誤</li><li>可整合驗證授權機制自動核發 IP，以達到使用者和連線設備相關資訊透明化，並確保設備的連線能力。</li><li>進階的 DHCP+，幫助管理者直覺、彈性地設定 IP 核發政策，並可視核發對象設定 IP 租期，方便廠商及訪客暫用公司網路，並於期限到時自動回收IP。</li>",
+			},
+		},
 		'fn6': {
 			'header': {
 				'content': '政府組態基準',
@@ -257,6 +280,10 @@ window.en = {
 			'feature3': 'Application traffics',
 			'feature4': 'Destination traffics ranking',
 		},
+		'fn3': {
+			'feature1': 'IT, OT identification',
+			'feature2': 'IT, OT control',
+		}
 	},
 	'pages': {
 		'index': {
@@ -387,6 +414,25 @@ window.en = {
 				'list-items2': "<li>Manual device verification is complicated and difficult.</li><li>Employee identity verification manually is difficult and is prone to omissions.</li><li>Unauthorized devices are checked for compliance after entering the intranet.</li>",
 				'list-items3': "<li>Strict 802.1X NAC (Network Access Control) supports authentication of device and user identity simultaneously,  which can effectively prohibiting unauthorized or private device (BYOD) from connecting to the Internet.</li><li>Built-in RADIUS, DHCP, easy to import and maintain 802.1X</li><li>After entering the network, the network segments can be managed according to their identities. Thus, the employees, non-employees, and unauthorized environments can be cut off completely.</li><li>Compliance management of endpoint devices in the network and non-compliance blocking.</li>"
 			}
+		},
+		'fn3': {
+			'header': {
+				'title': 'IoT identification module',
+				'content': 'It can identify IoT devices successfully, including card readers, CCTV, mobile phones, monitors, etc. The brand, specification, and model of the device can be identified with 90% identification rate',
+				'contact-btn': 'Contact us',
+			},
+			'section1': {
+				'desc': "You can view the brands, specifications, models of IoT-related equipment, their corresponding numbers and their IP, MAC, etc. All of the statistics can be shown in reports.",
+				'list-items1': "<li>When multiple machines and computers in the company are unavailable, and the MIS detect that the computers in the intranet got a virus and infect each other in the area.</li><li>Employees report to MIS that the internet speed is very slow, but the reason is unknown.</li><li>The company's internal equipment has the potential risk of ransomware infection.</li>",
+				'list-items2': "<li>Employees bring their own unupdated devices into the company and connect to the intranet.</li><li>The whitelisted device got a virus and brought the virus into the intranet.</li><li>Visitors and manufacturers’ computers aren't updated either regularly or in real time</li>",
+				'list-items3': "<li>It can integrate AD, GPO, WSUS, anti-virus software and other systems for application inventory to ensure that devices that are about to enter the intranet get updated and virus scans regularly.</li><li>Ban devices that don’t comply with the administrator’s rules from connecting to the Internet temporarily, and ensure that they are completely updated before resuming normal network functions.</li><li>When a new virus pattern is released or an update is provided, it can confirm that the company’s internal computers have real-time updates.</li>",
+			},
+			'section2': {
+				'desc': "Statistics of users' computers and the ranking of highest usage can be created according to the traffic rankings of regions, departments, and the overall company.",
+				'list-items1': "<li>When visitors and manufacturers need to connect to the intranet when visiting, the manual distribution is time-consuming and quite demanding.</li><li>IP abruptness of important equipments will make it impossible to connect to the Internet.</li><li>IP is not enough and cannot be recycled automatically.</li><li>Unable to know the unused IP quickly.</li>",
+				'list-items2': "<li>MIS assigns fixed IPs manually to legal devices, but employees who are familiar with network settings can change the IP by themselves to get away with the policy and connect to the company's intranet.</li><li>有陌生設備及員工自帶設備，可能造成重要設備無法使用的風險。</li>",
+				'list-items3': "<li>DHCP distributes IP automatically to reduce the working hours of the employees and reduce unpredictable errors.</li><li>It can integrate authentication and authorization mechanism to issue IP automatically and achieve transparency of users and those connected device. It can also ensure the device's connection capability.</li><li>Advanced DHCP+ can help the administrator to set the IP issuance policy straightforwardly and flexibly. They can also set the IP lease period according to the issuance object, which is convenient for manufacturers and visitors to temporarily use the company network, and automatically reclaim the IP when the deadline expires.</li>",
+			},
 		},
 		'fn6': {
 			'header': {
