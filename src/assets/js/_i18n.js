@@ -112,6 +112,39 @@ window.tw = {
 			}
 		},
 		'contact': {
+			'form': {
+				'title': '歡迎與我們聯絡',
+				'first-name': '姓 *',
+				'last-name': '名 *',
+				'phone': '電話 *',
+				'company': '公司 *',
+				'email': '工作電子信箱 *',
+				'job-title': '職稱 *',
+				'employee': '公司規模 *',
+				'employee-options': {
+					'1': '100人以下',
+					'2': '100-500人',
+					'3': '500-1000人',
+					'4': '1000-2000人',
+					'5': '2000人以上',
+				},
+				'usage': '洽詢用途 *',
+				'usage-options': {
+					'1': '內部使用測試',
+					'2': '產品業務評估',
+					'3': '其它用途',
+				},
+				'website': '網站 *',
+				'how': '如何得知 PIXIS',
+				'how-options': {
+					'1': '社群',
+					'2': '同業推薦',
+					'3': '展覽',
+					'4': '廣告',
+				},
+				'privacy': '我已閱讀且同意<a class="link" href="#">Cookie政策</a>與<a class="link" href="#">隱私權政策</a>，請知悉我們將會妥善應用您提供的資訊，您可造訪這裡了解更多資料隱私細節。',
+				'submit': '送出表單',
+			},
 			'content-section': {
 				'title': '關於 PIXIS',
 				'company-name-label': '公司名',
@@ -403,6 +436,39 @@ window.en = {
 			}
 		},
 		'contact': {
+			'form': {
+				'title': 'Contact us',
+				'first-name': 'First name *',
+				'last-name': 'Last name *',
+				'phone': 'Phone *',
+				'company': 'Company *',
+				'email': 'E-mail *',
+				'job-title': 'Job title *',
+				'employee': 'Employees *',
+				'employee-options': {
+					'1': '1 - 100 employees',
+					'2': '100 - 500 employees',
+					'3': '500 - 1000 employees',
+					'4': '1000 - 2000 employees',
+					'5': '2000+ employees',
+				},
+				'usage': 'Usage *',
+				'usage-options': {
+					'1': 'Internal use',
+					'2': 'Business plan',
+					'3': 'Other',
+				},
+				'website': 'Website *',
+				'how': 'How do you know PIXIS?',
+				'how-options': {
+					'1': 'Social media',
+					'2': 'Referral',
+					'3': 'Exhibition',
+					'4': 'Advertisement',
+				},
+				'privacy': 'I accept the <a class="link" href="#">Cookie Policy</a> and <a class="link" href="#">Privacy Policy</a>. We will properly apply the information you provide. You can visit here for more details.',
+				'submit': 'Submit',
+			},
 			'content-section': {
 				'title': 'About PIXIS',
 				'company-name-label': 'Company name',
