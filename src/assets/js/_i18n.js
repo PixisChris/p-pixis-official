@@ -4,6 +4,7 @@
 window.addEventListener('load', () => {
 	detectLocale()
 	translate()
+	enableNavTranslate()
 })
 
 window.tw = {
@@ -686,23 +687,61 @@ function translate() {
 
 function detectLocale() {
 	var params = new URLSearchParams(window.location.search)
+
+	// 根據 localStorage 判斷
+	if (localStorage.getItem('pixis_lang')) {
+		window.locale = window[localStorage.getItem('pixis_lang')]
+		return
+	}
+
 	// 根據瀏覽器偏好判斷
 	if (/^zh\b/.test(navigator.language)) {
 		window.locale = window.tw
+		localStorage.setItem('pixis_lang', 'tw')
 	} else {
 		window.locale = window.en
+		localStorage.setItem('pixis_lang', 'en')
 	}
 	
-	// 有 ?locale 會覆蓋瀏覽器設定，方便 debug
-	if (params.get('locale') === 'en') {
-		window.locale = window.en
-	} else if (params.get('locale') === 'zh') {
-		window.locale = window.tw
-	}
+	// // 有 ?locale 會覆蓋瀏覽器設定，方便 debug
+	// if (params.get('locale') === 'en') {
+	// 	window.locale = window.en
+	// } else if (params.get('locale') === 'zh') {
+	// 	window.locale = window.tw
+	// }
 
 	// 沒辦法設定 router 先註解掉
 	// // 上面先判斷瀏覽器，但以網址為主
 	// if (/^\/en\//.test(window.location.pathname)) {
 	// 	window.locale = window.en
 	// }
+}
+
+function _getLangBtnHTML(locale) {
+	return `<a href="javascript:;" data-lang="tw" class="lang-btn tw ${locale === 'tw' ? 'is-on' : ''}">繁中</a>
+					<a href="javascript:;" data-lang="en" class="lang-btn en ${locale === 'en' ? 'is-on' : ''}">EN</a>`
+}
+
+function enableNavTranslate() {
+	const desktopNavMenu = document.querySelector('#nav .nav-menu')
+	const mobileNavMenu = document.querySelector('#nav-mobile .nav-content')
+	const currentLocale = localStorage.getItem('pixis_lang')
+	
+	// 塞入桌機版、手機版的語系按鈕 html
+	desktopNavMenu.insertAdjacentHTML('beforeend', _getLangBtnHTML(currentLocale))
+	mobileNavMenu.insertAdjacentHTML('afterbegin', _getLangBtnHTML(currentLocale))
+	
+	const langBtns = document.querySelectorAll('.lang-btn')
+	langBtns.forEach((el) => {
+		el.addEventListener('click', () => {
+			// 取語系
+			window.locale = window[el.getAttribute('data-lang')]
+			// 翻譯
+			translate()
+			// 切換樣式
+			langBtns.forEach((el) => el.classList.toggle('is-on'))
+			// 儲存
+			localStorage.setItem('pixis_lang', el.getAttribute('data-lang'))
+		})
+	})
 }

@@ -4,7 +4,7 @@
   top: 40px;
   width: calc(100% - 80px);
   z-index: 10;
-  padding: 0 60px 0 50px;
+  padding: 0 30px 0 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,6 +61,20 @@
         margin-left: 10px;
         transform: rotate(-180deg);
         transition: 0.3s ease;
+      }
+    }
+
+    a.lang-btn {
+      font-weight: 300;
+      opacity: 0.8;
+
+      &.is-on {
+        font-weight: 400;
+        opacity: 1;
+      }
+
+      &.en {
+        margin-left: 10px;
       }
     }
   }
@@ -269,6 +283,24 @@
       }
       &.active img {
         transform: rotate(0deg);
+      }
+    }
+
+    a.lang-btn {
+      line-height: 65px;
+      font-weight: 300;
+      opacity: 0.8;
+
+      &.is-on {
+        font-weight: 400;
+        opacity: 1;
+      }
+
+      &.tw {
+        margin-left: calc(20% / 2);
+      }
+      &.en {
+        margin-left: 10px;
       }
     }
   }
