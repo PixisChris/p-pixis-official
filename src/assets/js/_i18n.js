@@ -717,7 +717,7 @@ function detectLocale() {
 	// }
 }
 
-function _getLangBtnHTML(locale) {
+function _getLangBtnHTML(locale = localStorage.getItem('pixis_lang')) {
 	return `<a href="javascript:;" data-lang="tw" class="lang-btn tw ${locale === 'tw' ? 'is-on' : ''}">繁中</a>
 					<a href="javascript:;" data-lang="en" class="lang-btn en ${locale === 'en' ? 'is-on' : ''}">EN</a>`
 }
@@ -725,11 +725,10 @@ function _getLangBtnHTML(locale) {
 function enableNavTranslate() {
 	const desktopNavMenu = document.querySelector('#nav .nav-menu')
 	const mobileNavMenu = document.querySelector('#nav-mobile .nav-content')
-	const currentLocale = localStorage.getItem('pixis_lang')
 	
 	// 塞入桌機版、手機版的語系按鈕 html
-	desktopNavMenu.insertAdjacentHTML('beforeend', _getLangBtnHTML(currentLocale))
-	mobileNavMenu.insertAdjacentHTML('afterbegin', _getLangBtnHTML(currentLocale))
+	desktopNavMenu.insertAdjacentHTML('beforeend', _getLangBtnHTML())
+	mobileNavMenu.insertAdjacentHTML('afterbegin', _getLangBtnHTML())
 	
 	const langBtns = document.querySelectorAll('.lang-btn')
 	langBtns.forEach((el) => {
