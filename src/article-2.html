@@ -97,8 +97,8 @@
 
     <header class="bg-contain bg-mask" style="background-image: url('./assets/img/articles/article-2-cover.png');">
         <div class="content">
-            <h3>・Case</h3>
-            <h1>資安好文</h1>
+            <h3>・Professional Articles</h3>
+            <h1 data-i18n="pages.articles.title">資安好文</h1>
         </div>
     </header>
 
@@ -108,35 +108,31 @@
                 <div class="article-date">2020.10.01</div>
                 <div class="article-icon-item">
                     <img src="./assets/img/articles/icon-app.svg" alt="">
-                    應用程式盤點
+                    <span data-i18n="functions.fn5.feature1">應用程式盤點</span>
                 </div>
             </div>
-            <h1 class="article-title">
+            <h1 class="article-title" data-i18n="pages.articles.article2.title">
                 [PIXIS CTO] NAC (Network Access Control) 網路存取控管解決方案
             </h1>
             <div class="article-functions">
                 <div>Functions</div>
                 <div class="icon-item">
                     <img src="./assets/img/articles/icon-app.svg" alt="">
-                    應用程式盤點
+                    <span data-i18n="functions.fn5.feature1">應用程式盤點</span>
                 </div>
                 <div class="icon-item">
                     <img src="./assets/img/icons/nav-1-1.svg" alt="">
-                    符規預檢
+                    <span data-i18n="functions.fn1.feature1">符規預檢</span>
                 </div>
-                <div class="icon-item">
-                    <img src="./assets/img/icons/nav-2-2.svg" alt="">
-                    端點流量排名
-                </div>
-                <div class="icon-item">
-                    <img src="./assets/img/icons/nav-1-3.svg" alt="">
-                    即時監看
-                </div>
+                <div class="icon-item" data-i18n-show-if="tw" hidden>
+                      <img src="./assets/img/icons/nav-2-2.svg" alt="">
+                      <span data-i18n="functions.fn2.feature2">端點流量排名</span>
+                  </div>
                 <div class="counts">
                     15+
                 </div>
             </div>
-            <div class="article-content">
+            <div class="article-content" data-i18n-show-if="tw">
                 在今日隨著電腦資訊快速發展、網路科技一日千里的時代，對於網路資安防禦
                 的觀念已經十分的普及。然而，最早的資安防禦架構，主要都著重強調對於連
                 接外部網路的防禦，諸如防火牆、駭客入侵偵測、網頁攻擊防禦...等等;到現
@@ -311,6 +307,180 @@
                     <img src="./assets/img/product-cta.png" alt="">
                 </a>
             </div>
+            <div class="article-content" data-i18n-show-if="en">
+                Today, with the rapid development of computer information and the rapid development of network technology, the defense of network security
+                The concept of has become very popular. However, the earliest information security defense architecture mainly emphasized
+                Connect to the external network defense, such as firewall, hacker intrusion detection, web attack defense... etc.; now
+                All external defense products have been very complete and mature. However, in recent years, there have been frequent incidents of hackers invading the intranet
+                It is said that incidents of the theft of important information from well-known companies have been heard from time to time. Therefore, for prevention from within the enterprise
+                The demand for intrusions and attacks has become a new topic. When it comes to corporate internal network defense, I have to mention
+                To the lowest level of the Ethernet (Ethernet), because of its low cost, simple structure and easy deployment, it has long been
+                Beat other rigorous structure and complete function network architecture (such as: Token-Ring, ATM and other protocols), long
+                Ethernet has long been the standard for basic networks. But at the same time, due to the inherently simple design, there is no
+                There is any mechanism for managing or controlling connected devices, making it difficult to manage and unable to effectively monitor online devices
+                The problem; another example, with the prevalence of BYOD (Bring Your Own Device) various mobile devices,
+                The demand continues to grow, and companies have to be able to maintain the security of the intranet while responding to this trend.
+                I don’t want to be able to find an effective management method to solve this problem.
+                The attention of the defense program.
+                <br><br>
+                As the demand for intranet security and management continues to increase, many corresponding solutions have also emerged.
+                A noun like NAC was born from this. Main functions of NAC (Network Access control)
+                The ability is to solve the problem of how to determine whether the device is connected to the enterprise or organization’s internal network at the first time
+                It is legal, and there is a question of whether there is permission to enter the network. It’s like returning from a foreign country to the customs, the customs first
+                Time will check whether you have a legal authorization to enter the country.
+                <br><br>
+                NAC is the collective name for all such products, and all those that have the function of checking the legality of equipment access to the network
+                The solutions are all called NAC products. (With the complexity of the Internet and information security, NAC's production
+                Product, and how to determine whether the OS version of the access device and the system patch are updated to the latest version,
+                Whether the virus code of the anti-virus software is updated... etc., this function will be discussed later in this article). While in
+                Among NAC's various products and agreements, the 802.1X function is more representative. At the very beginning,
+                Cisco's overall NAC solution is constructed based on 802.1X.
+
+                <br><br>
+                <h3>Description of the advantages of 802.1X architecture and functions:</h3>
+                <ol>
+                    <li>
+                        802.1X is an ISO Layer 2 protocol, which can be used as soon as the device connects to the network, and
+                        The device or user can be authenticated without the need of an IP address.
+                    </li>
+                    <br>
+                    <li>
+                        802.1X can be authenticated against the connected device (Device) or individual (User),
+                        The authentication mechanism used by 802.1X is the EAP (Extended Authentication) protocol.
+                        The NAC product scheme has a very rigorous and safe authentication method, which is not easy to be smashed by interested parties.
+                        break.
+                    </li>
+                    <br>
+                    <li>
+                        802.1X has another advantage to provide dynamic VLAN function. The function of the so-called dynamic VLAN is
+                        A function on the switch device to which the device is connected. The port of the switch is not fixed to a certain
+                        A VLAN or network segment can be based on the identity of the connected networked device or user, such as the device’s
+                        MAC address or USER-ID to determine the unit and its network segment to which the device is connected
+                        The switch port is dynamically changed to the VLAN to which it belongs (as different devices or users connect
+                        Connected, the port also dynamically changes its VLAN). If the device fails to pass the certification, you can change
+                        The device port is changed to an independent or blocked VLAN network segment for subsequent processing. Because it is via
+                        The network switch separates VLANs, which is equivalent to physical isolation, which is very safe.
+                        Dynamic VLAN can match the user’s unit identity, and its advantage is that no matter what the user is in,
+                        Department, location or floor, you can change the switch network port it is connected to at any time to the one it belongs to
+                        VLAN and network segment, so the assigned IP can always be fixed to the same one. This is on mobile devices now
+                        The prevailing, mobile operating environment provides users with great convenience, and at the same time, due to the IP address of the device
+                        The consistency of the data security is more conducive to the convenience of information security tracking and assessment. (Not because of users or equipment
+                        The movement caused the difficulty of IP tracking due to the need to change the IP address).
+                    </li>
+                </ol>
+                This can be used when verifying that an individual or device is legal through a rigorous EAP authentication process
+                The organization to which the user belongs will dispatch the relevant network segment VLAN, when the device enters this VLAN, it can be dispatched
+                Send the corresponding IP address, because it supports dynamic network segment, the benefit is that regardless of the user’s arrival
+                The department, location, floor of any other unit, and the port of the switch connected to it will become the unit to which it belongs
+                VLAN and IP network segment.
+
+                <br><br>
+                <h3>Disadvantages of 802.1X:</h3>
+                Products have advantages and usually have corresponding disadvantages. 802.1X has its rigorous authentication mechanism and security
+                Isolation and defense capabilities, but therefore its structure is relatively complex, all end network switches need to support
+                Support 802.1X function (most of the switches of the brand nowadays support 802.1X, this is no longer
+                Another question), at the same time, 802.1X also needs to build multiple server hosts to authenticate and confirm their identities.
+                And dispatch VLAN and dispatch the required IP address function. And the pre-construction stage also requires a lot of work to
+                Enter the MAC address of the device within the industry, and need to update the relevant information on multiple servers at the same time
+                Data, the subsequent data synchronization maintenance also requires a lot of manpower (even if all of them use Microsoft systems
+                In the environment of AD, NPA, DHCP, etc., multiple functions cannot be synchronized, and data needs to be performed separately
+                Establishment and maintenance). Recently, NAC products' requirements for access device inspection have gone beyond certification, and more
+                Added the check of the system version, patch update, virus version update, etc. of the access device to confirm
+                Whether the device is safe to allow it to enter the network, so it is more necessary to connect to more kinds of servers in the background
+                To perform related inspections, the overall system architecture is more complex and more difficult to maintain.
+                <br><br>
+                Another problem is that 802.1X authentication has the function of authenticating and confirming identity only when the device is connected to the network.
+                Once approved, no follow-up will be done (just like border customs only when people pass through the customs
+                Check whether there is a legal document from time to time, and it will no longer be managed after entry). For example: If an employee’s computer legally enters
+                After connecting to the Internet, if the IP address is changed without authorization, 802.1X cannot manage such violations. Another example is the connection setting
+                When the device is offline (record of online and offline time), or how many devices are currently online, and other equipment tracking and management
+                Management issues are not covered by 802.1X.
+
+                <br><br>
+                <h3>IP/ARP detection and blocking control solution:</h3>
+                Different from the 802.1X solution, another way to control and control the device IP/MAC address as the main body, adopts
+                Use the IP/ARP protocol to detect the MAC of the access device in real time to determine whether it is an authorized device,
+                So as to determine whether it can enter the network. IP/MAC control system to detect the device’s ARP broadcast
+                Content as the foundation. When using all devices to access the Ethernet environment, the ARP protocol and other devices must be used.
+                The principle of communication between devices or gateways, real-time detection of related information such as MAC and IP of the connected device, and judgment
+                Whether this MAC address has legal authorization to enter the network. Or if the device is not authorized,
+                Conveniently use the method of interfering with the device's ARP content to immediately block the device from entering the network.
+                <br><br>
+                Although this NAC solution does not have the rigorous authentication mechanism of 802.1X EAP level, it has a number of
+                advantage:
+                <ol>
+                    <li>
+                        It has the advantages of fast construction and easy management.
+                    </li>
+                    <br>
+                    <li>
+                        It does not limit the compatibility of network switches of any brand, and it can be quickly integrated into the corporate network.
+                    </li>
+                    <br>
+                    <li>
+                        Another main function is the ability to keep track of in real time, even if the device has been allowed
+                        Entering the network, it is still under constant monitoring by the IP/MAC management system. You cannot change the IP at will
+                        There are detailed records of address, location movement, and when to go online and offline.
+                    </li>
+                    <br>
+                    <li>
+                        Can integrate Microsoft OS Patch update, virus code update of virus software. When the device is connected to the network
+                        Perform version pre-check (Pre-Check) at a time, and any subsequent device violations of the network
+                        In case of policy, the network can be blocked at any time.
+                    </li>
+                    <br>
+                </ol>
+
+                <br><br>
+                The two NAC solutions use different architectures and protocols, and each has its own advantages; 802.1X is based on EAP
+                Protocol-based, with dynamic VLAN function to provide security, with strict network access authentication function and
+                Dynamic VLAN dispatch function. The IP/MAC control method based on the IP/ARP protocol is flexible
+                With the advantages of rapid construction and continuous monitoring capabilities. In practice, if the characteristics of these two schemes can be combined
+                It can absorb the advantages of complementary two products to form a more complete NAC solution. tower
+                Wanfeihong Technology Co., Ltd. has developed and produced NAC product technology for many years, and is well aware of the functions and functions of various NAC agreements.
+                Advantages, for the integration of these two solutions, the integration of 802.1X and dynamic VLAN technology and
+                The various functions of IP/ARP control technology produce a new integrated NAC solution and a more complete
+                The whole function:
+                <ol>
+                    <li>
+                        With 802.1X high security (EPA) protocol authentication mechanism, when the device is connected to the network, the system can be synchronized
+                        Perform Pre-Check, check the device OS Patch status, virus version update, etc.
+                    </li>
+                    <br>
+                    <li>
+                        Assign user equipment to the unit’s VLAN (dynamic VLAN function) regardless of equipment access or migration
+                        Move to any floor and location in the company, always send the same IP (and bind MAC and IP)
+                        Includes full delivery of IPv4 and IPv6.
+                    </li>
+                    <br>
+                    <li>
+                        Track device status at any time (IP/MAC network policy tracking and control function) except for 802.1X authentication
+                        In addition, the equipment is still monitored in the network at any time, and any behavior that violates the network policy can still be blocked immediately
+                        Lock.
+                    </li>
+                    <br>
+                    <li>
+                        Combine the visitor system and employee sign-in system. When the device is connected to the Internet, it will automatically detect the MAC location of the device.
+                        Address, there is no need to manually build, visitors or employees fill in relevant information, and immediately integrate it into the back-end system.
+                        Delivery of certification and policy. Significantly simplify the manpower requirements for background data establishment or maintenance.
+                    </li>
+                    <br>
+                    <li>
+                        Equipment control includes personal computers, NBs, tablets, mobile phones, wired, wireless and other terminal equipment, all
+                        Can be controlled.
+                    </li>
+                    <br>
+                    <li>
+                        A single system includes all the functions of authentication, VLAN information transmission, and IP delivery. Simplify the original
+                        802.1X requires a project to build multiple back-end servers. The architecture is simple to build quickly, and personnel or visits
+                        Unified management and control of customer data, no need to maintain across multiple systems.
+                    </li>
+                    <br>
+                </ol>
+                <a href="/white-paper.html" class="product-cta">
+                    <img src="./assets/img/product-cta.png" alt="">
+                </a>
+            </div>
             <a href="/articles.html" class="article-btn">
                 <span data-i18n="common.back">返回總覽</span>
                 <img src="./assets/img/articles/icon-arrow.svg" alt="">
@@ -331,7 +501,7 @@
                 <div class="note">
                     <span>2020.10.01</span>
                 </div>
-                <div class="title">[PIXIS CTO] NAC (Network Access Control) 網路存取控管解決方案</div>
+                <div class="title" data-i18n="pages.articles.article2.title">[PIXIS CTO] NAC (Network Access Control) 網路存取控管解決方案</div>
             </a>
             <a href="/article-1.html" class="article">
                 <!-- <div class="icon-item">
@@ -343,7 +513,7 @@
                 <div class="note">
                     <span>2021.05.04</span>
                 </div>
-                <div class="title">IP 及乙太網路管理之探討</div>
+                <div class="title" data-i18n="pages.articles.article1.title">IP 及乙太網路管理之探討</div>
             </a>
             <a href="https://cyber.ithome.com.tw/2021/exhibition-page/105" target="_blank" class="article">
                 <!-- <div class="icon-item">
@@ -354,7 +524,7 @@
                 <div class="note">
                     <span>2020.05.26</span>
                 </div>
-                <div class="title">PIXIS 受 TCA台灣電腦公會 專訪</div>
+                <div class="title" data-i18n="articles.medias-2.title">PIXIS 受 TCA台灣電腦公會 專訪</div>
             </a>
             <a href="/cases-3.html" class="article">
                 <!-- <div class="icon-item">
@@ -365,7 +535,7 @@
                 <div class="note">
                     <span>2021.02.01</span>
                 </div>
-                <div class="title">企業廠區多達數千台 Switch 該如何有效率地辨識裝置以及旗下介接的設備? PIXIS 具備什麼技術解決這類難題?</div>
+                <div class="title" data-i18n="pages.case.article3.title">企業廠區多達數千台 Switch 該如何有效率地辨識裝置以及旗下介接的設備? PIXIS 具備什麼技術解決這類難題?</div>
             </a>
             <a href="/cases-4.html" class="article">
                 <!-- <div class="icon-item">
@@ -376,7 +546,7 @@
                 <div class="note">
                     <span>2020.11.12</span>
                 </div>
-                <div class="title">許多大型企業依然使用 Excel 進行資安、設備管理，這將大幅提高維安風險， 而 PIXIS 提供了絕佳的解決方案</div>
+                <div class="title" data-i18n="pages.case.article4.title">許多大型企業依然使用 Excel 進行資安、設備管理，這將大幅提高維安風險， 而 PIXIS 提供了絕佳的解決方案</div>
             </a>
             <a href="/cases-2.html" class="article">
                 <!-- <div class="icon-item">
@@ -387,7 +557,7 @@
                 <div class="note">
                     <span>2021.03.15</span>
                 </div>
-                <div class="title">多個產品串接的同時會耗費大量人力成本，在與企業的合作中，工程師針對重重難題提出解決方案，最終取得了雙贏</div>
+                <div class="title" data-i18n="pages.case.article2.title">多個產品串接的同時會耗費大量人力成本，在與企業的合作中，工程師針對重重難題提出解決方案，最終取得了雙贏</div>
             </a>
         </div>
     </section>
