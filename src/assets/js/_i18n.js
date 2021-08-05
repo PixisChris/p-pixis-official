@@ -785,6 +785,14 @@ function translate() {
 			}
 		}
 	})
+	document.querySelectorAll(`[data-i18n-show-if=${localStorage.getItem('pixis_lang')}]`).forEach((el) => {
+		console.log(el)
+		el.hidden = false
+	})
+	document.querySelectorAll(`[data-i18n-show-if]:not([data-i18n-show-if=${localStorage.getItem('pixis_lang')}])`).forEach((el) => {
+		console.log(el)
+		el.hidden = true
+	})
 }
 
 function detectLocale() {
@@ -837,12 +845,12 @@ function enableNavTranslate() {
 		el.addEventListener('click', () => {
 			// 取語系
 			window.locale = window[el.getAttribute('data-lang')]
-			// 翻譯
-			translate()
 			// 切換樣式
 			langBtns.forEach((el) => el.classList.toggle('is-on'))
 			// 儲存
 			localStorage.setItem('pixis_lang', el.getAttribute('data-lang'))
+			// 翻譯
+			translate()
 		})
 	})
 }
