@@ -97,8 +97,8 @@
 
     <header class="bg-contain bg-mask" style="background-image: url('./assets/img/articles/article-1-cover.png');">
         <div class="content">
-            <h3>・Case</h3>
-            <h1>資安好文</h1>
+            <h3>・Professional Articles</h3>
+            <h1 data-i18n="pages.articles.title">資安好文</h1>
         </div>
     </header>
 
@@ -108,35 +108,31 @@
                 <div class="article-date">2021.05.04</div>
                 <div class="article-icon-item">
                     <img src="./assets/img/articles/icon-app.svg" alt="">
-                    應用程式盤點
+                    <span data-i18n="functions.fn5.feature1">應用程式盤點</span>
                 </div>
             </div>
-            <h1 class="article-title">
+            <h1 class="article-title" data-i18n="pages.articles.article1.title">
                 IP 及乙太網路管理之探討
             </h1>
             <div class="article-functions">
                 <div>Functions</div>
                 <div class="icon-item">
                     <img src="./assets/img/articles/icon-app.svg" alt="">
-                    應用程式盤點
+                    <span data-i18n="functions.fn5.feature1">應用程式盤點</span>
                 </div>
                 <div class="icon-item">
                     <img src="./assets/img/icons/nav-1-1.svg" alt="">
-                    符規預檢
+                    <span data-i18n="functions.fn1.feature1">符規預檢</span>
                 </div>
-                <div class="icon-item">
-                    <img src="./assets/img/icons/nav-2-2.svg" alt="">
-                    端點流量排名
-                </div>
-                <div class="icon-item">
-                    <img src="./assets/img/icons/nav-1-3.svg" alt="">
-                    即時監看
-                </div>
+                <div class="icon-item" data-i18n-show-if="tw" hidden>
+                      <img src="./assets/img/icons/nav-2-2.svg" alt="">
+                      <span data-i18n="functions.fn2.feature2">端點流量排名</span>
+                  </div>
                 <div class="counts">
                     15+
                 </div>
             </div>
-            <div class="article-content">
+            <div class="article-content" data-i18n-show-if="tw">
                 在資訊網路漫長的演進過程中，發展出許多的網路標準，從早期的Dec
                 Net、 FDDI、Token-Ring、Nowell、AppleTalk、TCP/IP 到ATM以及
                 Ethernet...等等，不論其他各種網路標準具備了多麼完整的架構、安全性與包
@@ -380,8 +376,251 @@
                     <img src="./assets/img/product-cta.png" alt="">
                 </a>
             </div>
+            <div class="article-content" data-i18n-show-if="en">
+                In the long evolution of the information network, many network standards have been developed. From the early Dec
+                Net, FDDI, Token-Ring, Nowell, AppleTalk, TCP/IP to ATM and
+                Ethernet...and so on, no matter how complete the architecture, security and package of other network standards
+                Capacitive, Ethernet and IP networks ultimately defeat all others with low price and easy-to-use advantages.
+                Other network standards, monopolize the L2/L3 network layer of most systems in the industry (even the deep-rooted traditional telecommunications
+                SONET/SDH at the bottom of the network is also attacked). Although IP and Ethernet have occupied the majority of users
+                Environment. However, Ethernet and IP networks have inherent flaws in the security and management aspects.
+                The number and complexity of rapid growth continue to increase, such as: growing wired and wireless connections, cross-customer
+                Internet access, servers, phones and mobile devices... etc., making IT departments face increasingly difficult
+                Management and security challenges. Although most companies have taken many measures to protect the peripheral ring of their network
+                Environment, including the deployment of firewalls, IDS/IPS, WAF, remote access and even secure VPNs, and
+
+                Fight against hackers who try to invade wireless access points; however, there is still a serious lack of basic B
+                Ethernet management and the ability to control and audit internal IP access.
+                <br><br>
+                The simple and easy-to-use architecture of Ethernet and IP networks gives them a low price advantage, but lacks availability
+                Visibility, strategy execution and effective control capabilities, for example: the user can change the IP address arbitrarily, causing
+                IP address conflicts can be seen everywhere; unable to immediately and effectively understand the number of corporate network equipment and IP, or even
+                It is impossible to know whether there are external guest devices connected to the intranet... etc., so that the basic level of most IT networks remains
+                Facing serious information security threats and management problems. The network that cannot be effectively managed and illegal network access, etc.
+                The question, invisibly brings technical implementation difficulties, business risks and even legal liabilities to the enterprise.
+
+                <br><br>
+                <h2>Description of the advantages of 802.1X architecture and functions</h2>
+                This article first discusses the current status of IP/Ethernet, user interface management, and explains the network address and
+                The demand and problem gaps in boundary access, as well as the management and policy control in today’s processes and solutions
+                system. The second part introduces a new IP/MAC management and solution "PIXIS Management System". it
+                Provide enterprise, government, education and service providers, etc., IP and Ethernet access control; for
+                Fully automatic monitoring of the entire network, the implementation of basic information security strategies, auditing and address tracking capabilities at the bottom of the network.
+                And discuss the advantages of deploying IP/MAC control system and fast return on investment.
+
+                <h3>1. Current status of Ethernet/IP access management</h3>
+                Today, because IP/Ethernet has become the industry standard, and the network security issues in countries all over the world are not
+                Due to many factors such as the occurrence of interruptions, the traditionally ignored "IP/MAC address management" has quickly been adopted by major enterprises.
+                And IT managers are listed as important indicators. Nowadays, many system applications are inseparable from the application of IP address.
+                Such as:
+                <ol>
+                    <li>Web-based applications. More and more application systems use the Internet's IP connection standard. this
+                        In addition, more and more applications are outsourced to Internet-based ASPs (for example, a large number of customer integration cooperation
+                        Industry systems integrated into cloud services), these changes have led to the delivery of mission-critical services and applications for
+                        Increased dependence on IP networks.
+                    </li>
+                    <br>
+                    <li>
+                        Another example is the large number of applications of IP telephony (VoIP), which makes the number of potential IP/Ethernet devices on the network
+                        Double the amount. Mobile devices compatible with Wireless-LAN (Mobile Phone, Tablet, Handheld Device)
+                        Intensify the explosive growth of network equipment. Since the VoIP call data stream is point-to-point in nature,
+                        In particular, VoIP phones will not only increase the number of devices, but also increase the complexity of their connections on the Internet.
+                        sex.
+                    </li>
+                    <br>
+                    <li>
+                        Security issues of unauthorized equipment. Due to the nature of Ethernet, it is easy to access devices
+                        The Internet, therefore, is almost completely unguarded for the record tracking and control of access devices. because
+                        The IT personnel of this enterprise have considerable responsibility and pressure when facing the legality of the connection of the intranet equipment. according to
+                        CSI/FBI 2012 Computer Crime and Security Investigation, among more than 1,000 organizations under investigation, there are
+                        More than half of the organizations admit to having suffered one or more internal security breaches, and may even introduce viruses such as
+                        Malware, and 32% of people don’t know if they have been attacked internally or externally.
+                        Invade.
+                    </li>
+                    <br>
+                    <li>Current enterprise key application service operations are entirely based on the infrastructure of IP connection. Active Enterprise Group
+                        The lifeblood of the organization's IT infrastructure has almost entirely relied on IP communication connections. General user's client computer
+                        Or the IP address conflict on the laptop will only cause a single user or some user groups in the service
+                        However, if an IP conflict occurs on a key server, it will cause direct application system interruption or failure.
+                        The production stoppage directly caused high losses for the enterprise. How to maintain the continuity of services, IP address management is not
+                        It will directly affect the availability of services and applications.
+                    </li>
+                </ol>
+
+                <br>
+                Facing the increasing importance of IP address management, many organizations still use manual processes and basic tools
+                (Such as Excel spreadsheet) to track and manage IP addresses. According to Forrester
+                According to the research of Research, 25% of people have developed internal database solutions, while the other 20%
+                People used a third-party vendor’s DHCP management products to help deal with address management.
+                <br><br>
+                However, in the face of today’s rapidly changing information and security management status/demand, the existing IP address management
+                Most of the cases lack the three key elements needed to control the changes in order to achieve a comprehensive IP/Ethernet
+                Solutions for road management and interface.
+                <ol>
+                    <li>Lack of immediacy and complete coverage
+                        <br>
+                        One of the biggest difficulties in the current access process and solutions used to manage IP/Ethernet is the lack of
+                        Instant overall coverage capability. In practice, the process of tracking the management change of the IP address manually or in a form,
+                        It is difficult to maintain and time-consuming, and cannot be updated at any time, and even major changes in the network are often missed.
+                        change. Although a DHCP-based system helps to assign IP addresses to users’ client devices, it cannot
+                        Covers many static IP servers and non-PC devices residing in many IP networks. Partial coverage
+                        Covering or managing itself may cause unexpected address conflicts. In addition, for static IP addresses and their underlying Ethernet
+                        The lack of real-time visibility of network MAC addresses means that policy control cannot be effectively carried out. Compulsory
+                        Use a paper ban for control (such as: arbitrarily changing IP is not allowed, and non-company allotment of NB or device
+                        Prepared), it can only be empty talk. Since it is very simple to set a static IP address on any IP end device,
+                        This is the main vulnerability of access control security. Employees and even visitors can easily connect to personal notes
+                        This computer even connects to network hard drives, personal sharing devices, etc.
+                    </li>
+                    <br>
+                    <li>Lack of flexibility and immediate control capabilities
+                        <br>
+                        Most manual management procedures (such as: defining switch ACLs) can only manage current events and cannot respond to the network
+                        Implementation of any specific IP strategy according to the road changes. DHCP-based dispatch system due to lack of static equipment
+                        Therefore, it is not easy to cover the overall implementation strategy. And use a network switch to connect a specific B
+                        The Ethernet MAC address is locked to a specific port, which limits the mobility of the device and requires
+                        It takes a lot of time and manpower to maintain. Another example is the wireless network (WLAN) solution, which only covers wireless
+                        The scope of the network, traditional wired network is not easy to use the same controller, making this kind of control method impossible
+                        Enough to implement a comprehensive network access strategy.
+                    </li>
+                    <br>
+                    <li>Lack of complete historical tracking files and audit trails
+                        <br>
+                        Due to the lack of complete coverage of all networked devices, today’s address management processes and solutions
+                        It is not easy to provide historical tracking data and audit trails in order to correctly grasp the track of equipment connection and establish
+                        Documents for regulatory audit purposes. Today’s government’s information security regulations have imposed on all listed companies and many businesses.
+                        The financial information of the industry has introduced regulatory requirements, such as healthcare, banking, financial services, telecommunications, and tourism.
+                        Theater operators must comply with regulatory requirements regarding finance, customer and patient information. If there is no corresponding
+                        A complete solution for network access policy control, complete network-wide management and comprehensive audit trails, then
+                        It is difficult to prove that effective and appropriate control measures are in place, thereby exposing the organization to significant financial penalties and
+                        Responsibility.
+                    </li>
+                </ol>
+
+                <br><br>
+                <h3>2. Introduction to PIXIS Management System: Global IP/Ethernet Access Control</h3>
+                Now, IT departments can use a new and more comprehensive IP/Ethernet access management method, which
+                The project can carry out comprehensive, complete network-wide policy control and monitoring of all IP/Ethernet equipment
+                It can effectively control its entire IP/Ethernet infrastructure by establishing a solution based on IP management strategy.
+                <br><br>
+                How the PIXIS management system works:
+                <br><br>
+                The PIXIS management system controls the basic access of the Ethernet MAC and IP layer to the internal network interface.
+                Ask, make any device that uses IP mode is subject to its control. The access point of any network is the user
+                Used to connect the application system, the end point of the traffic entering and leaving the network. At the edge of the network, control is enforced, yes
+                The most effective way to implement the security strategy. Any IP equipment must pass through the PIXIS management system or IT management
+                Management personnel certification and registration, the IP device can enter the corporate intranet access smoothly, regardless of the use of static
+                Both the dynamic IP address and the dynamic IP address can be effectively controlled.
+                <br><br>
+                The PIXIS management system solution has a distributed network probe device (Probe) and a centrally controlled management system.
+                It is composed of management host and database. Probe will perform real-time automatic detection and analysis of network flow while the system is running
+                Monitors the network access status of terminal equipment, and immediately transmits the collected information to the central management
+                Host. The management host is responsible for receiving and integrating all information, and establishing a complete terminal equipment status database. match
+
+                The implementation of the strategy is to monitor and control the activities of the terminal equipment in the intranet at any time. IT managers can download from Web-
+                The GUI service desk easily controls all situations in the internal network, monitors information globally, and can be implemented in accordance with IP security policies
+
+                Control and track the historical trajectory of equipment.
+                <br><br>
+                Based on the equipment deployment solution, the PIXIS management system provides an easy-to-deploy solution,
+                There is no need to install client software (Agent) on the terminal device, and it is compatible with all network switch devices,
+                Save a lot of construction time and construction and maintenance costs, and provide the following six major functions to achieve
+                Effective IP/Ethernet access control:
+                <ol>
+                    <li>
+                        External device management: flexible and real-time network control implementation, any IP based on network strategy /
+                        MAC devices can automatically accept (through authorization) or block (unauthorized devices) in real time, and this kind of control
+                        No need to use any network switch control function (that is, any network equipment or structure can be adapted
+                        Use PIXIS management system). It can completely block illegal devices from connecting to the Internet, and can also be combined with AD verification, automatically
+                        Authorized to connect to the Internet, and have employee/visitor authentication procedures, in addition to providing effective and convenient new equipment to connect to the Internet
+                        Manage and save the files of new device access immediately for future reference.
+                    </li>
+                    <br>
+                    <li>
+                        Terminal equipment, monitoring and control: comprehensive monitoring of the scope of management, the implementation of IP / MAC equipment on the network
+                        Automatic detection and monitoring at any time, including static and dynamic addressing devices, whether wireless or wired
+                        Because there is no need to install client terminal software (agent), it covers a more comprehensive terminal equipment.
+                        On PC (various OS: Windows, Linux), laptop, mobile device (mobile phone, tablet), printer
+                        Devices, such as mobile phones, IP Phone..., etc., can be easily managed.
+                    </li>
+                    <br>
+                    <li>
+                        Abnormal events, blocking, and alarm handling: powerful, centralized IP/MAC management strategy definition and monitoring
+                        And alerts, such as: unauthorized/out-of-management hosts, IP conflict detection and IP self-change management
+                        Control, unknown DHCP detection and blocking, important equipment IP offline detection alarm, equipment broadcast/group
+                        Broadcast packet overweight warning...etc.
+                    </li>
+                    <br>
+                    <li>
+                        IP distribution and management: real-time understanding of the IP number of connected devices (including the number of online and offline devices)
+                        And when the device is online, offline and other records. Preset policies for IP and MAC address levels
+                        Omit, such as the management and control of legal and unauthenticated MAC, the binding of IP and MAC address... etc.), DHCP
+                        Distribute IP according to policy, for example, distribute fixed IP address according to MAC, distribute IPv6 according to IPv4 address
+                        Corresponding addresses can effectively track the IPv4 and IPv6 activity records of the same device.
+                    </li>
+                    <br>
+                    <li>
+                        Network architecture, automatic detection: Switch Port automatically detects and grasps the connection location of the terminal device.
+                        Automatically define serial/general ports, and the idle (unused) Switch Port report is convenient for audit and query.
+                        Automatically generate network topology and provide network segment view.
+                    </li>
+                    <br>
+                    <li>
+                        Record audit, compliance with ISO27001 management: complete with all IP/MAC interfaced networks
+                        Historical records and audit trail data to comply with ISO27001 management standards. Contains: IP / MAC
+                        Use history, AD, WSUS (Microsoft Patch) deployment rate, anti-virus software version deployment rate, etc.
+                        Table, Active/Available/Idle Switch Port report, and customize related schedule report.
+                    </li>
+                </ol>
+
+                <br><br>
+                <h3>The advantages of PIXIS management system and fast return on investment</h3>
+                <ol>
+                    <li>
+                        Recorded network access policy control: PIXIS management system enables companies to build intelligent access control
+                        System solutions to manage the central strategy of the entire wired/wireless equipment and provide continuous follow-up
+                        Historical documents to prove that it can clearly define and implement effective
+                        Network access strategy.
+                    </li>
+                    <br>
+                    <li>
+                        Reduce downtime caused by address conflicts: According to a Forrester Research report, companies
+                        15% of the overall downtime of the industry is caused by network problems, and most of the network-based
+                        Downtime is attributed to the time it takes to solve the problem. By eliminating address conflicts, and real-time understanding
+                        With sudden equipment locations, IT departments can prevent frustrated user downtime and mission-critical server downtime
+                        time.
+                    </li>
+                    <br>
+                    <li>
+                        Seamless integration with existing IP networks: There is no need to change the existing network architecture to build a PIXIS management system,
+                        There is no need to consider the compatibility of any network equipment, and IT personnel do not need to notify the company or
+                        Apply for system interruption time, effectively reducing the pressure of IT personnel to build, the simplicity and completeness of this architecture
+                        Integrity makes the solution simple, allowing it to coexist seamlessly with other network components.
+                    </li>
+                    <br>
+                    <li>
+                        Easy to deploy and reduce operating costs: Compared with many security
+                        Different from the full solution, the PIXIS management system enables IT departments to install and maintain customers without increasing
+                        In the case of the additional overhead of the end software, the network can be more effectively controlled. This means that the user
+                        No additional training is required, and the management staff will not bother to increase the maintenance burden. also,
+                        The PIXIS management system also supports the access control process between the wired and wireless devices of the IT department, from
+                        And further reduce the process to reduce overhead.
+                    </li>
+                </ol>
+                Considering the cost of server downtime and internal security breaches, these benefits will lead to a quick return on investment
+                Newspaper.
+
+                <br><br>
+                <h3>Conclusion</h3>
+                The PIXIS management system provides a comprehensive solution for the global auditable network access management of IP/Ethernet devices.
+                Solution. By combining the PIXIS management system with a centralized user authentication system to access the Internet
+                With server resources on the road, the IT department can significantly reduce the risk of internal security vulnerabilities and eliminate address collisions.
+                Sudden network downtime. Provides a complete solution including a full range of enterprise-level support services.
+                <a href="" class="product-cta">
+                    <img src="./assets/img/product-cta.png" alt="">
+                </a>
+            </div>
             <a href="/articles.html" class="article-btn">
-                返回總覽
+                <span data-i18n="common.back">返回總覽</span>
                 <img src="./assets/img/articles/icon-arrow.svg" alt="">
             </a>
         </div>
@@ -400,7 +639,7 @@
                 <div class="note">
                     <span>2020.10.01</span>
                 </div>
-                <div class="title">[PIXIS CTO] NAC (Network Access Control) 網路存取控管解決方案</div>
+                <div class="title" data-i18n="pages.articles.article2.title">[PIXIS CTO] NAC (Network Access Control) 網路存取控管解決方案</div>
             </a>
             <a href="/article-1.html" class="article">
                 <!-- <div class="icon-item">
@@ -412,7 +651,7 @@
                 <div class="note">
                     <span>2021.05.04</span>
                 </div>
-                <div class="title">IP 及乙太網路管理之探討</div>
+                <div class="title" data-i18n="pages.articles.article1.title">IP 及乙太網路管理之探討</div>
             </a>
             <a href="https://cyber.ithome.com.tw/2021/exhibition-page/105" target="_blank" class="article">
                 <!-- <div class="icon-item">
@@ -423,7 +662,7 @@
                 <div class="note">
                     <span>2020.05.26</span>
                 </div>
-                <div class="title">PIXIS 受 TCA台灣電腦公會 專訪</div>
+                <div class="title" data-i18n="articles.medias-2.title">PIXIS 受 TCA台灣電腦公會 專訪</div>
             </a>
             <a href="/cases-3.html" class="article">
                 <!-- <div class="icon-item">
@@ -434,7 +673,7 @@
                 <div class="note">
                     <span>2021.02.01</span>
                 </div>
-                <div class="title">企業廠區多達數千台 Switch 該如何有效率地辨識裝置以及旗下介接的設備? PIXIS 具備什麼技術解決這類難題?</div>
+                <div class="title" data-i18n="pages.case.article3.title">企業廠區多達數千台 Switch 該如何有效率地辨識裝置以及旗下介接的設備? PIXIS 具備什麼技術解決這類難題?</div>
             </a>
             <a href="/cases-4.html" class="article">
                 <!-- <div class="icon-item">
@@ -445,7 +684,7 @@
                 <div class="note">
                     <span>2020.11.12</span>
                 </div>
-                <div class="title">許多大型企業依然使用 Excel 進行資安、設備管理，這將大幅提高維安風險， 而 PIXIS 提供了絕佳的解決方案</div>
+                <div class="title" data-i18n="pages.case.article4.title">許多大型企業依然使用 Excel 進行資安、設備管理，這將大幅提高維安風險， 而 PIXIS 提供了絕佳的解決方案</div>
             </a>
             <a href="/cases-2.html" class="article">
                 <!-- <div class="icon-item">
@@ -456,7 +695,7 @@
                 <div class="note">
                     <span>2021.03.15</span>
                 </div>
-                <div class="title">多個產品串接的同時會耗費大量人力成本，在與企業的合作中，工程師針對重重難題提出解決方案，最終取得了雙贏</div>
+                <div class="title" data-i18n="pages.case.article2.title">多個產品串接的同時會耗費大量人力成本，在與企業的合作中，工程師針對重重難題提出解決方案，最終取得了雙贏</div>
             </a>
         </div>
     </section>
