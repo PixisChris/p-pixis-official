@@ -102,7 +102,7 @@
         <header class="bg-contain bg-mask" style="background-image: url('./assets/img/cases/cases-1-cover.png');">
             <div class="content">
                 <h3>・Case</h3>
-                <h1>相關案例</h1>
+                <h1 data-i18n="pages.case.title">相關案例</h1>
             </div>
         </header>
 
@@ -112,35 +112,31 @@
                   <div class="article-date">2021.05.01</div>
                   <div class="article-icon-item">
                       <img src="./assets/img/articles/icon-app.svg" alt="">
-                      應用程式盤點
+                      <span data-i18n="functions.fn5.feature1">應用程式盤點</span>
                   </div>
                 </div>
-                <h1 class="article-title">
+                <h1 class="article-title" data-i18n="pages.case.article1.title">
                   大型企業常疲於多區域、多佔地的網路問題排除，PIXIS 提供了絕佳的解決方案，透過單一平台解決全區問題
                 </h1>
                 <div class="article-functions">
                   <div>Functions</div>
                   <div class="icon-item">
                       <img src="./assets/img/articles/icon-app.svg" alt="">
-                      應用程式盤點
+                      <span data-i18n="functions.fn5.feature1">應用程式盤點</span>
                   </div>
                   <div class="icon-item">
                       <img src="./assets/img/icons/nav-1-1.svg" alt="">
-                      符規預檢
+                      <span data-i18n="functions.fn1.feature1">符規預檢</span>
                   </div>
-                  <div class="icon-item">
+                  <div class="icon-item" data-i18n-show-if="tw" hidden>
                       <img src="./assets/img/icons/nav-2-2.svg" alt="">
-                      端點流量排名
-                  </div>
-                  <div class="icon-item">
-                      <img src="./assets/img/icons/nav-1-3.svg" alt="">
-                      即時監看
+                      <span data-i18n="functions.fn2.feature2">端點流量排名</span>
                   </div>
                   <div class="counts">
                     15+
                   </div>
                 </div>
-                <div class="article-content">
+                <div class="article-content" data-i18n-show-if="tw" hidden>
                   ASUS 旗下子公司的一員，目前在全球擁有近萬名員工，年營業額超過 300 億，專精網路通訊及電子產品開發的國際大廠。
                   <br><br>
                   在台灣有六個廠區，數千台設備，但只有六位 IT，這六人需要做伺服器維護、 協助建置網路安全機制、落實資訊安全機制、網路安全系統規劃 / 管理、資安 事件追蹤管理、維護防火牆及電腦病毒防範軟體以及網路障礙排除。以上等等 繁雜且費時的工作，但工廠內員工時常自行攜帶手機或筆電等設備且未依規定 事先申請就連上內網，對公司內部資料造成極大的資安風險與管理上的困擾。
@@ -152,6 +148,22 @@
                   於偵測器上下線、伺服器服務重啟時，主動通知給各廠區管理者，以防服務中 斷或有任何閃失。
                   <br><br>
                   讓 IT 人員能將心力移至需要做長遠規劃的事項上。
+                  <a href="/white-paper.html" class="product-cta">
+                    <img src="./assets/img/product-cta.png" alt="">
+                  </a>
+                </div>
+                <div class="article-content" data-i18n-show-if="en" hidden>
+                    A member of ASUS's subsidiaries, it currently has nearly 10,000 employees worldwide and has an annual turnover of more than 30 billion. It is an international manufacturer specializing in network communications and electronic product development.
+                  <br><br>
+                  There are six factories and thousands of equipment in Taiwan, but only six IT personnel. These six people need to do server maintenance, help build network security mechanisms, implement information security mechanisms, network security system planning/management, and information security Event tracking management, maintenance of firewalls and computer virus prevention software, and network obstacle removal. The above and so on are cumbersome and time-consuming tasks, but employees in the factory often bring their own mobile phones or laptops and other equipment and have not applied for connection to the intranet in advance according to regulations, which causes great information security risks and management problems for the company's internal data.
+                  <br><br>
+                  After importing PIXIS ATHENAC, mark/segregate all Windows devices with domain groups, and verify with AD account passwords to ensure that all devices connected to the intranet are legal and employees' MACs.
+                  <br><br>
+                  Block non-company equipment and self-owned equipment that employees have not applied for. Detect and display the device location and detailed information in real time, alert immediately when a problem occurs, and proactively notify the administrator, so that it can quickly obtain the location of the problem device and other detailed information.
+                  <br><br>
+                  When the detector goes online and offline, and the server service restarts, actively notify each plant manager to prevent service interruption or any error.
+                  <br><br>
+                  Allow IT staff to shift their minds to things that require long-term planning.
                   <a href="/white-paper.html" class="product-cta">
                     <img src="./assets/img/product-cta.png" alt="">
                   </a>
@@ -175,7 +187,7 @@
                 <div class="note">
                     <span>2021.03.15</span>
                 </div>
-                <div class="title">多個產品串接的同時會耗費大量人力成本，在與企業的合作中，工程師針對重重難題提出解決方案，最終取得了雙贏</div>
+                <div class="title" data-i18n="pages.case.article2.title">多個產品串接的同時會耗費大量人力成本，在與企業的合作中，工程師針對重重難題提出解決方案，最終取得了雙贏</div>
               </a>
               <a href="/cases-3.html" class="article">
                 <!-- <div class="icon-item">
@@ -186,7 +198,7 @@
                 <div class="note">
                     <span>2021.02.01</span>
                 </div>
-                <div class="title">企業廠區多達數千台 Switch 該如何有效率地辨識裝置以及旗下介接的設備? PIXIS 具備什麼技術解決這類難題?</div>
+                <div class="title" data-i18n="pages.case.article3.title">企業廠區多達數千台 Switch 該如何有效率地辨識裝置以及旗下介接的設備? PIXIS 具備什麼技術解決這類難題?</div>
               </a>
               <a href="/cases-4.html" class="article">
                 <!-- <div class="icon-item">
@@ -197,7 +209,7 @@
                 <div class="note">
                     <span>2020.11.12</span>
                 </div>
-                <div class="title">許多大型企業依然使用 Excel 進行資安、設備管理，這將大幅提高維安風險， 而 PIXIS 提供了絕佳的解決方案</div>
+                <div class="title" data-i18n="pages.case.article4.title">許多大型企業依然使用 Excel 進行資安、設備管理，這將大幅提高維安風險， 而 PIXIS 提供了絕佳的解決方案</div>
               </a>
               <a href="https://cyber.ithome.com.tw/2021/exhibition-page/105" target="_blank" class="article">
                 <!-- <div class="icon-item">
@@ -208,7 +220,7 @@
                 <div class="note">
                     <span>2020.05.26</span>
                 </div>
-                <div class="title">PIXIS 受 TCA台灣電腦公會 專訪</div>
+                <div class="title" data-i18n="articles.medias-2.title">PIXIS 受 TCA台灣電腦公會 專訪</div>
               </a>
               <a href="/article-1.html" class="article">
                   <!-- <div class="icon-item">
@@ -220,7 +232,7 @@
                   <div class="note">
                       <span>2021.05.04</span>
                   </div>
-                  <div class="title">IP 及乙太網路管理之探討</div>
+                  <div class="title" data-i18n="pages.articles.article1.title">IP 及乙太網路管理之探討</div>
               </a>
               <a href="/article-2.html" class="article">
                   <!-- <div class="icon-item">
@@ -232,7 +244,7 @@
                   <div class="note">
                       <span>2020.10.01</span>
                   </div>
-                  <div class="title">[PIXIS CTO] NAC (Network Access Control) 網路存取控管解決方案</div>
+                  <div class="title" data-i18n="pages.articles.article2.title">[PIXIS CTO] NAC (Network Access Control) 網路存取控管解決方案</div>
               </a>
             </div>
         </section>
