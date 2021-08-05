@@ -160,6 +160,10 @@ window.tw = {
 				'address-label': '地址',
 				'address': '105405 台北市 松山區 南京東路三段 275 號 7 樓',
 				'email-label': '電子郵件',
+			},
+			'side': {
+				'title': '讓系統為你解決企業內網問題',
+				'desc': 'PIXIS 飛泓科技藉由開發企業網路管理平台與內網衝突解決方案，協助企業解決最棘手的資安挑戰。不管你的企業規模處於哪個階段：中小型企業、單區企業、跨區企業，我們都提供相對應的解決方案，為你的團隊省下更多時間、IT建構成本與降低團隊勞頓。 '
 			}
 		},
 		'medias': {
@@ -546,6 +550,10 @@ window.en = {
 				'address-label': 'Address',
 				'address': 'No. 275, Sec. 3, Nanjing E. Rd., Songshan Dist., Taipei City 105405, Taiwan (R.O.C.)',
 				'email-label': 'E-mail',
+			},
+			'side': {
+				'title': 'Let the system solve corporate intranet problems for you',
+				'desc': 'PIXIS Feihong Technology helps companies solve the most difficult information security challenges by developing enterprise network management platforms and intranet conflict resolution solutions. No matter what stage your business is in: small and medium-sized enterprises, single-region enterprises, and cross-regional enterprises, we provide corresponding solutions to save your team more time, IT construction costs and reduce team labor.'
 			}
 		},
 		'medias': {
