@@ -161,6 +161,57 @@ window.tw = {
 				'email-label': '電子郵件',
 			}
 		},
+		'medias': {
+			'title': '媒體報導',
+			'desc': '隨著科技日益進步，病毒與駭客攻擊企業的頻率也頻頻升高，追蹤近況以了解未來可能發生地風險。',
+			'article1': {
+				'title': 'PIXIS 受 TCA台灣電腦公會 專訪'
+			},
+			'article2': {
+				'title': 'PIXIS 受 TCA台灣電腦公會 專訪'
+			},
+			'article3': {
+				'title': 'Windows 7、TeamViewer、共用密碼、沒防火牆四大安全缺陷，造成美國 淨水廠遭駭'
+			},
+			'article4': {
+				'title': '駭客利用 Drupal 等 32 種軟體漏洞，對 Windows 及類 UNIX 系統發動大規模 挖礦攻擊'
+			},
+			'article5': {
+				'title': 'FBI 警告物聯網裝置遭駭客劫持發動謊報攻擊'
+			},
+			'article6': {
+				'title': 'FBI 警告筆電不應和物聯網裝置共用 Wi-Fi 網路'
+			}
+		},
+		'articles': {
+			'title': '資安好文',
+			'desc': 'PIXIS 在業界累積超過 30 年的資安經驗，我們並不因此停下前進地腳步，反之持續發布業界領先的技術文件。',
+			'article1': {
+				'title': 'IP 及乙太網路管理之探討'
+			},
+			'article2': {
+				'title': '[PIXIS CTO] NAC (Network Access Control) 網路存取控管解決方案'
+			},
+			'article3': {
+				'title': '[PIXIS CTO] NAC (Network Access Control) 網路存取控管解決方案'
+			}
+		},
+		'case': {
+			'title': '相關案例',
+			'desc': '我們整理了長期且穩定合作夥伴的個案分析，經過緊密溝通與深入了解，所提出的解決方案往往能夠達到雙贏局面。',
+			'article1': {
+				'title': '大型企業常疲於多區域、多佔地的網路問題排除，PIXIS 提供了絕佳的解決方案，透過單一平台解決全區問題。'
+			},
+			'article2': {
+				'title': '多個產品串接的同時會耗費大量人力成本，在與企業的合作中，工程師針對重重難題提出解決方案，最終取得了雙贏。'
+			},
+			'article3': {
+				'title': '企業廠區多達數千台 Switch 該如何有效率地辨識裝置以及旗下介接的設備? PIXIS 具備什麼技術解決這類難題？'
+			},
+			'article4': {
+				'title': '許多大型企業依然使用 Excel 進行資安、設備管理，這將大幅提高維安風險， 而 PIXIS 提供了絕佳的解決方案。'
+			},
+		},
 		'fn1': {
 			'header': {
 				'title': 'NAC & IPAM<br>產品重點功能',
@@ -484,6 +535,57 @@ window.en = {
 				'address': 'No. 275, Sec. 3, Nanjing E. Rd., Songshan Dist., Taipei City 105405, Taiwan (R.O.C.)',
 				'email-label': 'E-mail',
 			}
+		},
+		'medias': {
+			'title': 'Media reports',
+			'desc': 'With the advancement of technology, the frequency of viruses and hackers attacking companies is also increasing. Keep track of recent developments to understand possible risks in the future.',
+			'article1': {
+				'title': 'PIXIS was interviewed by TCA Taiwan Computer Association'
+			},
+			'article2': {
+				'title': 'PIXIS was interviewed by TCA Taiwan Computer Association'
+			},
+			'article3': {
+				'title': 'Four security flaws in Windows 7, TeamViewer, shared passwords, and no firewalls have caused the US water purification plant to be hacked'
+			},
+			'article4': {
+				'title': 'Hackers use 32 software vulnerabilities such as Drupal to launch large-scale mining attacks on Windows and UNIX-like systems'
+			},
+			'article5': {
+				'title': 'FBI warns IoT devices were hijacked by hackers to launch false reports'
+			},
+			'article6': {
+				'title': 'FBI warns that laptops should not share Wi-Fi networks with IoT devices'
+			}
+		},
+		'articles': {
+			'title': 'Professional Articles',
+			'desc': 'PIXIS has accumulated more than 30 years of information security experience in the industry. We do not stop moving forward because of this. Instead, we continue to publish industry-leading technical documents.',
+			'article1': {
+				'title': 'Discussion on IP and Ethernet Management'
+			},
+			'article2': {
+				'title': '[PIXIS CTO] NAC (Network Access Control) Network access control solution'
+			},
+			'article3': {
+				'title': '[PIXIS CTO] NAC (Network Access Control) Network access control solution'
+			}
+		},
+		'case': {
+			'title': 'Case',
+			'desc': 'We have compiled case analysis of long-term and stable partners. After close communication and in-depth understanding, the solutions proposed can often achieve a win-win situation.',
+			'article1': {
+				'title': 'Large enterprises are often struggling to troubleshoot network problems in multiple areas and areas. PIXIS provides an excellent solution to solve problems in the entire region through a single platform.'
+			},
+			'article2': {
+				'title': 'The serial connection of multiple products will also consume a lot of labor costs. In the cooperation with the enterprise, engineers put forward solutions to numerous problems, and finally achieved a win-win situation.'
+			},
+			'article3': {
+				'title': 'How can thousands of Switches in a corporate factory effectively identify the devices and the devices connected to it? What technology does PIXIS have to solve this type of problem?'
+			},
+			'article4': {
+				'title': 'Many large enterprises still use Excel for information security and equipment management, which will greatly increase security risks, and PIXIS provides an excellent solution.'
+			},
 		},
 		'fn1': {
 			'header': {
