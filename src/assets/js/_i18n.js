@@ -18,6 +18,11 @@ window.tw = {
 		'cases': '成功案例',
 		'submit': '提交',
 		'features': '功能特色',
+		'validations': {
+			'required': '請填寫此欄位',
+			'email': '這不是有效的電子郵件',
+			'invalid': '請檢查此欄位',
+		},
 		'fn2': {
 			'title': 'Hybrid NAC技術',
 			'content': '以最嚴謹的802.1X與ARP Spoofing 混合式阻斷技術，讓內網安房嚴密確實'
@@ -411,6 +416,11 @@ window.en = {
 		'cases': 'Success Stories',
 		'submit': 'Submit',
 		'features': 'Features',
+		'validations': {
+			'required': 'Please fill out this field.',
+			'email': "This is not a valid email.",
+			'invalid': 'Please check this field.',
+		},
 		'fn2': {
 			'title': 'Hybrid NAC technology',
 			'content': 'With the most rigorous 802.1X and ARP Spoofing hybrid blocking technology, the intranet is secure and reliable'
@@ -828,6 +838,77 @@ function translate() {
 	document.querySelectorAll(`[data-i18n-show-if]:not([data-i18n-show-if=${localStorage.getItem('pixis_lang')}])`).forEach((el) => {
 		console.log(el)
 		el.hidden = true
+	})
+
+	document.querySelectorAll('input[required]').forEach((requiredInput) => {
+		const requiredMessage = "common.validations.required".split(".").reduce(index, window.locale)
+		const emailInvalidMessage = "common.validations.email".split(".").reduce(index, window.locale)
+		const generalInvalidMessage = "common.validations.invalid".split(".").reduce(index, window.locale)
+
+		requiredInput.addEventListener("invalid", function (event) {
+			console.log(event.target.validity)
+			if (event.target.validity.typeMismatch) {
+				if (requiredInput.type === 'email') {
+		    		event.target.setCustomValidity(emailInvalidMessage);
+		    	} else {
+		    		event.target.setCustomValidity(generalInvalidMessage);
+		    	}
+		    } else if (event.target.validity.valueMissing) {
+		    	event.target.setCustomValidity(requiredMessage);
+		    } else if (!(event.target.validity.valid)) {
+		    	console.log(event.target.validity)
+		    	event.target.setCustomValidity(generalInvalidMessage);
+		  	} else if (event.target.validity.valid) {
+		    	event.target.setCustomValidity("");
+		  	}
+		});
+
+		requiredInput.addEventListener("input", function (event) {
+			console.log(event.target.validity)
+			event.target.setCustomValidity("");
+			if (event.target.validity.typeMismatch) {
+				if (requiredInput.type === 'email') {
+		    		event.target.setCustomValidity(emailInvalidMessage);
+		    	} else {
+		    		event.target.setCustomValidity(generalInvalidMessage);
+		    	}
+		    } else if (event.target.validity.valueMissing) {
+		    	event.target.setCustomValidity(requiredMessage);
+		    } else if (!(event.target.validity.valid)) {
+		    	console.log(event.target.validity)
+		    	event.target.setCustomValidity(generalInvalidMessage);
+		  	} else if (event.target.validity.valid) {
+		    	event.target.setCustomValidity("");
+		  	}
+		});
+	})
+
+	document.querySelectorAll('select[required]').forEach((requiredInput) => {
+		const requiredMessage = "common.validations.required".split(".").reduce(index, window.locale)
+		const generalInvalidMessage = "common.validations.invalid".split(".").reduce(index, window.locale)
+
+		requiredInput.addEventListener("invalid", function (event) {
+		    if (event.target.validity.valueMissing) {
+		    	event.target.setCustomValidity(requiredMessage);
+		    } else if (!(event.target.validity.valid)) {
+		    	console.log(event.target.validity)
+		    	event.target.setCustomValidity(generalInvalidMessage);
+		  	} else if (event.target.validity.valid) {
+		    	event.target.setCustomValidity("");
+		  	}
+		});
+
+		requiredInput.addEventListener("change", function (event) {
+			event.target.setCustomValidity("");
+		    if (event.target.validity.valueMissing) {
+		    	event.target.setCustomValidity(requiredMessage);
+		    } else if (!(event.target.validity.valid)) {
+		    	console.log(event.target.validity)
+		    	event.target.setCustomValidity(generalInvalidMessage);
+		  	} else if (event.target.validity.valid) {
+		    	event.target.setCustomValidity("");
+		  	}
+		});
 	})
 
 	if (document.querySelector('#home_video video.pc')) {
