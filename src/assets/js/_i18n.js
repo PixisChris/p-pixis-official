@@ -829,6 +829,50 @@ function translate() {
 		console.log(el)
 		el.hidden = true
 	})
+
+	if (document.querySelector('#home_video video.pc')) {
+		const videoPc = document.querySelector('#home_video video.pc');
+		videoPc.querySelectorAll("source").forEach((el) => {
+			el.remove()
+		})
+		const sourcePc = document.createElement('source');
+		let urlPc = ""
+		if (localStorage.getItem('pixis_lang') === 'tw') {
+			urlPc = require(`../videos/desktop-tw.mp4`)	
+		} else {
+			urlPc = require(`../videos/desktop-en.mp4`)	
+		}
+		sourcePc.setAttribute('src', urlPc);
+		sourcePc.setAttribute('type', 'video/mp4');
+		videoPc.appendChild(sourcePc);
+		setTimeout(() => {
+			videoPc.autoplay = true;
+			videoPc.loop = true;
+			videoPc.load();
+		}, 300);
+	}
+
+	if (document.querySelector('#home_video video.m')) {
+		const videoM = document.querySelector('#home_video video.m');
+		videoM.querySelectorAll("source").forEach((el) => {
+			el.remove()
+		})
+		const sourceM = document.createElement('source');
+		let urlM = ""
+		if (localStorage.getItem('pixis_lang') === 'tw') {
+			urlM = require(`../videos/mobile-tw.mp4`)	
+		} else {
+			urlM = require(`../videos/mobile-en.mp4`)	
+		}
+		sourceM.setAttribute('src', urlM);
+		sourceM.setAttribute('type', 'video/mp4');
+		videoM.appendChild(sourceM);
+		setTimeout(() => {
+			videoM.autoplay = true;
+			videoM.loop = true;
+			videoM.load();
+		}, 300);
+	}
 }
 
 function detectLocale() {
