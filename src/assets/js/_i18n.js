@@ -76,6 +76,7 @@ window.tw = {
 	},
 	'pages': {
 		'index': {
+			'head_title': 'PIXIS',
 			'section1': {
 				'title': '系統6大特色<br>專業傾聽、以客為尊',
 				'content': '支援完整NAC功能，禁止陌生設備/非法設備連網。透過802.1X 的機制可規範設備使用的網段範圍',
@@ -97,6 +98,7 @@ window.tw = {
 			}
 		},
 		'white-paper': {
+			'head_title': 'PIXIS 白皮書 | 內網管理系統，高效率企業問題',
 			'title-h2': '內容概要',
 			'ul': '選擇對的內部網路管理平台對企業而言是個大挑戰，你需要思考到底要投資多少？你需要多厲害的功能？你具備的技術是否足以導入內部網路管理平台了嗎？我們準備了幾項可立即上手的教戰守則幫你快速決策！<br>下載本白皮書您將了解：',
 			'li1': '政策多個安全基礎面向',
@@ -114,6 +116,7 @@ window.tw = {
 			}
 		},
 		'contact': {
+			'head_title': 'PIXIS 聯繫我們 | 內網管理系統，高效率企業問題',
 			'form': {
 				'title': '歡迎與我們聯絡',
 				'first-name': '姓 *',
@@ -167,6 +170,7 @@ window.tw = {
 			}
 		},
 		'medias': {
+			'head_title': 'PIXIS 媒體報導 | 內網管理系統，高效率企業問題',
 			'title': '媒體報導',
 			'desc': '隨著科技日益進步，病毒與駭客攻擊企業的頻率也頻頻升高，追蹤近況以了解未來可能發生地風險。',
 			'article1': {
@@ -189,6 +193,7 @@ window.tw = {
 			}
 		},
 		'articles': {
+			'head_title': 'PIXIS 資安好文 | 內網管理系統，高效率企業問題',
 			'title': '資安好文',
 			'desc': 'PIXIS 在業界累積超過 30 年的資安經驗，我們並不因此停下前進地腳步，反之持續發布業界領先的技術文件。',
 			'article1': {
@@ -202,6 +207,7 @@ window.tw = {
 			}
 		},
 		'case': {
+			'head_title': 'PIXIS 相關案例 | 內網管理系統，高效率企業問題',
 			'title': '相關案例',
 			'desc': '我們整理了長期且穩定合作夥伴的個案分析，經過緊密溝通與深入了解，所提出的解決方案往往能夠達到雙贏局面。',
 			'article1': {
@@ -218,6 +224,7 @@ window.tw = {
 			},
 		},
 		'fn1': {
+			'head_title': 'NAC & IPAM 產品重點功能 | PIXIS',
 			'header': {
 				'title': 'NAC & IPAM<br>產品重點功能',
 				'content': '主打易用性極高的 NAC & IPAM，讓您輕鬆、全面、有效率的管理企業網路 - PIXIS 飛泓科技',
@@ -251,6 +258,7 @@ window.tw = {
 			},
 		},
 		'fn2': {
+			'head_title': 'Endpoint Flow 流量分析模組 | PIXIS',
 			'header': {
 				'title': 'Endpoint Flow<br>流量分析模組',
 				'content': '依據使用者電腦所使用的上網或開啟應用程式的流量統計',
@@ -282,6 +290,7 @@ window.tw = {
 			}
 		},
 		'fn3': {
+			'head_title': 'IoT 物聯辨識模組 | PIXIS',
 			'header': {
 				'title': 'IoT<br>物聯辨識模組',
 				'content': '成功辨識物聯網設備，涵蓋範圍包含讀卡機、監視器、手機、顯示器等等，設備的廠牌、規格、型號皆可辨識，辨識率可達 9 成',
@@ -301,6 +310,7 @@ window.tw = {
 			},
 		},
 		'fn4': {
+			'head_title': 'OTC 訪客驗證模組 | PIXIS',
 			'header': {
 				'title': 'OTC 訪客驗證模組',
 				'content': '針對訪客所攜帶的電腦設備進行該設備的防毒軟體辨識、微軟更新版本更新辨識',
@@ -332,6 +342,7 @@ window.tw = {
 			}
 		},
 		'fn5': {
+			'head_title': 'AMS 資產管理模組 | PIXIS',
 			'header': {
 				'title': 'AMS<br>資產管理模組',
 				'content': '針對訪客所攜帶的電腦設備進行該設備的防毒軟體辨識、微軟更新版本更新辨識',
@@ -357,7 +368,9 @@ window.tw = {
 			},
 		},
 		'fn6': {
+			'head_title': 'Complicane 資安符規模組 | PIXIS',
 			'header': {
+				'title': 'Complicane 資安符規模組',
 				'content': '政府組態基準',
 				'contact-btn': '與我們聯繫',
 			},
@@ -384,16 +397,6 @@ window.tw = {
 		'title': 'PIXIS 飛泓科技的<br>服務涵蓋各行各業',
 		'content': '除台灣數十個中央部會與地方政府單位外，還有食品業和電子業龍頭、首屈一指的律師事務所、日本汽車業和電機業大廠、各級醫療機構等。面對台灣在地服務之外，也提供馬來西亞政府局處與泰國最高金融單位專業的資安服務。',
 		'address-and-phone': '飛泓科技股份有限公司<br>105405 台北市松山區南京東路三段275號<br>(+886) 02-2394-1199',
-	},
-	'articles': {
-		'medias-2': {
-			'title': 'PIXIS 受 TCA台灣電腦公會專訪',
-			'content': "以新竄之姿崛起的飛泓科技 NAC(Network Access Control)，核心團隊在產業、技術等相關領域具備豐厚經驗，並擁有 IPv6 封鎖方法等多項發明專利，快速累積豐厚客戶實績，透過用戶回饋，了解用戶工作上的需求，以此強化並發展更貼近用戶之功能，面對客戶的反饋能快速即時的回應。<br><br>飛泓科技表示，隨著企業日深的資訊化，網路已經是企業運行中不可或缺的一部分，同時資安威脅的挑戰也日益嚴峻。當企業專注於抵禦來自外部網路資安攻擊時，卻往往忽略了來自內部網路與設備控管上所帶來的資安風險。隨著 IPv6 逐漸成為未來趨勢，政府單位或企業的網管人員相對在管理上的複雜度也就增加不少負擔。<br><br>飛泓科技所開發的「PIXIS DSI 雙協定 NAC & IP/MAC 網路安全管理系統」是企業用戶在面臨越來越複雜的網路環境與資安威脅下所提供的最佳解決方案。 PIXIS DSI 網路管理系統主要提供了 5 大功能: 網路使用管制 (NAC, Network Access Control)、IP 派發 (Distribution)、符規預檢 (Pre-Check)、即時監看 (Monitor)、記錄稽核 (Reporting)，能夠協助企業有效率管控網路與設備，杜絕內部人為疏忽的威脅。<br><br>秉持「站在網路管理者的角度來思考，以務實的態度來開發。」飛泓科技憑藉人性化操作介面與高效化的系統運作，在系統設計理念上，有效滿足管理者面對各種複雜網路環境下的需求，也讓 PIXIS DSI 在問世後的短短時間內即贏得國內外大量政府機關與知名企業用戶的支持與採購。<br><br>隨著企業對資安的需求越來越高，NAC(Network Access Control)產品雖大多能滿足企業八成的需求，然而各產業型態不盡相同，各家所需的資安功能也就有所差異。PIXIS 可有效阻擋外來非授權設備接入內網，隨時監控內網設備 IP / MAC 的活動，並對異常事件具備阻斷、告警能力確以保企業網路的作業安全。<br><br>透過中控儀表板更可一目瞭然現有設備上線、下線數量及活動狀態，管理並阻擋 IP 任意變動，避免 IP 衝突，具備所有 IP / MAC 設備界接網路的完整歷史記錄和審核追踪資料，符合 ISO27001 管理準則。易於部署、運作及維護的特性，能有效減輕 MIS 人員工作負擔，及早提供有效的告警並降低運營成本。<br><br>飛泓科技指出，PIXIS DSI 能因應各戶之需求彈性化的系統調校，更穩定、人性化介面更容易操作。同時因應不同網路環境，提供驗證授權的功能，並透過自動偵測網路拓樸圖，即時準確掌握內網所有的設備實體位置，協助管理者快速簡單的取得設備相關資訊。<br><br>隨著 IoT 及 5G 網路快速發展，IPv6 的網路世界也即將來臨，近來企業更是清楚感受資安威脅重點已經從外部攻擊逐漸轉變到內網的入侵與資料竊取。飛泓科技的 PIXIS DSI 系統所具備完整性、易用性及可擴充性，可協助管理者無痛導入 802.1X、IPv6 或雙協定網路。對於各項資安威脅，內網接入管制、內網設備行為與活動追蹤的管理及控制更加重要。<br><br>飛泓科技的產品主要之優勢即為 NAC (Network Access Control) 及內網設備 管控，今後將更深入對於內網設備行為的研判與管理並加強與友商設備之合作，如防火牆，網路情資設備等之協同處理，加強資安防禦之縱深。目前，飛泓科技主要業務以國內政府單位與企業用戶為主，但隨著與越來越多的國外企業接觸頻繁，未來也勢必會在國際業務上加強力道並發揚光大。"
-		},
-		'article-0': {
-			'title': '',
-			'content': "",
-		}
 	}
 }
 
@@ -466,6 +469,7 @@ window.en = {
 	},
 	'pages': {
 		'index': {
+			'head_title': 'PIXIS',
 			'section1': {
 				'title': '6 major features<br>, listening professionally and always be customer-oriented.',
 				'content': 'Supports complete NAC function, prohibits unfamiliar devices/illegal devices from connecting to the Internet. Through the 802.1X mechanism, the network segment range used by the device can be regulated.',
@@ -487,6 +491,7 @@ window.en = {
 			}
 		},
 		'white-paper': {
+			'head_title': 'PIXIS White Paper | Intranet Management System, High-efficiency Enterprise Issues',
 			'title-h2': 'Abstract',
 			'ul': 'For companies, choosing the right internal network management platform is a big challenge. You have to think about how much to invest in, what advanced features you need, and whether you have enough technology to import the internal network management platform. We have prepared several guides that are easy to follow to help you make quick decisions!<br>By downloading this white paper, you will understand:',
 			'li1': 'Multiple security fundamentals of the policy',
@@ -504,6 +509,7 @@ window.en = {
 			}
 		},
 		'contact': {
+			'head_title': 'PIXIS Contact Us | Intranet management system, high-efficiency corporate issues',
 			'form': {
 				'title': 'Contact us',
 				'first-name': 'First name *',
@@ -557,6 +563,7 @@ window.en = {
 			}
 		},
 		'medias': {
+			'head_title': 'PIXIS Media Report | Intranet Management System, High-efficiency Enterprise Issues',
 			'title': 'Media reports',
 			'desc': 'With the advancement of technology, the frequency of viruses and hackers attacking companies is also increasing. Keep track of recent developments to understand possible risks in the future.',
 			'article1': {
@@ -579,6 +586,7 @@ window.en = {
 			}
 		},
 		'articles': {
+			'head_title': 'PIXIS Professional Articles | Intranet Management System, High-efficiency Enterprise Issues',
 			'title': 'Professional Articles',
 			'desc': 'PIXIS has accumulated more than 30 years of information security experience in the industry. We do not stop moving forward because of this. Instead, we continue to publish industry-leading technical documents.',
 			'article1': {
@@ -592,6 +600,7 @@ window.en = {
 			}
 		},
 		'case': {
+			'head_title': 'PIXIS Success Stories | Intranet management system, high-efficiency enterprise problems',
 			'title': 'Case',
 			'desc': 'We have compiled case analysis of long-term and stable partners. After close communication and in-depth understanding, the solutions proposed can often achieve a win-win situation.',
 			'article1': {
@@ -608,6 +617,7 @@ window.en = {
 			},
 		},
 		'fn1': {
+			'head_title': 'Product features of NAC & IPAM | PIXIS',
 			'header': {
 				'title': 'Product features of NAC & IPAM',
 				'content': 'PIXIS technology features easy-to-use NAC & IPAM, allowing you to manage your corporate network easily, comprehensively and efficiently',
@@ -652,6 +662,7 @@ window.en = {
 			},
 		},
 		'fn2': {
+			'head_title': 'Endpoint Flow Traffic analysis module | PIXIS',
 			'header': {
 				'title': 'Endpoint Flow<br>Traffic analysis module',
 				'content': "It can perform a traffic statistics based on the user's internet browsing or applications using",
@@ -683,6 +694,7 @@ window.en = {
 			}
 		},
 		'fn3': {
+			'head_title': 'IoT identification module | PIXIS',
 			'header': {
 				'title': 'IoT identification module',
 				'content': 'It can identify IoT devices successfully, including card readers, CCTV, mobile phones, monitors, etc. The brand, specification, and model of the device can be identified with 90% identification rate',
@@ -702,6 +714,7 @@ window.en = {
 			},
 		},
 		'fn4': {
+			'head_title': 'OTC visitor verification module | PIXIS',
 			'header': {
 				'title': 'OTC visitor verification module',
 				'content': 'Visitors’ computers should do a compliance verification to see whether anti-virus software is installed, and whether the Microsoft vulnerability updates comply with the specifications.',
@@ -733,9 +746,10 @@ window.en = {
 			}
 		},
 		'fn5': {
+			'head_title': 'AMS Asset Management Module | PIXIS',
 			'header': {
-				'title': 'Product features of NAC & IPAM',
-				'content': 'PIXIS technology features easy-to-use NAC & IPAM, allowing you to manage your corporate network easily, comprehensively and efficiently',
+				'title': 'AMS Asset Management Module',
+				'content': 'Visitors’ computers should do a compliance verification to see whether anti-virus software is installed, and whether the Microsoft vulnerability updates comply with the specifications.',
 				'contact-btn': 'Contact us',
 			},
 			'section1': {
@@ -758,7 +772,9 @@ window.en = {
 			},
 		},
 		'fn6': {
+			'head_title': 'Government Configuration Baseline(GCB) | PIXIS',
 			'header': {
+				'title': 'Government Configuration<br>Baseline(GCB)',
 				'content': 'Government Configuration Baseline(GCB)',
 				'contact-btn': 'Contact us',
 			},
@@ -785,12 +801,6 @@ window.en = {
 		'title': "PIXIS covers all walks of life",
 		'content': "In addition to dozens of central ministries and local government units in Taiwan, our clients include leading brand of the food and electronics industries, greatest law firms, major manufacturers in the Japanese automobile and electrical industries, and medical institutions at all levels.",
 		'address-and-phone': 'PIXIS Technology Co., Ltd.<br>No. 275, Sec. 3, Nanjing E. Rd., Songshan Dist., Taipei City 105405, Taiwan (R.O.C.)<br>(+886) 02-2394-1199',
-	},
-	'articles': {
-		'medias-2': {
-			'title': 'PIXIS was interviewed by TCA Taiwan Computer Association',
-			'content': "Feihong Technology NAC (Network Access Control), which has emerged as a new trend, has a core team with rich experience in related fields such as industry and technology, and has a number of invention patents such as IPv6 blocking methods. It quickly accumulates substantial customer performance. Through user feedback, Understand the needs of users at work, in order to strengthen and develop functions closer to users, and respond quickly and instantly to customer feedback. <br><br>Feihong Technology stated that with the increasing informatization of enterprises, the Internet has become an indispensable part of the operation of enterprises, and at the same time, the challenges of information security threats have become increasingly severe. When companies focus on defending against external network security attacks, they often ignore the information security risks that come from internal network and device control. As IPv6 gradually becomes a future trend, the network management personnel of government units or enterprises will have a lot of burdens on the relative management complexity. <br><br>The 'PIXIS DSI Dual Protocol NAC & IP/MAC Network Security Management System' developed by Feihong Technology is the best solution provided by enterprise users in the face of increasingly complex network environments and threats to information security. The best solution. The PIXIS DSI network management system mainly provides 5 major functions: network access control (NAC, Network Access Control), IP distribution (Distribution), pre-check (Pre-Check), real-time monitoring (Monitor), record audit (Reporting), which can help companies effectively control networks and equipment, and eliminate the threat of internal human negligence. <br><br>Adhering to 'thinking from the perspective of network managers, and developing with a pragmatic attitude.' Feihong Technology, with its humanized operation interface and efficient system operation, effectively satisfies the system design concept Managers face the needs of various complex network environments, and PIXIS DSI has won support and purchases from a large number of government agencies and well-known corporate users at home and abroad within a short period of time after its launch. <br><br>With the increasing demand for information security by enterprises, most of NAC (Network Access Control) products can meet 80% of the needs of enterprises, but the types of industries are not the same. The security function is also different. PIXIS can effectively block external unauthorized devices from accessing the intranet, monitor the IP/MAC activities of intranet devices at any time, and have the ability to block and alert abnormal events to ensure the security of corporate network operations. <br><br>Through the central control dashboard, you can see the number of online and offline devices and the activity status at a glance, manage and block any IP changes, avoid IP conflicts, and have a complete history of all IP/MAC devices connected to the network. The audit trail data complies with ISO27001 management standards. The features of easy deployment, operation and maintenance can effectively reduce the workload of MIS personnel, provide effective warnings early and reduce operating costs. <br><br>Feihong Technology pointed out that PIXIS DSI can flexibly adjust the system according to the needs of each user, making it more stable and user-friendly interface easier to operate. At the same time, in response to different network environments, it provides the function of verifying authorization, and automatically detects the network topology, real-time and accurate grasp of the physical location of all devices in the intranet, helping managers to quickly and easily obtain device-related information. <br><br>With the rapid development of IoT and 5G networks, the IPv6 network world is about to come. Recently, companies have clearly felt that the focus of information security threats has gradually shifted from external attacks to intranet intrusions and data theft. Feihong Technology's PIXIS DSI system has completeness, ease of use, and expandability, which can help administrators painlessly import 802.1X, IPv6, or dual-protocol networks. For various information security threats, the management and control of intranet access control, intranet device behavior and activity tracking are more important. <br><br>The main advantages of Feihong Technology's products are NAC (Network Access Control) and intranet equipment management and control. In the future, we will further in-depth research, judgment and management of intranet equipment behavior and strengthen cooperation with other vendors’ equipment. Cooperative processing such as firewalls, network intelligence equipment, etc., strengthens the depth of information security defense. At present, the main business of Feihong Technology is mainly domestic government units and corporate users. However, with frequent contacts with more and more foreign companies, it is bound to strengthen its strength and develop its international business in the future."
-		}
 	}
 }
 
