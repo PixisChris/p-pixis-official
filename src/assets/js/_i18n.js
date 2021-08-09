@@ -212,8 +212,8 @@ window.tw = {
 			}
 		},
 		'case': {
-			'head_title': 'PIXIS 相關案例 | 內網管理系統，高效率企業問題',
-			'title': '相關案例',
+			'head_title': 'PIXIS 成功案例 | 內網管理系統，高效率企業問題',
+			'title': '成功案例',
 			'desc': '我們整理了長期且穩定合作夥伴的個案分析，經過緊密溝通與深入了解，所提出的解決方案往往能夠達到雙贏局面。',
 			'article1': {
 				'title': '大型企業常疲於多區域、多佔地的網路問題排除，PIXIS 提供了絕佳的解決方案，透過單一平台解決全區問題。'
@@ -413,7 +413,7 @@ window.en = {
 		'contact': 'Contact us',
 		'medias': 'Medias',
 		'products': 'Products',
-		'cases': 'Success Stories',
+		'cases': 'Successful Cases',
 		'submit': 'Submit',
 		'features': 'Features',
 		'validations': {
@@ -481,7 +481,7 @@ window.en = {
 		'index': {
 			'head_title': 'PIXIS',
 			'section1': {
-				'title': '6 major features<br>, listening professionally and always be customer-oriented.',
+				'title': 'Six Features of Our Product<br>Professional Listening、Respect and Honor our Customer',
 				'content': 'Supports complete NAC function, prohibits unfamiliar devices/illegal devices from connecting to the Internet. Through the 802.1X mechanism, the network segment range used by the device can be regulated.',
 				'button': 'View all functions',
 			},
@@ -610,8 +610,8 @@ window.en = {
 			}
 		},
 		'case': {
-			'head_title': 'PIXIS Success Stories | Intranet management system, high-efficiency enterprise problems',
-			'title': 'Case',
+			'head_title': 'PIXIS Successful Cases | Intranet management system, high-efficiency enterprise problems',
+			'title': 'Successful Cases',
 			'desc': 'We have compiled case analysis of long-term and stable partners. After close communication and in-depth understanding, the solutions proposed can often achieve a win-win situation.',
 			'article1': {
 				'title': 'Large enterprises are often struggling to troubleshoot network problems in multiple areas and areas. PIXIS provides an excellent solution to solve problems in the entire region through a single platform.'
@@ -635,9 +635,9 @@ window.en = {
 			},
 			'section1': {
 				'desc': 'More than 250,000 people are protected by the PIXIS system, meanwhile experience the most efficient solution and enjoy the most secure network environment in PIXIS.',
-				'list-items1': "<li>Situation One: When multiple machines and computers in the company are unavailable, and the MIS detect that the computers in the intranet got a virus and infect each other in the area</li><li>Employees report to MIS that the internet speed is very slow, but the reason is unknown</li><li>The company's internal equipment has the potential risk of ransomware infection</li>",
-				'list-items2': "<li>Employees bring their own unupdated devices into the company and connect to the intranet.</li><li>The whitelisted device got a virus and brought the virus into the intranet.</li><li>Visitors and manufacturers’ computers aren't updated either regularly or in real time.</li>",
-				'list-items3': "<li>It can integrate AD, GPO, WSUS, anti-virus software and other systems for application inventory to ensure that devices that are about to enter the intranet get updated and virus scans regularly.</li><li>Ban devices that don’t comply with the administrator’s rules from connecting to the Internet temporarily, and ensure that they are completely updated before resuming normal network functions.</li><li>When a new virus pattern is released or an update is provided, it can confirm that the company’s internal computers have real-time updates.</li>",
+				'list-items1': "<li>1. When multiple machines and computers in the company are unavailable, and the MIS detect that the computers in the intranet got a virus and infect each other in the area</li><li>Employees report to MIS that the internet speed is very slow, but the reason is unknown</li><li>The company's internal equipment has the potential risk of ransomware infection</li>",
+				'list-items2': "<li>2. Employees bring their own unupdated devices into the company and connect to the intranet.</li><li>The whitelisted device got a virus and brought the virus into the intranet.</li><li>Visitors and manufacturers’ computers aren't updated either regularly or in real time.</li>",
+				'list-items3': "<li>3. It can integrate AD, GPO, WSUS, anti-virus software and other systems for application inventory to ensure that devices that are about to enter the intranet get updated and virus scans regularly.</li><li>Ban devices that don’t comply with the administrator’s rules from connecting to the Internet temporarily, and ensure that they are completely updated before resuming normal network functions.</li><li>When a new virus pattern is released or an update is provided, it can confirm that the company’s internal computers have real-time updates.</li>",
 			},
 			'section2': {
 				'list-items1': "<li>When visitors and manufacturers need to connect to the intranet when visiting, the manual distribution is time-consuming and quite demanding.</li><li>IP abruptness of important equipments will make it impossible to connect to the Internet.</li><li>IP is not enough and cannot be recycled automatically.</li><li>Unable to know the unused IP quickly.</li>",
