@@ -919,9 +919,9 @@ function translate() {
 		const sourcePc = document.createElement('source');
 		let urlPc = ""
 		if (localStorage.getItem('pixis_lang') === 'tw') {
-			urlPc = require(`../videos/desktop-tw.mp4`)	
+			urlPc = 'https://storage.googleapis.com/p-pixis-official-temp/videos/desktop-tw.mp4'
 		} else {
-			urlPc = require(`../videos/desktop-en.mp4`)	
+			urlPc = 'https://storage.googleapis.com/p-pixis-official-temp/videos/desktop-en.mp4'
 		}
 		sourcePc.setAttribute('src', urlPc);
 		sourcePc.setAttribute('type', 'video/mp4');
@@ -941,9 +941,9 @@ function translate() {
 		const sourceM = document.createElement('source');
 		let urlM = ""
 		if (localStorage.getItem('pixis_lang') === 'tw') {
-			urlM = require(`../videos/mobile-tw.mp4`)	
+			urlM = 'https://storage.googleapis.com/p-pixis-official-temp/videos/mobile-tw.mp4'
 		} else {
-			urlM = require(`../videos/mobile-en.mp4`)	
+			urlM = 'https://storage.googleapis.com/p-pixis-official-temp/videos/mobile-en.mp4'
 		}
 		sourceM.setAttribute('src', urlM);
 		sourceM.setAttribute('type', 'video/mp4');
