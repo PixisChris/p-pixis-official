@@ -635,9 +635,9 @@ window.en = {
 			},
 			'section1': {
 				'desc': 'More than 250,000 people are protected by the PIXIS system, meanwhile experience the most efficient solution and enjoy the most secure network environment in PIXIS.',
-				'list-items1': "<li>1. When multiple machines and computers in the company are unavailable, and the MIS detect that the computers in the intranet got a virus and infect each other in the area</li><li>Employees report to MIS that the internet speed is very slow, but the reason is unknown</li><li>The company's internal equipment has the potential risk of ransomware infection</li>",
-				'list-items2': "<li>2. Employees bring their own unupdated devices into the company and connect to the intranet.</li><li>The whitelisted device got a virus and brought the virus into the intranet.</li><li>Visitors and manufacturers’ computers aren't updated either regularly or in real time.</li>",
-				'list-items3': "<li>3. It can integrate AD, GPO, WSUS, anti-virus software and other systems for application inventory to ensure that devices that are about to enter the intranet get updated and virus scans regularly.</li><li>Ban devices that don’t comply with the administrator’s rules from connecting to the Internet temporarily, and ensure that they are completely updated before resuming normal network functions.</li><li>When a new virus pattern is released or an update is provided, it can confirm that the company’s internal computers have real-time updates.</li>",
+				'list-items1': "<li>1. When multiple machines and computers in the company are unavailable, and the MIS detect that the computers in the intranet got a virus and infect each other in the area</li><li>2. Employees report to MIS that the internet speed is very slow, but the reason is unknown</li><li>3. The company's internal equipment has the potential risk of ransomware infection</li>",
+				'list-items2': "<li>Employees bring their own unupdated devices into the company and connect to the intranet.</li><li>The whitelisted device got a virus and brought the virus into the intranet.</li><li>Visitors and manufacturers’ computers aren't updated either regularly or in real time.</li>",
+				'list-items3': "<li>It can integrate AD, GPO, WSUS, anti-virus software and other systems for application inventory to ensure that devices that are about to enter the intranet get updated and virus scans regularly.</li><li>Ban devices that don’t comply with the administrator’s rules from connecting to the Internet temporarily, and ensure that they are completely updated before resuming normal network functions.</li><li>When a new virus pattern is released or an update is provided, it can confirm that the company’s internal computers have real-time updates.</li>",
 			},
 			'section2': {
 				'list-items1': "<li>When visitors and manufacturers need to connect to the intranet when visiting, the manual distribution is time-consuming and quite demanding.</li><li>IP abruptness of important equipments will make it impossible to connect to the Internet.</li><li>IP is not enough and cannot be recycled automatically.</li><li>Unable to know the unused IP quickly.</li>",
@@ -663,13 +663,7 @@ window.en = {
 				'situation':'Situations',
 				'cause':'Common causes',
 				'solution':'Solutions',
-			},
-			'section1': {
-				'desc': "The straightforward  dashboard interface can create the top 10 ranking based on the traffic statistics of endpoint computers. It can also display analysis charts.",
-				'list-items1': "<li>Situation One: When multiple machines and computers in the company are unavailable, and the MIS detect that the computers in the intranet got a virus and infect each other in the area</li><li>Employees report to MIS that the internet speed is very slow, but the reason is unknown</li><li>The company's internal equipment has the potential risk of ransomware infection</li>",
-				'list-items2': "<li>Employees bring their own unupdated devices into the company and connect to the intranet</li><li>The whitelisted device got a virus and brought the virus into the intranet</li><li>Visitors and manufacturers’ computers aren't updated either regularly or in real time</li>",
-				'list-items3': "<li>It can integrate AD, GPO, WSUS, anti-virus software and other systems for application inventory to ensure that devices that are about to enter the intranet get updated and virus scans regularly.</li><li>Ban devices that don’t comply with the administrator’s rules from connecting to the Internet temporarily, and ensure that they are completely updated before resuming normal network functions.</li><li>When a new virus pattern is released or an update is provided, it can confirm that the company’s internal computers have real-time updates.</li>",
-			},
+			}
 		},
 		'fn2': {
 			'head_title': 'Endpoint Flow Traffic analysis module | PIXIS',
