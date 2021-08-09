@@ -486,7 +486,7 @@ window.en = {
 				'button': 'View all functions',
 			},
 			'section2': {
-				'title': 'Advanced control technology to effectively protect the corporate’s security.',
+				'title': 'Advanced Control Tech、Effectively defend the Security of the Corporate',
 				'content': 'Master the intranet data through the Switch network topology graph without manual management, and no need to worry about data accuracy.',
 				'button': 'Successful cases'
 			},
@@ -635,7 +635,7 @@ window.en = {
 			},
 			'section1': {
 				'desc': 'More than 250,000 people are protected by the PIXIS system, meanwhile experience the most efficient solution and enjoy the most secure network environment in PIXIS.',
-				'list-items1': "<li>1. When multiple machines and computers in the company are unavailable, and the MIS detect that the computers in the intranet got a virus and infect each other in the area</li><li>2. Employees report to MIS that the internet speed is very slow, but the reason is unknown</li><li>3. The company's internal equipment has the potential risk of ransomware infection</li>",
+				'list-items1': "<li>Situation One: When multiple machines and computers in the company are unavailable, and the MIS detect that the computers in the intranet got a virus and infect each other in the area</li><li>Situation Two: Employees report to MIS that the internet speed is very slow, but the reason is unknown</li><li>Situation Three: The company's internal equipment has the potential risk of ransomware infection</li>",
 				'list-items2': "<li>Employees bring their own unupdated devices into the company and connect to the intranet.</li><li>The whitelisted device got a virus and brought the virus into the intranet.</li><li>Visitors and manufacturers’ computers aren't updated either regularly or in real time.</li>",
 				'list-items3': "<li>It can integrate AD, GPO, WSUS, anti-virus software and other systems for application inventory to ensure that devices that are about to enter the intranet get updated and virus scans regularly.</li><li>Ban devices that don’t comply with the administrator’s rules from connecting to the Internet temporarily, and ensure that they are completely updated before resuming normal network functions.</li><li>When a new virus pattern is released or an update is provided, it can confirm that the company’s internal computers have real-time updates.</li>",
 			},
