@@ -411,9 +411,9 @@ window.en = {
 		'white-paper': 'Technical White Paper',
 		'articles': "Articles",
 		'contact': 'Contact us',
-		'medias': 'Medias',
+		'medias': 'Press Release',
 		'products': 'Products',
-		'cases': 'Successful Cases',
+		'cases': 'Successful Stories',
 		'submit': 'Submit',
 		'features': 'Features',
 		'validations': {
@@ -488,7 +488,7 @@ window.en = {
 			'section2': {
 				'title': 'Advanced Control Tech、Effectively defend the Security of the Corporate',
 				'content': 'Master the intranet data through the Switch network topology graph without manual management, and no need to worry about data accuracy.',
-				'button': 'Successful cases'
+				'button': 'Successful Stories'
 			},
 			'section3': {
 				'title': 'Brand new human-factors experience',
@@ -573,8 +573,8 @@ window.en = {
 			}
 		},
 		'medias': {
-			'head_title': 'PIXIS Media Report | Intranet Management System, High-efficiency Enterprise Issues',
-			'title': 'Media reports',
+			'head_title': 'PIXIS Press Release | Intranet Management System, High-efficiency Enterprise Issues',
+			'title': 'Press Release',
 			'desc': 'With the advancement of technology, the frequency of viruses and hackers attacking companies is also increasing. Keep track of recent developments to understand possible risks in the future.',
 			'article1': {
 				'title': 'PIXIS was interviewed by TCA Taiwan Computer Association'
@@ -610,8 +610,8 @@ window.en = {
 			}
 		},
 		'case': {
-			'head_title': 'PIXIS Successful Cases | Intranet management system, high-efficiency enterprise problems',
-			'title': 'Successful Cases',
+			'head_title': 'PIXIS Successful Stories | Intranet management system, high-efficiency enterprise problems',
+			'title': 'Successful Stories',
 			'desc': 'We have compiled case analysis of long-term and stable partners. After close communication and in-depth understanding, the solutions proposed can often achieve a win-win situation.',
 			'article1': {
 				'title': 'Large enterprises are often struggling to troubleshoot network problems in multiple areas and areas. PIXIS provides an excellent solution to solve problems in the entire region through a single platform.'
