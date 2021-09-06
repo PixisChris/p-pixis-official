@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88.74" height="24.153" viewBox="0 0 88.74 24.153">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="88.74" height="24.153" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Repeat_Grid_1" data-name="Repeat Grid 1" clip-path="url(#clip-path)">
+    <g id="Group_2980" data-name="Group 2980" transform="translate(-47.606 -30)">
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="3.518" height="22.848" rx="1.759" transform="translate(70.31 30.653)" fill="#fff"/>
+      <path id="Path_14" data-name="Path 14" d="M196.043,1723.846h-9.823a1.827,1.827,0,0,0,0,3.65h9.824a2.745,2.745,0,0,1,2.735,2.754,2.6,2.6,0,0,1-2.542,2.621H185.8V1744.8a1.762,1.762,0,0,0,1.758,1.724,1.783,1.783,0,0,0,1.757-1.808s0-8.393,0-8.394h7.022c8.121-.371,7.9-12.371-.29-12.47" transform="translate(-136.861 -1692.687)" fill="#fff"/>
+      <path id="Path_16" data-name="Path 16" d="M661.339,1732.2H654.7a2.734,2.734,0,0,1-2.828-2.636v-.014a2.854,2.854,0,0,1,.778-2.114,2.673,2.673,0,0,1,1.953-.811h9.613a2.01,2.01,0,0,0,1.265-.509,1.963,1.963,0,0,0,.489-1.318,1.786,1.786,0,0,0-1.743-1.823H654.6a6.391,6.391,0,0,0-.144,12.771h6.978a2.855,2.855,0,0,1,.293,5.677H651.1a1.827,1.827,0,0,0,0,3.65h10.333a6.245,6.245,0,0,0,6.151-6.334v-.052a6.986,6.986,0,0,0-1.791-4.755,5.847,5.847,0,0,0-4.458-1.732" transform="translate(-531.242 -1691.947)" fill="#fff"/>
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="3.518" height="22.848" rx="1.759" transform="translate(108.738 30.653)" fill="#fff"/>
+      <g id="Group_1" data-name="Group 1" transform="translate(80.259 30.719)">
+        <path id="Path_1" data-name="Path 1" d="M409.494,1730.576l2.487-2.487-6.667-6.667a1.736,1.736,0,0,0-2.454,0l-.033.033a1.736,1.736,0,0,0,0,2.455Z" transform="translate(-402.32 -1720.914)" fill="#fff"/>
+        <path id="Path_2" data-name="Path 2" d="M491.9,1808l-2.487,2.488,6.667,6.667a1.736,1.736,0,0,0,2.454,0l.033-.033a1.736,1.736,0,0,0,0-2.454Z" transform="translate(-476.356 -1794.951)" fill="#fff"/>
+      </g>
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="3.518" height="30.64" rx="1.759" transform="translate(101.206 30) rotate(45)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

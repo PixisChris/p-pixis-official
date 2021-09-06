@@ -1,0 +1,107 @@
+<nav id="nav-mobile" class="m">
+    <div class="nav-logo">
+        <a href="index.html">
+            <img src="images/logo.ab4389c3.svg" alt="PIXIS logo">
+        </a>
+    </div>
+    <div class="nav-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="nav-content">
+        <a href="javascript:;" class="nav-fn nav-btn product-btn" data-i18n="common.products">產品功能<img src="images/arrow.33cc31e8.svg" alt=""></a>
+        <div class="product-content">
+            <a href="fn-1.html" class="product-link">NAC & IPAM</a>
+            <a href="fn-2.html" class="product-link">NetFlow</a>
+            <a href="fn-3.html" class="product-link">IoT</a>
+            <a href="fn-4.html" class="product-link">OTC</a>
+            <a href="fn-5.html" class="product-link">AMS</a>
+            <a href="fn-6.html" class="product-link">Complicane</a>
+        </div>
+        <a href="case.html" class="nav-btn" data-i18n="common.cases">成功案例</a>
+        <a href="articles.html" class="nav-btn" data-i18n="common.articles">資安好文</a>
+        <a href="medias.html" class="nav-btn" data-i18n="common.medias">媒體報導</a>
+        <a href="white-paper.html" class="nav-btn" data-i18n="common.white-paper">白皮書</a>
+        <a class="nav-btn main-icon-btn" href="contact.html">
+            <span data-i18n="common.contact">聯繫我們</span>
+            <img src="images/arrow-right.38bae243.svg" alt="arrow icon">
+        </a>
+        <div class="nav-text">@ PIXIS 2021</div>
+    </div>
+</nav>
+<nav id="nav" class="pcfx">
+    <div class="nav-logo">
+        <a href="index.html">
+            <img src="images/logo.ab4389c3.svg" alt="PIXIS logo">
+        </a>
+    </div>
+    <div class="nav-menu">
+        <a class="nav-fn nav-btn product-btn" href="javascript:;">
+            <span data-i18n="common.products">產品功能</span>
+            <img src="images/arrow.33cc31e8.svg" alt="">
+        </a>
+        <a class="nav-case nav-btn" href="case.html" data-i18n="common.cases">成功案例</a>
+        <a class="nav-articles nav-btn" href="articles.html" data-i18n="common.articles">資安好文</a>
+        <a class="nav-medias nav-btn" href="medias.html" data-i18n="common.medias">媒體報導</a>
+        <a class="nav-white-paper nav-btn" href="white-paper.html" data-i18n="common.white-paper">白皮書</a>
+        <a class="nav-contact nav-btn" href="contact.html" data-i18n="common.contact">聯繫我們</a>
+    </div>
+    <div class="nav-product">
+        <div class="function-options">
+            <a class="option" href="fn-1.html">
+                <img class="icon" src="images/2.8823f342.png" alt="">
+                <span>NAC & IPAM</span>
+            </a>
+            <a class="option" href="fn-2.html">
+                <img class="icon" src="images/1.21256470.png" alt="">
+                <span>NetFlow</span>
+            </a>
+            <a class="option" href="fn-3.html">
+                <img class="icon" src="images/4.671af360.png" alt="">
+                <span>IoT</span>
+            </a>
+            <a class="option" href="fn-4.html">
+                <img class="icon" src="images/5.15292936.png" alt="">
+                <span>OTC</span>
+            </a>
+            <a class="option" href="fn-5.html">
+                <img class="icon" src="images/6.e105c4d5.png" alt="">
+                <span>AMS</span>
+            </a>
+            <a class="option" href="fn-6.html">
+                <img class="icon" src="images/3.9af00bde.png" alt="">
+                <span>Complicane</span>
+            </a>
+        </div>
+    </div>
+</nav>
+<script>var _document$querySelect, _document$querySelect2, _document$querySelect3;
+
+(_document$querySelect = document.querySelector('#nav .product-btn')) === null || _document$querySelect === void 0 ? void 0 : _document$querySelect.addEventListener('click', function () {
+  toggleClassName('#nav', 'active');
+});
+(_document$querySelect2 = document.querySelector('#nav-mobile .nav-menu-btn')) === null || _document$querySelect2 === void 0 ? void 0 : _document$querySelect2.addEventListener('click', function () {
+  toggleClassName('#nav-mobile', 'active');
+  document.querySelector('#nav-mobile .product-btn').classList.remove('active');
+  document.querySelector('#nav-mobile .product-content').classList.remove('active');
+});
+(_document$querySelect3 = document.querySelector('#nav-mobile .product-btn')) === null || _document$querySelect3 === void 0 ? void 0 : _document$querySelect3.addEventListener('click', function () {
+  toggleClassName('#nav-mobile .product-btn', 'active');
+  toggleClassName('#nav-mobile .product-content', 'active');
+});
+var ROUTE_PATH_MAP = {
+  'fn-': 'nav-fn',
+  'white-paper': 'nav-white-paper',
+  'medias': 'nav-medias',
+  'contact': 'nav-contact',
+  'case.html': 'nav-case',
+  'cases-': 'nav-case',
+  'articles.html': 'nav-articles',
+  'article-': 'nav-articles'
+};
+Object.keys(ROUTE_PATH_MAP).forEach(function (key) {
+  if (window.location.href.indexOf(key) !== -1) {
+    toggleClassName(".".concat(ROUTE_PATH_MAP[key]), 'active');
+  }
+});</script>
