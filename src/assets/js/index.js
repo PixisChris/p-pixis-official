@@ -25,8 +25,9 @@ docReady(() => {
   setHomePageScreensEffect();
 
   const scrollHandler = () => {
+    const wW = window.innerWidth;
     const wH = window.innerHeight;
-    const yOff = window.pageYOffset + wH;
+    const yOff = window.pageYOffset + (wW / 1.8);
     setHomePageWelcomeEffect(yOff, wH);
     window.innerWidth >= 768 && setFnPageEffect(yOff, wH);
   };
